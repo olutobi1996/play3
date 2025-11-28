@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8">
+    <title>Stellar HTML Demo - Integrations Post</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="./css/vendors/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/vendors/swiper-bundle.min.css" />
+    <link href="./style.css" rel="stylesheet">
+</head>
+
+<body class="font-inter antialiased bg-slate-900 text-slate-100 tracking-tight">
+
+    <!-- Page wrapper -->
+    <div class="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
+
+        <!-- Site header -->
+        <header class="absolute w-full z-30">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                <div class="flex items-center justify-between h-16 md:h-20">
+
+                    <!-- Site branding -->
+                    <div class="flex-1">
+                        <!-- Logo -->
+                        <a class="inline-flex" href="index.html" aria-label="Cruip">
+                            <img class="max-w-none" src="./images/logo.svg" width="38" height="38" alt="Stellar">
+                        </a>
+                    </div>
+
+                    <!-- Desktop navigation -->
+                    <nav class="hidden md:flex md:grow">
+
+                        <!-- Desktop menu links -->
+                        <ul class="flex grow justify-center flex-wrap items-center">
+                              <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="about.html">About</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="booking.html">Booking</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="pricing.html">Pricing</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="reviews.html">Reviews</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="questionnaire.html">Questionnaire</a>
+                            </li>
+                        </ul>
+
+                    </nav>
+
+                    <!-- Desktop sign in links -->
+                                  <!-- Desktop booking button -->
+<ul class="flex-1 flex justify-end items-center">
+    <li>
+        <a href="https://tidycal.com/helloecobubba/play3-training-session" target="_blank"
+           class="btn-sm text-slate-300 hover:text-white transition duration-150 ease-in-out group
+                  bg-gradient-to-r from-purple-500 to-purple-400 relative
+                  before:absolute before:inset-0 before:bg-slate-800/70 before:rounded-full before:pointer-events-none">
+            <span class="relative inline-flex items-center">
+                Book a Session
+                <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">
+                    -&gt;
+                </span>
+            </span>
+        </a>
+    </li>
+</ul>
+
+                    <!-- Mobile menu -->
+                    <div class="md:hidden flex items-center ml-4" x-data="{ expanded: false }">
+                    
+                        <!-- Hamburger button -->
+                        <button class="group inline-flex w-8 h-8 text-slate-300 hover:text-white text-center items-center justify-center transition" aria-controls="mobile-nav" :aria-expanded="expanded" @click.stop="expanded = !expanded">
+                            <span class="sr-only">Menu</span>
+                            <svg class="w-4 h-4 fill-current pointer-events-none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <rect class="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] -translate-y-[5px] group-aria-expanded:rotate-[315deg] group-aria-expanded:translate-y-0" y="7" width="16" height="2" rx="1"></rect>
+                                <rect class="origin-center group-aria-expanded:rotate-45 transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.8)]" y="7" width="16" height="2" rx="1"></rect>
+                                <rect class="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] translate-y-[5px] group-aria-expanded:rotate-[135deg] group-aria-expanded:translate-y-0" y="7" width="16" height="2" rx="1"></rect>
+                            </svg>
+                        </button>   
+                    
+                        <!-- Mobile navigation -->
+                        <nav id="mobile-nav" class="absolute top-full z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out" x-ref="mobileNav" :style="expanded ? 'max-height: ' + $refs.mobileNav.scrollHeight + 'px; opacity: 1' : 'max-height: 0; opacity: .8'" @click.outside="expanded = false" @keydown.escape.window="expanded = false" x-cloak>
+                            <ul class="border border-transparent [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] rounded-lg px-4 py-1.5">
+                                           <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="about.html">About</a>
+                            </li>
+                            <li>
+                                <a href="https://tidycal.com/helloecobubba/play3-training-session" target="_blank" class="btn-sm text-slate-300 hover:text-white transition duration-150 ease-in-out group [background:linear-gradient(...)] relative before:absolute before:inset-0 before:bg-slate-800/70 before:rounded-full before:pointer-events-none">
+    <span class="relative inline-flex items-center">
+        Book a Session <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+    </span>
+</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="pricing.html">Pricing</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="reviews.html">Reviews</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="questionnaire.html">Questionnaire</a>
+                            </li>
+                            </ul>
+                        </nav>
+                    
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <!-- Page content -->
+        <main class="grow">
+
+            <section class="relative">
+                
+    <!-- Radial gradient -->
+    <div class="absolute flex items-center justify-center top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-[800px] aspect-square" aria-hidden="true">
+        <div class="absolute inset-0 translate-z-0 bg-purple-500 rounded-full blur-[120px] opacity-30"></div>
+        <div class="absolute w-64 h-64 translate-z-0 bg-purple-400 rounded-full blur-[80px] opacity-70"></div>
+    </div>
+    
+    <!-- Particles animation -->
+    <div class="absolute inset-0 h-96 -z-10" aria-hidden="true">
+        <canvas data-particle-animation data-particle-quantity="15"></canvas>
+    </div>
+    
+    <!-- Illustration -->
+    <div class="md:block absolute left-1/2 -translate-x-1/2 -mt-16 blur-2xl opacity-90 pointer-events-none -z-10" aria-hidden="true">
+        <img src="./images/page-illustration.svg" class="max-w-none" width="1440" height="427" alt="Page Illustration">
+    </div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="pt-32 md:pt-40">
+
+            <div class="md:flex md:justify-between">
+
+                <!-- Page content -->
+                <div class="md:grow pb-12 md:pb-20">
+                    <div class="max-w-[720px]">
+
+                        <div class="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-16">
+
+                            <!-- Back button -->
+                            <div class="shrink-0">
+                                <div class="sticky top-6">
+                                    <a class="flex items-center justify-center w-9 h-9 group border border-transparent rounded-full [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] relative before:absolute before:inset-0 before:bg-slate-800/30 before:rounded-full before:pointer-events-none" href="index.html">
+                                        <span class="sr-only">Go back</span>
+                                        <svg class="w-4 h-4 fill-purple-500" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.7 14.7l1.4-1.4L3.8 9H16V7H3.8l4.3-4.3-1.4-1.4L0 8z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Content -->
+                            <div>
+                                <article class="pb-12 mb-12 border-b [border-image:linear-gradient(to_right,transparent,var(--color-slate-800),transparent)1]">
+
+                                    <figure class="bg-slate-700/20 border border-slate-300/10 p-4 rounded-3xl mb-8">
+                                        <img class="w-full rounded-2xl" src="./images/booking-hero.jpg" width="586" height="316" alt="Play3 Booking" />
+                                    </figure>
+
+                                    <h1 class="h2 text-slate-200 mb-4">Book a Play3 Session</h1>
+
+                                    <!-- Post content -->
+                                    <div class="prose max-w-none text-slate-400 prose-headings:text-slate-50 prose-h2:text-xl prose-h2:mt-8 prose-h2:mb-4 prose-p:leading-relaxed prose-a:text-purple-500 prose-a:no-underline hover:prose-a:underline prose-strong:text-slate-50 prose-strong:font-medium prose-blockquote:pl-5 prose-blockquote:xl:-ml-5 prose-blockquote:border-l-2 prose-blockquote:border-purple-500 prose-blockquote:font-medium prose-blockquote:text-slate-300 prose-blockquote:italic">
+                                        <h2>How Booking Works</h2>
+                                        <p>
+                                            Booking a Play3 session is simple and fast. Choose a date, select your preferred group, complete your player details, and secure your spot. 
+                                            Payments are handled safely through our booking partner with instant confirmation sent to your email.
+                                        </p>
+
+                                        <h2>Session Format</h2>
+                                        <p>
+                                            Each session blends futsal speed, tight-space creativity, and football principles.  
+                                            60-minute classes designed for development, confidence, and pure enjoyment.
+                                        </p>
+
+                                        <h2>Location & Times</h2>
+                                        <p>
+                                            <strong>Chiswick School, Burlington Lane, W4 3UN</strong><br>
+                                            Monday & Wednesday evenings — limited spaces (16 max per group).
+                                        </p>
+
+                                        <h2>Ready to Book?</h2>
+                                        <p>
+                                            Scroll down and use our booking portal to reserve your session. It's quick, secure, and takes less than a minute.
+                                        </p>
+                                    </div>
+                                </article>
+
+                                <aside class="pl-6 border-l-2 border-purple-500">
+                                    <p class="inline-flex font-medium italic text-lg bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">“ Booking was so easy — and the sessions are unreal. My son’s confidence has doubled in just a few weeks. ”</p>
+                                    <footer class="flex items-center space-x-4">
+                                        <img class="shrink-0 rounded-full" src="./images/parent-avatar.jpg" width="32" height="32" alt="Parent Review" />
+                                        <div class="text-sm font-medium text-slate-300">
+                                            Sarah M <span class="text-slate-700">-</span> Play3 Parent
+                                        </div>
+                                    </footer>
+                                </aside>
+                            </div>
+                
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="md:w-64 lg:w-80 md:shrink-0 md:pt-[3.75rem] lg:pt-0 pb-12 md:pb-20">
+                    <div class="sticky top-6 md:pl-6 lg:pl-10">
+
+                        <!-- Sidebar content -->
+                        <div class="space-y-6">
+
+                            <!-- Widget -->
+                            <div class="bg-linear-to-tr from-slate-800 to-slate-800/25 rounded-3xl border border-slate-800">
+                                <div class="px-5 py-6">
+                                    <div class="text-center mb-5">
+                                        <div class="mb-4">
+                                            <div class="relative inline-flex">
+                                                <img src="./images/ball-icon.svg" width="80" height="80" alt="Play3 Icon" />
+                                                <img class="absolute top-0 -right-1" src="./images/star.svg" width="24" height="24" alt="Star" aria-hidden="true" />
+                                            </div>
+                                        </div>
+
+                                        <a href="#booking" class="btn-sm text-slate-300 hover:text-white transition duration-150 ease-in-out group [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] relative before:absolute before:inset-0 before:bg-slate-800/70 before:rounded-full before:pointer-events-none">
+                                            <span class="relative inline-flex items-center">
+                                                Book a Session <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+                                            </span>
+                                        </a>
+                                    </div>
+
+                                    <ul class="text-sm">
+                                        <li class="flex items-center justify-between py-3 border-t border-slate-700/40">
+                                            <span class="text-slate-400">Price</span>
+                                            <span class="text-slate-300 font-medium">£15 / session</span>
+                                        </li>
+                                        <li class="flex items-center justify-between py-3 border-t border-slate-700/40">
+                                            <span class="text-slate-400">Duration</span>
+                                            <span class="text-slate-300 font-medium">1 hour</span>
+                                        </li>
+                                        <li class="flex items-center justify-between py-3 border-t border-slate-700/40">
+                                            <span class="text-slate-400">Capacity</span>
+                                            <span class="text-slate-300 font-medium">16 players</span>
+                                        </li>
+                                        <li class="flex items-center justify-between py-3 border-t border-slate-700/40">
+                                            <span class="text-slate-400">Location</span>
+                                            <span class="text-slate-300 font-medium">Chiswick School</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </aside>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Booking Embed Section -->
+<section id="booking" class="relative mt-20 mb-32">
+
+    <!-- Background glow -->
+    <div class="absolute inset-0 pointer-events-none -z-10 flex justify-center">
+        <div class="w-[600px] h-[600px] bg-purple-500/20 rounded-full blur-[140px]"></div>
+    </div>
+
+    <!-- Optional particles -->
+    <div class="absolute inset-0 h-96 pointer-events-none -z-10">
+        <canvas data-particle-animation data-particle-quantity="10"></canvas>
+    </div>
+
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+        <h2 class="h2 bg-clip-text text-transparent bg-linear-to-r from-slate-200 via-slate-100 to-slate-200 mb-4">
+            Book Your Play3 Session
+        </h2>
+        <p class="text-slate-400 text-lg mb-10">
+            Choose a date and secure your place in seconds. Payments and confirmations are handled safely through our booking partner.
+        </p>
+    </div>
+
+</section>
+
+
+        </main>
+
+             <!-- Site footer -->
+<footer>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+        <!-- Blocks -->
+        <div class="grid sm:grid-cols-12 gap-8 py-8 md:py-12">
+
+            <!-- 1st block -->
+            <div class="sm:col-span-12 lg:col-span-4 order-1 lg:order-none">
+                <div class="h-full flex flex-col sm:flex-row lg:flex-col justify-between">
+                    <div class="mb-4 sm:mb-0">
+                        <div class="mb-4">
+                            <!-- Logo -->
+                            <a class="inline-flex" href="index.html" aria-label="Play3">
+                                <img src="./images/logo.svg" width="38" height="38" alt="Play3 Logo">
+                            </a>
+                        </div>
+                        <div class="text-sm text-slate-300">&copy; 2025 Play3 Football <span class="text-slate-500">-</span> All rights reserved.</div>
+                    </div>
+
+                    <!-- Social links (football brand specific) -->
+                    <ul class="flex">
+
+                        <!-- Instagram -->
+                        <li>
+                            <a class="flex justify-center items-center text-purple-500 hover:text-purple-400 transition duration-150 ease-in-out" 
+                               href="https://www.instagram.com/play3football" target="_blank" aria-label="Instagram">
+                                <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                    <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 
+                                            2.243 5 5 5h10c2.757 0 5-2.243 
+                                            5-5V7c0-2.757-2.243-5-5-5H7zm10 
+                                            2c1.654 0 3 1.346 3 3v10c0 
+                                            1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 
+                                            1.346-3 3-3h10zm-5 3a5 5 0 100 10 
+                                            5 5 0 000-10zm0 2a3 3 0 110 
+                                            6 3 3 0 010-6zm4.5-.75a1.25 1.25 0 110 
+                                            2.5 1.25 1.25 0 010-2.5z"/>
+                                </svg>
+                            </a>
+                        </li>
+
+                        <!-- TikTok -->
+                        <li class="ml-2">
+                            <a class="flex justify-center items-center text-purple-500 hover:text-purple-400 transition duration-150 ease-in-out"
+                               href="https://www.tiktok.com/@play3football" target="_blank" aria-label="TikTok">
+                                <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                    <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 
+                                             10-10 10S2 17.514 2 12 6.486 
+                                             2 12 2zm1 4.5v5.086a3.5 3.5 
+                                             0 11-2-3.182V6.5h2z"/>
+                                </svg>
+                            </a>
+                        </li>
+
+                        <!-- YouTube -->
+                        <li class="ml-2">
+                            <a class="flex justify-center items-center text-purple-500 hover:text-purple-400 transition duration-150 ease-in-out"
+                               href="https://www.youtube.com/@play3football" target="_blank" aria-label="YouTube">
+                                <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                    <path d="M21.8 8s-.2-1.5-.8-2.2c-.7-.9-1.5-.9-1.9-1C15.9 
+                                             4.5 12 4.5 12 4.5h-.1s-3.9 
+                                             0-7.1.3c-.4.1-1.2.1-1.9 1C2.4 
+                                             6.5 2.2 8 2.2 8S2 9.7 2 
+                                             11.4v1.3c0 1.7.2 3.4.2 3.4s.2 
+                                             1.5.8 2.2c.7.9 1.7.9 2.2 
+                                             1 1.6.2 6.8.3 6.8.3s3.9 
+                                             0 7.1-.3c.4-.1 1.2-.1 1.9-1 
+                                             .6-.7.8-2.2.8-2.2s.2-1.7.2-3.4v-1.3c0-1.7-.2-3.4-.2-3.4zM10 
+                                             14.7V9.3l5.2 2.7L10 14.7z"/>
+                                </svg>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 2nd block -->
+            <div class="sm:col-span-6 md:col-span-3 lg:col-span-2">
+                <h6 class="text-sm text-slate-50 font-medium mb-2">Play3</h6>
+                <ul class="text-sm space-y-2">
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#training">Training</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#coaches">Our Coaches</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#sessions">Sessions</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#philosophy">Philosophy</a></li>
+                </ul>
+            </div>
+
+            <!-- 3rd block -->
+            <div class="sm:col-span-6 md:col-span-3 lg:col-span-2">
+                <h6 class="text-sm text-slate-50 font-medium mb-2">Company</h6>
+                <ul class="text-sm space-y-2">
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#about">About Us</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#team">Meet the Founders</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#contact">Contact</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#locations">Locations</a></li>
+                </ul>
+            </div>
+
+            <!-- 4th block -->
+            <div class="sm:col-span-6 md:col-span-3 lg:col-span-2">
+                <h6 class="text-sm text-slate-50 font-medium mb-2">Resources</h6>
+                <ul class="text-sm space-y-2">
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#faq">FAQ</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#policies">Policies</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#safeguarding">Safeguarding</a></li>
+                </ul>
+            </div>
+
+            <!-- 5th block -->
+            <div class="sm:col-span-6 md:col-span-3 lg:col-span-2">
+                <h6 class="text-sm text-slate-50 font-medium mb-2">Legal</h6>
+                <ul class="text-sm space-y-2">
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#terms">Terms & Conditions</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#privacy">Privacy Policy</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#liability">Liability Waiver</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#insurance">Insurance</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+</footer>
+
+    </div>
+
+    <script src="./js/vendors/alpinejs.min.js" defer></script>
+    <script src="./js/vendors/aos.js"></script>
+    <script src="./js/vendors/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
