@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 150">
-  <style><![CDATA[
-    .title { font-family: "Arial Rounded MT Bold", "Segoe UI", "Helvetica", Arial, sans-serif; 
-              font-weight:700; font-size:100px; fill:#263054; }
-  ]]></style>
-
-  <text x="0" y="110" class="title">PVO</text>
-</svg>
