@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8">
+    <title>Stellar HTML Demo - Pricing</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="./css/vendors/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/vendors/swiper-bundle.min.css" />
+    <link href="./style.css" rel="stylesheet">
+</head>
+
+<body class="font-inter antialiased bg-slate-900 text-slate-100 tracking-tight">
+
+    <!-- Page wrapper -->
+    <div class="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
+
+        <!-- Site header -->
+        <header class="absolute w-full z-30">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                <div class="flex items-center justify-between h-16 md:h-20">
+
+                    <!-- Site branding -->
+                    <div class="flex-1">
+                        <!-- Logo -->
+                        <a class="inline-flex" href="index.html" aria-label="Cruip">
+                            <img class="max-w-none" src="./images/logo.svg" width="38" height="38" alt="Stellar">
+                        </a>
+                    </div>
+
+                    <!-- Desktop navigation -->
+                    <nav class="hidden md:flex md:grow">
+
+                        <!-- Desktop menu links -->
+                        <ul class="flex grow justify-center flex-wrap items-center">
+                                                <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="about.html">About</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="booking.html">Booking</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="pricing.html">Pricing</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="reviews.html">Reviews</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="questionnaire.html">Questionnaire</a>
+                            </li>
+                        </ul>
+
+                    </nav>
+
+                    <!-- Desktop sign in links -->
+                                    <!-- Desktop booking button -->
+<ul class="flex-1 flex justify-end items-center">
+    <li>
+        <a href="https://tidycal.com/helloecobubba/play3-training-session" target="_blank"
+           class="btn-sm text-slate-300 hover:text-white transition duration-150 ease-in-out group
+                  bg-gradient-to-r from-purple-500 to-purple-400 relative
+                  before:absolute before:inset-0 before:bg-slate-800/70 before:rounded-full before:pointer-events-none">
+            <span class="relative inline-flex items-center">
+                Book a Session
+                <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">
+                    -&gt;
+                </span>
+            </span>
+        </a>
+    </li>
+</ul>
+
+                    <!-- Mobile menu -->
+                    <div class="md:hidden flex items-center ml-4" x-data="{ expanded: false }">
+                    
+                        <!-- Hamburger button -->
+                        <button class="group inline-flex w-8 h-8 text-slate-300 hover:text-white text-center items-center justify-center transition" aria-controls="mobile-nav" :aria-expanded="expanded" @click.stop="expanded = !expanded">
+                            <span class="sr-only">Menu</span>
+                            <svg class="w-4 h-4 fill-current pointer-events-none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <rect class="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] -translate-y-[5px] group-aria-expanded:rotate-[315deg] group-aria-expanded:translate-y-0" y="7" width="16" height="2" rx="1"></rect>
+                                <rect class="origin-center group-aria-expanded:rotate-45 transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.8)]" y="7" width="16" height="2" rx="1"></rect>
+                                <rect class="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] translate-y-[5px] group-aria-expanded:rotate-[135deg] group-aria-expanded:translate-y-0" y="7" width="16" height="2" rx="1"></rect>
+                            </svg>
+                        </button>   
+                    
+                        <!-- Mobile navigation -->
+                        <nav id="mobile-nav" class="absolute top-full z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out" x-ref="mobileNav" :style="expanded ? 'max-height: ' + $refs.mobileNav.scrollHeight + 'px; opacity: 1' : 'max-height: 0; opacity: .8'" @click.outside="expanded = false" @keydown.escape.window="expanded = false" x-cloak>
+                            <ul class="border border-transparent [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] rounded-lg px-4 py-1.5">
+                                <li>
+                                    <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="about.html">About</a>
+                                </li>
+                                <li>
+                                    <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="booking.html">Booking</a>
+                                </li>
+                                <li>
+                                    <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="pricing.html">Pricing</a>
+                                </li>
+                                <li>
+                                    <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="reviews.html">Reviews</a>
+                                </li>
+                                <li>
+                                    <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="questionnaire.html">Questionnaire</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <!-- Page content -->
+        <main class="grow">
+
+            <!-- Hero -->
+                 <!-- Pricing -->
+            <section class="relative">
+                <div class="absolute inset-0 -z-20 overflow-hidden opacity-20">
+    <img 
+        src="./images/vinnywembley.jpg" 
+        class="w-full h-full object-cover" 
+        alt="FAQ Background"
+    />
+</div>
+                <!-- Radial gradient -->
+                <div class="absolute inset-0 overflow-hidden pointer-events-none -z-10" aria-hidden="true">
+                    <div class="absolute flex items-center justify-center top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 w-1/3 aspect-square">
+                        <div class="absolute inset-0 translate-z-0 bg-purple-500 rounded-full blur-[120px] opacity-50"></div>
+                    </div>
+                </div>
+                <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                    <div class="py-12 md:py-20">
+                        <!-- Content -->
+                        <div class="max-w-3xl mx-auto text-center pb-12 md:pb-20">
+                            <div>
+                                <div class="inline-flex font-medium bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 pb-3">PLAY3 Sessions & Memberships</div>
+                            </div>
+                            <h2 class="h2 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">Choose how you want to Play3</h2>
+                            <p class="text-lg text-slate-400">Whether you're dropping in for weekly sessions or committing to monthly development, we offer options for every young baller. Quality coaching. Maximum fun. Zero ego.</p>
+                        </div>
+                 <!-- Pricing tabs (PLAY3 content) -->
+<!-- Source PDF: /mnt/data/PLAY3.pdf.pdf -->
+<div class="relative">
+    <!-- Blurred shape (unchanged) -->
+    <div class="max-md:hidden absolute bottom-0 -mb-20 left-2/3 -translate-x-1/2 blur-2xl opacity-70 pointer-events-none" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="434" height="427">
+            <defs>
+                <linearGradient id="bs5-a" x1="19.609%" x2="50%" y1="14.544%" y2="100%">
+                    <stop offset="0%" stop-color="#A855F7" />
+                    <stop offset="100%" stop-color="#6366F1" stop-opacity="0" />
+                </linearGradient>
+            </defs>
+            <path fill="url(#bs5-a)" fill-rule="evenodd" d="m661 736 461 369-284 58z" transform="matrix(1 0 0 -1 -661 1163)" />
+        </svg>
+    </div>
+
+    <!-- Content -->
+    <div class="grid md:grid-cols-4 xl:-mx-6 text-sm [&>div:nth-of-type(-n+4)]:py-6 [&>div:nth-last-of-type(-n+4)]:pb-6 max-md:[&>div:nth-last-of-type(-n+4)]:mb-8 max-md:[&>div:nth-of-type(-n+4):nth-of-type(n+1)]:rounded-t-3xl max-md:[&>div:nth-last-of-type(-n+4)]:rounded-b-3xl md:[&>div:nth-of-type(2)]:rounded-tl-3xl md:[&>div:nth-of-type(4)]:rounded-tr-3xl md:[&>div:nth-last-of-type(3)]:rounded-bl-3xl md:[&>div:nth-last-of-type(1)]:rounded-br-3xl [&>div]:bg-slate-700/20 [&>div:nth-of-type(4n+1)]:bg-transparent max-md:[&>div:nth-of-type(4n+5)]:hidden max-md:[&>div:nth-of-type(4n+2)]:order-1 max-md:[&>div:nth-of-type(4n+3)]:order-2 max-md:[&>div:nth-of-type(4n+4)]:order-3 max-md:md:[&>div:nth-of-type(n)]:mb-0 [&>div:nth-of-type(4n+3)]:relative [&>div:nth-of-type(4n+3)]:before:absolute [&>div:nth-of-type(4n+3)]:before:-inset-px [&>div:nth-of-type(4n+3)]:before:rounded-[inherit] [&>div:nth-of-type(4n+3)]:before:border-x-2 [&>div:nth-of-type(3)]:before:border-t-2 [&>div:nth-last-of-type(2)]:before:border-b-2 [&>div:nth-of-type(4n+3)]:before:border-purple-500 [&>div:nth-of-type(4n+3)]:before:-z-10 [&>div:nth-of-type(4n+3)]:before:pointer-events-none" x-data="{ annual: true }">
+
+        <!-- Pricing toggle (left column kept, text unchanged visually) -->
+        <div class="px-6 flex flex-col justify-end">
+            <div class="pb-5 md:border-b border-slate-800">
+                <!-- Toggle switch (kept) -->
+                <div class="max-md:text-center">
+                    <div class="inline-flex items-center whitespace-nowrap">
+                        <div class="text-sm text-slate-500 font-medium mr-2 md:max-lg:hidden">Monthly</div>
+                        <div class="relative">
+                            <input type="checkbox" id="toggle" class="peer sr-only" x-model="annual" />
+                            <label for="toggle" class="relative flex h-6 w-11 cursor-pointer items-center rounded-full bg-slate-400 px-0.5 outline-slate-400 transition-colors before:h-5 before:w-5 before:rounded-full before:bg-white before:shadow-xs before:transition-transform before:duration-150 peer-checked:bg-purple-500 peer-checked:before:translate-x-full peer-focus-visible:outline peer-focus-visible:outline-offset-2 peer-focus-visible:outline-gray-400 peer-focus-visible:peer-checked:outline-purple-500">
+                                <span class="sr-only">Pay Yearly</span>
+                            </label>
+                        </div>
+                        <div class="text-sm text-slate-500 font-medium ml-2">Yearly <span class="text-teal-500">(-20%)</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Single Session (was Pro) -->
+        <div class="px-6 flex flex-col justify-end">
+            <div class="grow pb-4 mb-4 border-b border-slate-800">
+                <div class="text-base font-medium bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 pb-0.5">Single Session</div>
+                <div class="mb-1">
+                    <span class="text-lg font-medium text-slate-500">£</span>
+                    <!-- Single session price (show same whether annual toggled or not) -->
+                    <span class="text-3xl font-bold text-slate-50" x-text="annual ? '15' : '15'">15</span>
+                    <span class="text-sm text-slate-600 font-medium">/session</span>
+                </div>
+                <div class="text-slate-500">Pay-as-you-go access to any Play3 session.</div>
+            </div>
+            <div class="pb-4 border-b border-slate-800">
+                <a class="btn-sm text-slate-900 bg-linear-to-r from-white/80 via-white to-white/80 hover:bg-white w-full transition duration-150 ease-in-out group" href="booking.html">
+                    Book a Session <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Monthly Membership (was Team) -->
+        <div class="px-6 flex flex-col justify-end">
+            <div class="grow pb-4 mb-4 border-b border-slate-800">
+                <div class="text-base font-medium bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 pb-0.5">Monthly Membership</div>
+                <div class="mb-1">
+                    <span class="text-lg font-medium text-slate-500">£</span>
+                    <!-- Membership price -->
+                    <span class="text-3xl font-bold text-slate-50" x-text="annual ? '45' : '45'">45</span>
+                    <span class="text-sm text-slate-600 font-medium">/mo</span>
+                </div>
+                <div class="text-slate-500">Best value — regular sessions for consistent development (approx. 8 sessions/month).</div>
+            </div>
+            <div class="pb-4 border-b border-slate-800">
+                <a class="btn-sm text-white bg-purple-500 hover:bg-purple-600 w-full transition duration-150 ease-in-out group" href="signup.html">
+                    Join Monthly <span class="tracking-normal text-purple-300 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Elite Pack (was Enterprise) -->
+        <div class="px-6 flex flex-col justify-end">
+            <div class="grow pb-4 mb-4 border-b border-slate-800">
+                <div class="text-base font-medium bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 pb-0.5">Elite Pack</div>
+                <div class="mb-1">
+                    <span class="text-lg font-medium text-slate-500">£</span>
+                    <!-- Elite price -->
+                    <span class="text-3xl font-bold text-slate-50" x-text="annual ? '99' : '99'">99</span>
+                    <span class="text-sm text-slate-600 font-medium">/mo</span>
+                </div>
+                <div class="text-slate-500">Priority booking, guaranteed spot, plus end-of-term progress review and feedback.</div>
+            </div>
+            <div class="pb-4 border-b border-slate-800">
+                <a class="btn-sm text-slate-900 bg-linear-to-r from-white/80 via-white to-white/80 hover:bg-white w-full transition duration-150 ease-in-out group" href="signup.html">
+                    Join Elite <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- What’s Included (Usage) -->
+        <div class="px-6 flex flex-col justify-end">
+            <div class="py-2 text-slate-50 font-medium mt-4">What’s included</div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="py-2 text-slate-50 font-medium mt-4 md:hidden">What’s included</div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="py-2 text-slate-50 font-medium mt-4 md:hidden">What’s included</div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="py-2 text-slate-50 font-medium mt-4 md:hidden">What’s included</div>
+        </div>
+
+        <!-- Capacity (was Social Connections) -->
+        <div class="px-6 flex flex-col justify-end">
+            <div class="py-2 text-slate-400 border-b border-slate-800">Session capacity</div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>16 players max</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>16 players max</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>16 players max</span>
+            </div>
+        </div>
+
+        <!-- Location (was Custom Domains) -->
+        <div class="px-6 flex flex-col justify-end">
+            <div class="py-2 text-slate-400 border-b border-slate-800">Location</div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>Chiswick School, Burlington Lane, W4 3UN</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>Chiswick School, Burlington Lane, W4 3UN</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>Chiswick School, Burlington Lane, W4 3UN</span>
+            </div>
+        </div>
+
+        <!-- Coaching Team (was User Role Management) -->
+        <div class="px-6 flex flex-col justify-end">
+            <div class="py-2 text-slate-400 border-b border-slate-800">Coaching Team</div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>UEFA-qualified + pro players</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>UEFA-qualified + pro players</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>UEFA-qualified + pro players</span>
+            </div>
+        </div>
+
+        <!-- Ages (was External Databases) -->
+        <div class="px-6 flex flex-col justify-end">
+            <div class="py-2 text-slate-400 border-b border-slate-800">Ages</div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>Ages 7–9</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>Ages 10–12</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>Ages 7–12 (mixed)</span>
+            </div>
+        </div>
+
+        <!-- Benefits (was Features) -->
+        <div class="px-6 flex flex-col justify-end">
+            <div class="py-2 text-slate-50 font-medium mt-4">Benefits</div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="py-2 text-slate-50 font-medium mt-4 md:hidden">Benefits</div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="py-2 text-slate-50 font-medium mt-4 md:hidden">Benefits</div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="py-2 text-slate-50 font-medium mt-4 md:hidden">Benefits</div>
+        </div>
+
+        <!-- Futsal Training (was Custom Connection) -->
+        <div class="px-6 flex flex-col justify-end">
+            <div class="py-2 text-slate-400 border-b border-slate-800">Futsal Training</div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>Included</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>Included</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>Included</span>
+            </div>
+        </div>
+
+        <!-- Football Training (was Advanced Deployment Options) -->
+        <div class="px-6 flex flex-col justify-end">
+            <div class="py-2 text-slate-400 border-b border-slate-800">Football Training</div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>Included</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>Included</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>Included</span>
+            </div>
+        </div>
+
+        <!-- Optional Extras (was Extra Add-ons) -->
+        <div class="px-6 flex flex-col justify-end">
+            <div class="py-2 text-slate-400 border-b border-slate-800">Optional extras</div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>Holiday Camps, 1-to-1 coaching</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>Holiday Camps, 1-to-1 coaching</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>Holiday Camps, 1-to-1 coaching</span>
+            </div>
+        </div>
+
+        <!-- Support (was Admin Roles) -->
+        <div class="px-6 flex flex-col justify-end">
+            <div class="py-2 text-slate-400 border-b border-slate-800">Support</div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center border-b border-slate-800 py-2 text-slate-400 max-md:hidden">
+                <span>WhatsApp & email</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center border-b border-slate-800 py-2 text-slate-400 max-md:hidden">
+                <span>WhatsApp & email</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>WhatsApp & email</span>
+            </div>
+        </div>
+
+        <!-- Safety & Welfare (was Deploy and Monitor) -->
+        <div class="px-6 flex flex-col justify-end">
+            <div class="py-2 text-slate-400 border-b border-slate-800">Safety & welfare</div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center border-b border-slate-800 py-2 text-slate-400 max-md:hidden">
+                <span>Safeguarding certified coaches</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center border-b border-slate-800 py-2 text-slate-400 max-md:hidden">
+                <span>First-aid trained staff</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>Secure indoor venue & welfare policies</span>
+            </div>
+        </div>
+
+        <!-- Enterprise Add-ons (kept but renamed visually above to Optional extras) -->
+        <div class="px-6 flex flex-col justify-end">
+            <div class="py-2 text-slate-400 border-b border-slate-800">Enterprise Add-ons</div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center border-b border-slate-800 py-2 text-slate-400 max-md:hidden">
+                <span>Enterprise Add-ons</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center border-b border-slate-800 py-2 text-slate-400 max-md:hidden">
+                <span>Enterprise Add-ons</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>Enterprise Add-ons</span>
+            </div>
+        </div>
+
+        <!-- Premium Support (kept as Support/Extras) -->
+        <div class="px-6 flex flex-col justify-end">
+            <div class="py-2 text-slate-400 border-b border-slate-800">Premium support</div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center border-b border-slate-800 py-2 text-slate-400 max-md:hidden">
+                <span>Coach feedback & priority contact</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>Coach feedback & priority contact</span>
+            </div>
+        </div>
+
+    </div>
+</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features -->
+      <!-- Features -->
+<section class="relative">
+
+    <!-- Particles animation -->
+    <div class="absolute left-1/2 -translate-x-1/2 top-0 -z-10 w-64 h-64 -mt-24">
+        <div class="absolute inset-0 -z-10" aria-hidden="true">
+            <canvas data-particle-animation data-particle-quantity="6" data-particle-staticity="30"></canvas>
+        </div>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="pb-12 md:pb-20">
+
+            <!-- Section header -->
+            <div class="max-w-3xl mx-auto text-center pb-12">
+                <h2 class="h2 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">
+                    Football Training Prices & Details
+                </h2>
+                <p class="text-lg text-slate-400">
+                    Clear, simple pricing with flexible options for kids who love to play, learn, and improve.
+                </p>
+            </div>
+
+            <!-- Rings illustration -->
+            <div class="text-center pb-8">
+                <div class="inline-flex items-center justify-center relative">
+                    <!-- Particles animation -->
+                    <div class="absolute inset-0 -z-10" aria-hidden="true">
+                        <canvas data-particle-animation data-particle-quantity="10"></canvas>
+                    </div>
+                    <div class="inline-flex">
+                        <img src="./images/pricing-illustration.svg" width="334" height="334" alt="Features illustration" />
+                    </div>
+                    <img class="absolute -mt-[40%]" src="./images/pricing-illustration-top.svg" width="396" height="328" alt="Features illustration top" aria-hidden="true" />
+                    <div class="absolute w-[200%] flex items-center justify-center space-x-5">
+                        <div class="-rotate-[4deg]">
+                            <img class="w-11 h-11 drop-shadow-lg animate-[float_2.6s_ease-in-out_infinite] opacity-10" src="./images/pricing-icon-01.svg" width="80" height="80" alt="Pricing icon 01" />
+                        </div>
+                        <div class="rotate-[4deg]">
+                            <img class="w-14 h-14 drop-shadow-lg animate-[float_2.4s_ease-in-out_infinite] opacity-25" src="./images/pricing-icon-02.svg" width="80" height="80" alt="Pricing icon 02" />
+                        </div>
+                        <div class="-rotate-[4deg]">
+                            <img class="w-16 h-16 drop-shadow-lg animate-[float_2.2s_ease-in-out_infinite] opacity-60" src="./images/pricing-icon-03.svg" width="80" height="80" alt="Pricing icon 03" />
+                        </div>
+                        <img class="drop-shadow-lg animate-float" src="./images/pricing-icon-04.svg" width="80" height="80" alt="Pricing icon 04" />
+                        <div class="rotate-[4deg]">
+                            <img class="w-16 h-16 drop-shadow-lg animate-[float_2.2s_ease-in-out_infinite] opacity-60" src="./images/pricing-icon-05.svg" width="80" height="80" alt="Pricing icon 05" />
+                        </div>
+                        <div class="-rotate-[4deg]">
+                            <img class="w-14 h-14 drop-shadow-lg animate-[float_2.4s_ease-in-out_infinite] opacity-25" src="./images/pricing-icon-06.svg" width="80" height="80" alt="Pricing icon 06" />
+                        </div>
+                        <div class="rotate-[4deg]">
+                            <img class="w-11 h-11 drop-shadow-lg animate-[float_2.6s_ease-in-out_infinite] opacity-10" src="./images/pricing-icon-07.svg" width="80" height="80" alt="Pricing icon 07" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features list -->
+            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+                <!-- Card #1 -->
+                <div class="bg-linear-to-tr from-slate-800/50 to-slate-800/10 rounded-3xl border border-slate-800">
+                    <div class="flex items-center space-x-4 p-4 h-full">
+                        <svg class="shrink-0" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                            <path class="fill-purple-500" fill-opacity=".24" d="M10 0C4.5 0 0 4.5 0 10s4.5 10 10 10 10-4.5 10-10S15.5 0 10 0Z" />
+                            <path class="fill-purple-400" fill-rule="nonzero" d="M13 6.586 14.414 8l-5.747 5.748-3.081-3.081L7 9.252l1.667 1.667z" />
+                        </svg>
+                        <p class="text-sm text-slate-400">
+                            Each session is <strong class="text-slate-300 font-medium">£15 for a full 1-hour class</strong>, offering structured and enjoyable coaching.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card #2 -->
+                <div class="bg-linear-to-tr from-slate-800/50 to-slate-800/10 rounded-3xl border border-slate-800">
+                    <div class="flex items-center space-x-4 p-4 h-full">
+                        <svg class="shrink-0" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                            <path class="fill-purple-500" fill-opacity=".24" d="M10 0C4.5 0 0 4.5 0 10s4.5 10 10 10 10-4.5 10-10S15.5 0 10 0Z" />
+                            <path class="fill-purple-400" fill-rule="nonzero" d="M13 6.586 14.414 8l-5.747 5.748-3.081-3.081L7 9.252l1.667 1.667z" />
+                        </svg>
+                        <p class="text-sm text-slate-400">
+                            Sessions are limited to <strong class="text-slate-300 font-medium">16 kids max per hour</strong> to ensure quality coaching and attention.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card #3 -->
+                <div class="bg-linear-to-tr from-slate-800/50 to-slate-800/10 rounded-3xl border border-slate-800">
+                    <div class="flex items-center space-x-4 p-4 h-full">
+                        <svg class="shrink-0" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                            <path class="fill-purple-500" fill-opacity=".24" d="M10 0C4.5 0 0 4.5 0 10s4.5 10 10 10 10-4.5 10-10S15.5 0 10 0Z" />
+                            <path class="fill-purple-400" fill-rule="nonzero" d="M13 6.586 14.414 8l-5.747 5.748-3.081-3.081L7 9.252l1.667 1.667z" />
+                        </svg>
+                        <p class="text-sm text-slate-400">
+                            Monthly subscription pricing is available and can be <strong class="text-slate-300 font-medium">discussed individually</strong>.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card #4 -->
+                <div class="bg-linear-to-tr from-slate-800/50 to-slate-800/10 rounded-3xl border border-slate-800">
+                    <div class="flex items-center space-x-4 p-4 h-full">
+                        <svg class="shrink-0" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                            <path class="fill-purple-500" fill-opacity=".24" d="M10 0C4.5 0 0 4.5 0 10s4.5 10 10 10 10-4.5 10-10S15.5 0 10 0Z" />
+                            <path class="fill-purple-400" fill-rule="nonzero" d="M13 6.586 14.414 8l-5.747 5.748-3.081-3.081L7 9.252l1.667 1.667z" />
+                        </svg>
+                        <p class="text-sm text-slate-400">
+                            We train at <strong class="text-slate-300 font-medium">Chiswick School</strong>, Burlington Lane, W4 3UN, easy to reach and fully equipped.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card #5 -->
+                <div class="bg-linear-to-tr from-slate-800/50 to-slate-800/10 rounded-3xl border border-slate-800">
+                    <div class="flex items-center space-x-4 p-4 h-full">
+                        <svg class="shrink-0" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                            <path class="fill-purple-500" fill-opacity=".24" d="M10 0C4.5 0 0 4.5 0 10s4.5 10 10 10 10-4.5 10-10S15.5 0 10 0Z" />
+                            <path class="fill-purple-400" fill-rule="nonzero" d="M13 6.586 14.414 8l-5.747 5.748-3.081-3.081L7 9.252l1.667 1.667z" />
+                        </svg>
+                        <p class="text-sm text-slate-400">
+                            Sessions run on <strong class="text-slate-300 font-medium">Monday and Wednesday evenings, </strong>perfect for after-school activity time.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card #6 -->
+                <div class="bg-linear-to-tr from-slate-800/50 to-slate-800/10 rounded-3xl border border-slate-800">
+                    <div class="flex items-center space-x-4 p-4 h-full">
+                        <svg class="shrink-0" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                            <path class="fill-purple-500" fill-opacity=".24" d="M10 0C4.5 0 0 4.5 0 10s4.5 10 10 10 10-4.5 10-10S15.5 0 10 0Z" />
+                            <path class="fill-purple-400" fill-rule="nonzero" d="M13 6.586 14.414 8l-5.747 5.748-3.081-3.081L7 9.252l1.667 1.667z" />
+                        </svg>
+                        <p class="text-sm text-slate-400">
+                            Friendly, structured coaching for kids of all skill levels,  <strong class="text-slate-300 font-medium">fun, safe, and engaging</strong>.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+  <!-- Customers -->
+<section class="relative">
+    <!-- Radial gradient -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none -z-10" aria-hidden="true">
+        <div class="absolute flex items-center justify-center top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 w-1/3 aspect-square">
+            <div class="absolute inset-0 translate-z-0 bg-purple-500 rounded-full blur-[120px] opacity-50"></div>
+        </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="py-12 md:py-20">
+            <!-- Content -->
+            <div class="max-w-3xl mx-auto text-center pb-12 md:pb-20">
+                <h2 class="h2 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">
+                    Hear From Our Players Families
+                </h2>
+                <p class="text-lg text-slate-400">Real stories from real families who train with Play3 Football Academy.</p>
+            </div>
+
+            <!-- Customers Grid -->
+            <div class="grid lg:grid-cols-3 gap-4 sm:gap-6 max-w-xs mx-auto lg:max-w-none">
+
+                <!-- Review Template #01 -->
+                <div class="relative p-5 before:absolute before:inset-0 before:-z-10 before:border before:border-slate-300 before:bg-slate-700 before:opacity-10 before:rounded-xl">
+                    <div class="flex items-center justify-between space-x-2 mb-4">
+                        <div class="flex items-center space-x-4">
+                            <img class="shrink-0 rounded-full" src="./images/customer-01.jpg" width="44" height="44" alt="Customer 01"/>
+                            <div class="grow truncate">
+                                <div class="font-bold text-slate-100 truncate">Sarah Jennings</div>
+                                <a class="text-sm text-slate-500 hover:text-slate-300 font-medium truncate transition-colors">@sarahj</a>
+                            </div>
+                        </div>
+                        <!-- 5 Gold Stars -->
+                        <svg class="shrink-0" xmlns="http://www.w3.org/2000/svg" width="90" height="14">
+                            <path class="fill-yellow-400" d="M7 0 5.006 5.368H0l4.232 3.221L2.195 14 7 10.344 11.82 14 9.768 8.589 14 5.368H8.98zM26 0l-1.994 5.368H19l4.232 3.221L21.195 14 26 10.344 30.82 14l-2.052-5.411L33 5.368h-5.02zM45 0l-1.994 5.368H38l4.232 3.221L40.195 14 45 10.344 49.82 14l-2.052-5.411L52 5.368h-5.02zM64 0l-1.994 5.368H57l4.232 3.221L59.195 14 64 10.344 68.82 14l-2.052-5-411L71 5.368h-5.02zM83 0l-1.994 5.368H76l4.232 3.221L78.195 14 83 10.344 87.82 14l-2.052-5.411L90 5.368h-5.02z"/>
+                        </svg>
+                    </div>
+                    <p class="text-sm text-slate-400">
+                        “My son absolutely loves Play3. The coaches make every session fun while still pushing the kids to improve. His confidence has skyrocketed!”
+                    </p>
+                </div>
+
+                <!-- Review Template #02 -->
+                <div class="relative p-5 before:absolute before:inset-0 before:-z-10 before:border before:border-slate-300 before:bg-slate-700 before:opacity-10 before:rounded-xl">
+                    <div class="flex items-center justify-between space-x-2 mb-4">
+                        <div class="flex items-center space-x-4">
+                            <img class="shrink-0 rounded-full" src="./images/customer-02.jpg" width="44" height="44" alt="Customer 02"/>
+                            <div class="grow truncate">
+                                <div class="font-bold text-slate-100 truncate">Leon Martins</div>
+                                <a class="text-sm text-slate-500 hover:text-slate-300 font-medium">@leonm97</a>
+                            </div>
+                        </div>
+
+                        <!-- Stars -->
+                        <svg class="shrink-0" xmlns="http://www.w3.org/2000/svg" width="90" height="14">
+                            <path class="fill-yellow-400" d="M7 0 5.006 5.368H0l4.232 3.221L2.195 14 7 10.344 11.82 14 9.768 8.589 14 5.368H8.98zM26 0l-1.994 5.368H19l4.232 3.221L21.195 14 26 10.344 30.82 14l-2.052-5.411L33 5.368h-5.02zM45 0l-1.994 5.368H38l4.232 3.221L40.195 14 45 10.344 49.82 14l-2.052-5.411L52 5.368h-5.02zM64 0l-1.994 5.368H57l4.232 3.221L59.195 14 64 10.344 68.82 14l-2.052-5-411L71 5.368h-5.02zM83 0l-1.994 5.368H76l4.232 3.221L78.195 14 83 10.344 87.82 14l-2.052-5.411L90 5.368h-5.02z"/>
+                        </svg>
+                    </div>
+                    <p class="text-sm text-slate-400">
+                        “Play3 brings such positive energy. My daughter leaves every session buzzing,  fast-paced drills, great friends, brilliant atmosphere.”
+                    </p>
+                </div>
+
+                <!-- Review Template #03 -->
+                <div class="relative p-5 before:absolute before:inset-0 before:-z-10 before:border before:border-slate-300 before:bg-slate-700 before:opacity-10 before:rounded-xl">
+                    <div class="flex items-center justify-between space-x-2 mb-4">
+                        <div class="flex items-center space-x-4">
+                            <img class="shrink-0 rounded-full" src="./images/customer-03.jpg" width="44" height="44" alt="Customer 03"/>
+                            <div class="grow truncate">
+                                <div class="font-bold text-slate-100 truncate">Priya Singh</div>
+                                <a class="text-sm text-slate-500 hover:text-slate-300 font-medium">@priyasingh</a>
+                            </div>
+                        </div>
+
+                        <!-- Stars -->
+                        <svg class="shrink-0" xmlns="http://www.w3.org/2000/svg" width="90" height="14">
+                            <path class="fill-yellow-400" d="M7 0 5.006 5.368H0l4.232 3.221L2.195 14 7 10.344 11.82 14 9.768 8.589 14 5.368H8.98zM26 0l-1.994 5.368H19l4.232 3.221L21.195 14 26 10.344 30.82 14l-2.052-5.411L33 5.368h-5.02zM45 0l-1.994 5.368H38l4.232 3.221L40.195 14 45 10.344 49.82 14l-2.052-5.411L52 5.368h-5.02zM64 0l-1.994 5.368H57l4.232 3.221L59.195 14 64 10.344 68.82 14l-2.052-5-411L71 5.368h-5.02zM83 0l-1.994 5.368H76l4.232 3.221L78.195 14 83 10.344 87.82 14l-2.052-5.411L90 5.368h-5.02z"/>
+                        </svg>
+                    </div>
+                    <p class="text-sm text-slate-400">
+                        “The coaches genuinely care. My kid was shy at first, now he sprints onto the pitch. Play3 feels like a second family.”
+                    </p>
+                </div>
+
+                <!-- Review Template #04 -->
+                <div class="relative p-5 before:absolute before:inset-0 before:-z-10 before:border before:border-slate-300 before:bg-slate-700 before:opacity-10 before:rounded-xl">
+                    <div class="flex items-center justify-between space-x-2 mb-4">
+                        <div class="flex items-center space-x-4">
+                            <img class="shrink-0 rounded-full" src="./images/customer-04.jpg" width="44" height="44" alt="Customer 04"/>
+                            <div class="grow truncate">
+                                <div class="font-bold text-slate-100 truncate">James Walker</div>
+                                <a class="text-sm text-slate-500 hover:text-slate-300 font-medium">@walkerj</a>
+                            </div>
+                        </div>
+
+                        <svg class="shrink-0" xmlns="http://www.w3.org/2000/svg" width="90" height="14">
+                            <path class="fill-yellow-400" d="M7 0 5.006 5.368H0l4.232 3.221L2.195 14 7 10.344 11.82 14 9.768 8.589 14 5.368H8.98zM26 0l-1.994 5.368H19l4.232 3.221L21.195 14 26 10.344 30.82 14l-2.052-5.411L33 5.368h-5.02zM45 0l-1.994 5.368H38l4.232 3.221L40.195 14 45 10.344 49.82 14l-2.052-5.411L52 5.368h-5.02zM64 0l-1.994 5.368H57l4.232 3.221L59.195 14 64 10.344 68.82 14l-2.052-5-411L71 5.368h-5.02zM83 0l-1.994 5.368H76l4.232 3.221L78.195 14 83 10.344 87.82 14l-2.052-5.411L90 5.368h-5.02z"/>
+                        </svg>
+                    </div>
+                    <p class="text-sm text-slate-400">
+                        “My twins can’t stop practicing at home now. Play3 makes learning fun, energetic and very motivational.”
+                    </p>
+                </div>
+
+                <!-- Review Template #05 -->
+                <div class="relative p-5 before:absolute before:inset-0 before:-z-10 before:border before:border-slate-300 before:bg-slate-700 before:opacity-10 before:rounded-xl">
+                    <div class="flex items-center justify-between space-x-2 mb-4">
+                        <div class="flex items-center space-x-4">
+                            <img class="shrink-0 rounded-full" src="./images/customer-05.jpg" width="44" height="44" alt="Customer 05"/>
+                            <div class="grow truncate">
+                                <div class="font-bold text-slate-100 truncate">Elena Petrova</div>
+                                <a class="text-sm text-slate-500 hover:text-slate-300 font-medium">@elena-p</a>
+                            </div>
+                        </div>
+
+                        <svg class="shrink-0" xmlns="http://www.w3.org/2000/svg" width="90" height="14">
+                            <path class="fill-yellow-400" d="M7 0 5.006 5.368H0l4.232 3.221L2.195 14 7 10.344 11.82 14 9.768 8.589 14 5.368H8.98zM26 0l-1.994 5.368H19l4.232 3.221L21.195 14 26 10.344 30.82 14l-2.052-5.411L33 5.368h-5.02zM45 0l-1.994 5.368H38l4.232 3.221L40.195 14 45 10.344 49.82 14l-2.052-5.411L52 5.368h-5.02zM64 0l-1.994 5.368H57l4.232 3.221L59.195 14 64 10.344 68.82 14l-2.052-5-411Л71 5.368h-5.02zM83 0l-1.994 5.368Н76l4.232 3.221L78.195 14 83 10.344 87.82 14l-2.052-5.411L90 5.368h-5.02z"/>
+                        </svg>
+                    </div>
+                    <p class="text-sm text-slate-400">
+                        “Such a welcoming coaching team. My daughter feels supported and challenged every single week.”
+                    </p>
+                </div>
+
+                <!-- Review Template #06 -->
+                <div class="relative p-5 before:absolute before:inset-0 before:-z-10 before:border before:border-slate-300 before:bg-slate-700 before:opacity-10 before:rounded-xl">
+                    <div class="flex items-center justify-between space-x-2 mb-4">
+                        <div class="flex items-center space-x-4">
+                            <img class="shrink-0 rounded-full" src="./images/customer-06.jpg" width="44" height="44" alt="Customer 06"/>
+                            <div class="grow truncate">
+                                <div class="font-bold text-slate-100 truncate">Tom Hargreeves</div>
+                                <a class="text-sm text-slate-500 hover:text-slate-300 font-medium">@tom-hg</a>
+                            </div>
+                        </div>
+
+                        <svg class="shrink-0" xmlns="http://www.w3.org/2000/svg" width="90" height="14">
+                            <path class="fill-yellow-400" d="M7 0 5.006 5.368H0l4.232 3.221L2.195 14 7 10.344 11.82 14l9.768 8.589L14 5.368H8.98zM26 0l-1.994 5.368Н19l4.232 3.221L21.195 14 26 10.344 30.82 14l-2.052-5.411L33 5.368h-5.02zМ45 0l-1.994 5.368Н38l4.232 3.221L40.195 14 45 10.344 49.82 14l-2.052-5.411L52 5.368h-5.02zМ64 0l-1.994 5.368Н57l4.232 3.221L59.195 14 64 10.344 68.82 14l-2.052-5-411L71 5.368h-5.02zМ83 0l-1.994 5.368Н76l4.232 3.221L78.195 14 83 10.344 87.82 14l-2.052-5.411L90 5.368h-5.02z"/>
+                        </svg>
+                    </div>
+                    <p class="text-sm text-slate-400">
+                        “If you're looking for passion, energy and great coaching, Play3 is the place. My son's footwork has improved massively.”
+                    </p>
+                </div>
+
+                <!-- Review Template #07 -->
+                <div class="relative p-5 before:absolute before:inset-0 before:-z-10 before:border before:border-slate-300 before:bg-slate-700 before:opacity-10 before:rounded-xl">
+                    <div class="flex items-center justify-between space-x-2 mb-4">
+                        <div class="flex items-center space-x-4">
+                            <img class="shrink-0 rounded-full" src="./images/customer-07.jpg" width="44" height="44" alt="Customer 07"/>
+                            <div class="grow truncate">
+                                <div class="font-bold text-slate-100 truncate">Harvey Mills</div>
+                                <a class="text-sm text-slate-500 hover:text-slate-300 font-medium">@harveym</a>
+                            </div>
+                        </div>
+
+                        <svg class="shrink-0" xmlns="http://www.w3.org/2000/svg" width="90" height="14">
+                            <path class="fill-yellow-400" d="M7 0 5.006 5.368Н0l4.232 3.221L2.195 14 7 10.344 11.82 14l9.768 8.589L14 5.368H8.98zМ26 0l-1.994 5.368Н19l4.232 3.221L21.195 14 26 10.344 30.82 14l-2.052-5.411L33 5.368h-5.02zМ45 0l-1.994 5.368Н38l4.232 3.221L40.195 14 45 10.344 49.82 14l-2.052-5.411L52 5.368h-5.02zМ64 0l-1.994 5.368Н57l4.232 3.221L59.195 14 64 10.344 68.82 14l-2.052-5-411L71 5.368h-5.02zМ83 0l-1.994 5.368Н76l4.232 3.221L78.195 14 83 10.344 87.82 14l-2.052-5.411L90 5.368h-5.02z"/>
+                        </svg>
+                    </div>
+                    <p class="text-sm text-slate-400">
+                        “Play3 changed how my daughter sees football,  she’s now practising tricks every day. She’s having genuine fun while developing real skill.”
+                    </p>
+                </div>
+
+                <!-- Review Template #08 -->
+                <div class="relative p-5 before:absolute before:inset-0 before:-z-10 before:border before:border-slate-300 before:bg-slate-700 before:opacity-10 before:rounded-xl">
+                    <div class="flex items-center justify-between space-x-2 mb-4">
+                        <div class="flex items-center space-x-4">
+                            <img class="shrink-0 rounded-full" src="./images/customer-08.jpg" width="44" height="44" alt="Customer 08"/>
+                            <div class="grow truncate">
+                                <div class="font-bold text-slate-100 truncate">Amira Khalid</div>
+                                <a class="text-sm text-slate-500 hover:text-slate-300">@amira-k</a>
+                            </div>
+                        </div>
+
+                        <svg class="shrink-0" xmlns="http://www.w3.org/2000/svg" width="90" height="14">
+                            <path class="fill-yellow-400" d="M7 0 5.006 5.368Н0l4.232 3.221L2.195 14 7 10.344 11.82 14l9.768 8.589L14 5.368H8.98zМ26 0l-1.994 5.368Н19l4.232 3.221L21.195 14 26 10.344 30.82 14l-2.052-5.411L33 5.368h-5.02zМ45 0l-1.994 5.368Н38l4.232 3.221L40.195 14 45 10.344 49.82 14l-2.052-5.411L52 5.368h-5.02zМ64 0l-1.994 5.368Н57l4.232 3.221L59.195 14 64 10.344 68.82 14l-2.052-5-411L71 5.368h-5.02zМ83 0l-1.994 5.368Н76l4.232 3.221L78.195 14 83 10.344 87.82 14l-2.052-5.411L90 5.368h-5.02z"/>
+                        </svg>
+                    </div>
+                    <p class="text-sm text-slate-400">
+                        “A brilliant environment for kids to grow. Skill development, teamwork, confidence,  Play3 covers it all.”
+                    </p>
+                </div>
+
+                <!-- Review Template #09 -->
+                <div class="relative p-5 before:absolute before:inset-0 before:-z-10 before:border before:border-slate-300 before:bg-slate-700 before:opacity-10 before:rounded-xl">
+                    <div class="flex items-center justify-between space-x-2 mb-4">
+                        <div class="flex items-center space-x-4">
+                            <img class="shrink-0 rounded-full" src="./images/customer-09.jpg" width="44" height="44" alt="Customer 09"/>
+                            <div class="grow truncate">
+                                <div class="font-bold text-slate-100 truncate">Oscar Mills</div>
+                                <a class="text-sm text-slate-500 hover:text-slate-300">@oscar-m</a>
+                            </div>
+                        </div>
+
+                        <svg class="shrink-0" xmlns="http://www.w3.org/2000/svg" width="90" height="14">
+                            <path class="fill-yellow-400" d="M7 0 5.006 5.368Н0l4.232 3.221L2.195 14 7 10.344 11.82 14l9.768 8.589L14 5.368H8.98zМ26 0l-1.994 5.368Н19l4.232 3.221L21.195 14 26 10.344 30.82 14l-2.052-5.411L33 5.368h-5.02zМ45 0l-1.994 5.368Н38l4.232 3.221L40.195 14 45 10.344 49.82 14l-2.052-5.411_L52 5.368h-5.02zМ64 0l-1.994 5.368Н57l4.232 3.221L59.195 14 64 10.344 68.82 14l-2.052-5-411Л71 5.368h-5.02zМ83 0l-1.994 5.368Н76l4.232 3.221L78.195 14 83 10.344 87.82 14l-2.052-5.411L90 5.368h-5.02z"/>
+                        </svg>
+                    </div>
+                    <p class="text-sm text-slate-400">
+                        “From the first session we were impressed. Professional, friendly and full of energy,  Play3 brings the best out of every child.”
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+   <!-- FAQs -->
+<section class="relative">
+    <!-- Background image for FAQ section -->
+<div class="absolute inset-0 -z-20 overflow-hidden opacity-20">
+    <img 
+        src="./images/dariospeech.jpg" 
+        class="w-full h-full object-cover" 
+        alt="FAQ Background"
+    />
+</div>
+
+
+    <!-- Blurred shape -->
+    <div class="absolute top-0 -translate-y-1/3 left-1/2 -translate-x-1/2 ml-24 blur-2xl opacity-50 pointer-events-none -z-10" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="434" height="427">
+            <defs>
+                <linearGradient id="bs3-a" x1="19.609%" x2="50%" y1="14.544%" y2="100%">
+                    <stop offset="0%" stop-color="#6366F1" />
+                    <stop offset="100%" stop-color="#6366F1" stop-opacity="0" />
+                </linearGradient>
+            </defs>
+            <path fill="url(#bs3-a)" fill-rule="evenodd" d="m410 0 461 369-284 58z"
+                transform="matrix(1 0 0 -1 -410 427)" />
+        </svg>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div
+            class="py-12 md:py-20 border-t [border-image:linear-gradient(to_right,transparent,var(--color-slate-800),transparent)1]">
+
+            <!-- Section header -->
+            <div class="max-w-3xl mx-auto text-center pb-12 md:pb-20">
+                <div>
+                    <div
+                        class="inline-flex font-medium bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 pb-3">
+                        Play3 Football • FAQs
+                    </div>
+                </div>
+                <h2
+                    class="h2 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">
+                    Everything you need before you play
+                </h2>
+            </div>
+
+            <!-- Columns -->
+            <div class="md:flex md:space-x-12 space-y-8 md:space-y-0">
+
+                <!-- Column -->
+                <div class="w-full md:w-1/2 space-y-8">
+
+                    <!-- Item -->
+                    <div class="space-y-2">
+    <h4 class="font-semibold">What is the Play3 environment like?</h4>
+    <p class="text-slate-400">
+        Every young baller at Play3 inspires one another through fun, passion and full commitment. 
+        We promote positive energy, awareness and confidence on and off the pitch, always leading with love, never fear. 
+        Play3 is more than football; it’s a family where every player feels supported, encouraged and empowered.
+    </p>
+</div>
+
+
+                    <!-- Item -->
+                    <div class="space-y-2">
+                        <h4 class="font-semibold">How many players are allowed?</h4>
+                        <p class="text-slate-400">We cap each hour at 16 players to guarantee fast gameplay, quick
+                            rotations and a high number of touches per player.</p>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="space-y-2">
+                        <h4 class="font-semibold">Do you offer monthly subscriptions?</h4>
+                        <p class="text-slate-400">Yes, monthly passes are available. Pricing depends on how many
+                            sessions you want per week. Speak to us directly to build your subscription.</p>
+                    </div>
+
+                </div>
+
+                <!-- Column -->
+                <div class="w-full md:w-1/2 space-y-8">
+
+                    <div class="space-y-2">
+    <h4 class="font-semibold">Is there parking available?</h4>
+    <p class="text-slate-400">
+        Yes, there is on-site parking directly at the complex, making drop-offs and pick-ups easy and safe for parents.
+        The car park is monitored and conveniently close to the pitch area.
+    </p>
+</div>
+
+
+                    <!-- Item -->
+                    <div class="space-y-2">
+                        <h4 class="font-semibold">Where do sessions take place?</h4>
+                        <p class="text-slate-400">We play at Chiswick School, Burlington Lane, W4 3UN, on high-quality,
+                            well-maintained pitches perfect for fast small-sided football.</p>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="space-y-2">
+                        <h4 class="font-semibold">When are sessions available?</h4>
+                        <p class="text-slate-400">Sessions run every Monday and Wednesday evening. Additional days may be
+                            added depending on demand.</p>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="space-y-2">
+                        <h4 class="font-semibold">What age/skill level is Play3 for?</h4>
+                        <p class="text-slate-400">Play3 is designed for every young footballer of any skill, just be open and your 3quency will be raised. All skill levels are welcome.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="relative px-8 py-12 md:py-20 rounded-[3rem] overflow-hidden">
+
+            <!-- Radial gradient -->
+            <div class="absolute flex items-center justify-center top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/3 aspect-square"
+                aria-hidden="true">
+                <div class="absolute inset-0 translate-z-0 bg-purple-500 rounded-full blur-[120px] opacity-70"></div>
+                <div class="absolute w-1/4 h-1/4 translate-z-0 bg-purple-400 rounded-full blur-[40px]"></div>
+            </div>
+
+            <!-- Blurred shape -->
+            <div class="absolute bottom-0 translate-y-1/2 left-0 blur-2xl opacity-50 pointer-events-none -z-10"
+                aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="434" height="427">
+                    <defs>
+                        <linearGradient id="bs5-a" x1="19.609%" x2="50%" y1="14.544%" y2="100%">
+                            <stop offset="0%" stop-color="#A855F7" />
+                            <stop offset="100%" stop-color="#6366F1" stop-opacity="0" />
+                        </linearGradient>
+                    </defs>
+                    <path fill="url(#bs5-a)" fill-rule="evenodd" d="m0 0 461 369-284 58z"
+                        transform="matrix(1 0 0 -1 0 427)" />
+                </svg>
+            </div>
+
+            <!-- Content -->
+            <div class="max-w-3xl mx-auto text-center">
+                <div>
+                    <div
+                        class="inline-flex font-medium bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 pb-3">
+                        Join the movement
+                    </div>
+                </div>
+                <h2
+                    class="h2 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">
+                    Ready to Play3?
+                </h2>
+                <p class="text-lg text-slate-400 mb-8">
+                    Fast football, loads of touches, competitive energy, no go, Play3 is the perfect place to develop,
+                    have fun and improve your game every week.
+                </p>
+                <div>
+                    <a class="btn text-slate-900 bg-linear-to-r from-white/80 via-white to-white/80 hover:bg-white transition duration-150 ease-in-out group"
+                        href="booking.html">
+                        View Sessions & Pricing <span
+                            class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        </main>
+
+        <!-- Site footer -->
+     <!-- Site footer -->
+<footer>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+        <!-- Blocks -->
+        <div class="grid sm:grid-cols-12 gap-8 py-8 md:py-12">
+
+            <!-- 1st block -->
+            <div class="sm:col-span-12 lg:col-span-4 order-1 lg:order-none">
+                <div class="h-full flex flex-col sm:flex-row lg:flex-col justify-between">
+                    <div class="mb-4 sm:mb-0">
+                        <div class="mb-4">
+                            <!-- Logo -->
+                            <a class="inline-flex" href="index.html" aria-label="Play3">
+                                <img src="./images/logo.svg" width="38" height="38" alt="Play3 Logo">
+                            </a>
+                        </div>
+                        <div class="text-sm text-slate-300">&copy; 2025 Play3 Football <span class="text-slate-500">-</span> All rights reserved.</div>
+                    </div>
+
+                    <!-- Social links (football brand specific) -->
+                    <ul class="flex">
+
+                        <!-- Instagram -->
+                        <li>
+                            <a class="flex justify-center items-center text-purple-500 hover:text-purple-400 transition duration-150 ease-in-out" 
+                               href="https://www.instagram.com/play3football" target="_blank" aria-label="Instagram">
+                                <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                    <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 
+                                            2.243 5 5 5h10c2.757 0 5-2.243 
+                                            5-5V7c0-2.757-2.243-5-5-5H7zm10 
+                                            2c1.654 0 3 1.346 3 3v10c0 
+                                            1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 
+                                            1.346-3 3-3h10zm-5 3a5 5 0 100 10 
+                                            5 5 0 000-10zm0 2a3 3 0 110 
+                                            6 3 3 0 010-6zm4.5-.75a1.25 1.25 0 110 
+                                            2.5 1.25 1.25 0 010-2.5z"/>
+                                </svg>
+                            </a>
+                        </li>
+
+                        <!-- TikTok -->
+                        <li class="ml-2">
+                            <a class="flex justify-center items-center text-purple-500 hover:text-purple-400 transition duration-150 ease-in-out"
+                               href="https://www.tiktok.com/@play3football" target="_blank" aria-label="TikTok">
+                                <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                    <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 
+                                             10-10 10S2 17.514 2 12 6.486 
+                                             2 12 2zm1 4.5v5.086a3.5 3.5 
+                                             0 11-2-3.182V6.5h2z"/>
+                                </svg>
+                            </a>
+                        </li>
+
+                        <!-- YouTube -->
+                        <li class="ml-2">
+                            <a class="flex justify-center items-center text-purple-500 hover:text-purple-400 transition duration-150 ease-in-out"
+                               href="https://www.youtube.com/@play3football" target="_blank" aria-label="YouTube">
+                                <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                    <path d="M21.8 8s-.2-1.5-.8-2.2c-.7-.9-1.5-.9-1.9-1C15.9 
+                                             4.5 12 4.5 12 4.5h-.1s-3.9 
+                                             0-7.1.3c-.4.1-1.2.1-1.9 1C2.4 
+                                             6.5 2.2 8 2.2 8S2 9.7 2 
+                                             11.4v1.3c0 1.7.2 3.4.2 3.4s.2 
+                                             1.5.8 2.2c.7.9 1.7.9 2.2 
+                                             1 1.6.2 6.8.3 6.8.3s3.9 
+                                             0 7.1-.3c.4-.1 1.2-.1 1.9-1 
+                                             .6-.7.8-2.2.8-2.2s.2-1.7.2-3.4v-1.3c0-1.7-.2-3.4-.2-3.4zM10 
+                                             14.7V9.3l5.2 2.7L10 14.7z"/>
+                                </svg>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 2nd block -->
+            <div class="sm:col-span-6 md:col-span-3 lg:col-span-2">
+                <h6 class="text-sm text-slate-50 font-medium mb-2">Play3</h6>
+                <ul class="text-sm space-y-2">
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#training">Training</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#coaches">Our Coaches</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#sessions">Sessions</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#philosophy">Philosophy</a></li>
+                </ul>
+            </div>
+
+            <!-- 3rd block -->
+            <div class="sm:col-span-6 md:col-span-3 lg:col-span-2">
+                <h6 class="text-sm text-slate-50 font-medium mb-2">Company</h6>
+                <ul class="text-sm space-y-2">
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#about">About Us</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#team">Meet the Founders</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#contact">Contact</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#locations">Locations</a></li>
+                </ul>
+            </div>
+
+            <!-- 4th block -->
+            <div class="sm:col-span-6 md:col-span-3 lg:col-span-2">
+                <h6 class="text-sm text-slate-50 font-medium mb-2">Resources</h6>
+                <ul class="text-sm space-y-2">
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#faq">FAQ</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#policies">Policies</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#safeguarding">Safeguarding</a></li>
+                </ul>
+            </div>
+
+            <!-- 5th block -->
+            <div class="sm:col-span-6 md:col-span-3 lg:col-span-2">
+                <h6 class="text-sm text-slate-50 font-medium mb-2">Legal</h6>
+                <ul class="text-sm space-y-2">
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#terms">Terms & Conditions</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#privacy">Privacy Policy</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#liability">Liability Waiver</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#insurance">Insurance</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+</footer>
+
+    </div>
+
+    <script src="./js/vendors/alpinejs.min.js" defer></script>
+    <script src="./js/vendors/aos.js"></script>
+    <script src="./js/vendors/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>

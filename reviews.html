@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8">
+    <title>Stellar HTML Demo - Customers</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="./css/vendors/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/vendors/swiper-bundle.min.css" />
+    <link href="./style.css" rel="stylesheet">
+</head>
+
+<body class="font-inter antialiased bg-slate-900 text-slate-100 tracking-tight">
+
+    <!-- Page wrapper -->
+    <div class="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
+
+        <!-- Site header -->
+        <header class="absolute w-full z-30">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                <div class="flex items-center justify-between h-16 md:h-20">
+
+                    <!-- Site branding -->
+                    <div class="flex-1">
+                        <!-- Logo -->
+                        <a class="inline-flex" href="index.html" aria-label="Cruip">
+                            <img class="max-w-none" src="./images/logo.svg" width="38" height="38" alt="Stellar">
+                        </a>
+                    </div>
+
+                    <!-- Desktop navigation -->
+                    <nav class="hidden md:flex md:grow">
+
+                        <!-- Desktop menu links -->
+                       <!-- Desktop menu links -->
+                        <ul class="flex grow justify-center flex-wrap items-center">
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="about.html">About</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="booking.html">Booking</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="pricing.html">Pricing</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="reviews.html">Reviews</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="questionnaire.html">Questionnaire</a>
+                            </li>
+                        </ul>
+
+                    </nav>
+
+                    <!-- Desktop sign in links -->
+                                     <!-- Desktop booking button -->
+<ul class="flex-1 flex justify-end items-center">
+    <li>
+        <a href="https://tidycal.com/helloecobubba/play3-training-session" target="_blank"
+           class="btn-sm text-slate-300 hover:text-white transition duration-150 ease-in-out group
+                  bg-gradient-to-r from-purple-500 to-purple-400 relative
+                  before:absolute before:inset-0 before:bg-slate-800/70 before:rounded-full before:pointer-events-none">
+            <span class="relative inline-flex items-center">
+                Book a Session
+                <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">
+                    -&gt;
+                </span>
+            </span>
+        </a>
+    </li>
+</ul>
+
+                    <!-- Mobile menu -->
+                    <div class="md:hidden flex items-center ml-4" x-data="{ expanded: false }">
+                    
+                        <!-- Hamburger button -->
+                        <button class="group inline-flex w-8 h-8 text-slate-300 hover:text-white text-center items-center justify-center transition" aria-controls="mobile-nav" :aria-expanded="expanded" @click.stop="expanded = !expanded">
+                            <span class="sr-only">Menu</span>
+                            <svg class="w-4 h-4 fill-current pointer-events-none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <rect class="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] -translate-y-[5px] group-aria-expanded:rotate-[315deg] group-aria-expanded:translate-y-0" y="7" width="16" height="2" rx="1"></rect>
+                                <rect class="origin-center group-aria-expanded:rotate-45 transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.8)]" y="7" width="16" height="2" rx="1"></rect>
+                                <rect class="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] translate-y-[5px] group-aria-expanded:rotate-[135deg] group-aria-expanded:translate-y-0" y="7" width="16" height="2" rx="1"></rect>
+                            </svg>
+                        </button>   
+                    
+                        <!-- Mobile navigation -->
+                        <nav id="mobile-nav" class="absolute top-full z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out" x-ref="mobileNav" :style="expanded ? 'max-height: ' + $refs.mobileNav.scrollHeight + 'px; opacity: 1' : 'max-height: 0; opacity: .8'" @click.outside="expanded = false" @keydown.escape.window="expanded = false" x-cloak>
+                            <ul class="border border-transparent [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] rounded-lg px-4 py-1.5">
+                                                     <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="about.html">About</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="booking.html">Booking</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="pricing.html">Pricing</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="reviews.html">Reviews</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="questionnaire.html">Questionnaire</a>
+                            </li>
+                            </ul>
+                        </nav>
+                    
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <!-- Page content -->
+        <main class="grow">
+
+            <!-- Content -->
+            <section class="relative">
+
+                <!-- Radial gradient -->
+                <div class="absolute flex items-center justify-center top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-[800px] aspect-square" aria-hidden="true">
+                    <div class="absolute inset-0 translate-z-0 bg-purple-500 rounded-full blur-[120px] opacity-30"></div>
+                    <div class="absolute w-64 h-64 translate-z-0 bg-purple-400 rounded-full blur-[80px] opacity-70"></div>
+                </div>
+
+                <!-- Particles animation -->
+                <div class="absolute inset-0 h-96 -z-10" aria-hidden="true">
+                    <canvas data-particle-animation data-particle-quantity="15"></canvas>
+                </div>
+
+                <!-- Illustration -->
+                <div class="md:block absolute left-1/2 -translate-x-1/2 -mt-16 blur-2xl opacity-90 pointer-events-none -z-10" aria-hidden="true">
+                    <img src="./images/page-illustration.svg" class="max-w-none" width="1440" height="427" alt="Page Illustration">
+                </div>
+
+                <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                    <div class="pt-32 md:pt-40">
+
+                        <!-- Section header -->
+                        <div class="text-center pb-12 md:pb-20">
+                            <div class="inline-flex font-medium bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 pb-3">Trusted</div>
+                            <h1 class="h1 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">Play3 Reviews</h1>
+                            <div class="max-w-3xl mx-auto">
+                                <p class="text-lg text-slate-400">Mission to make the Youth best versions of themselves.</p>
+                            </div>
+                        </div>
+
+                        <!-- Customers grid -->
+                       <!-- Customers grid -->
+<div class="max-w-[352px] mx-auto sm:max-w-[728px] lg:max-w-none pb-12 md:pb-20">
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 group [&_*:nth-child(n+5):not(:nth-child(n+12))]:order-1 [&_*:nth-child(n+10):not(:nth-child(n+11))]:order-2!" data-highlighter>
+
+        <!-- Item #01 -->
+        <div>
+            <a href="customer.html">
+                <div class="relative h-full bg-slate-800 rounded-3xl p-px -m-px before:absolute before:w-64 before:h-64 before:-left-32 before:-top-32 before:bg-indigo-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] hover:before:opacity-30 before:z-30 before:blur-[64px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),var(--color-slate-400),transparent)] group-hover:after:opacity-100 after:z-10 overflow-hidden">
+                    <div class="relative h-full bg-slate-900 rounded-[inherit] z-20 overflow-hidden">
+                        <div class="absolute inset-0 -z-10" aria-hidden="true">
+                            <canvas data-particle-animation data-particle-quantity="3"></canvas>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <img class="w-full h-full aspect-video object-cover" src="./images/customer-bg-01.png" />
+                            <div class="absolute text-white font-bold text-3xl tracking-wide">3QUENCY</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Item #02 -->
+        <div>
+            <a href="customer.html">
+                <div class="relative h-full bg-slate-800 rounded-3xl p-px -m-px before:absolute before:w-64 before:h-64 before:-left-32 before:-top-32 before:bg-indigo-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] hover:before:opacity-30 before:z-30 before:blur-[64px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),var(--color-slate-400),transparent)] group-hover:after:opacity-100 after:z-10 overflow-hidden">
+                    <div class="relative h-full bg-slate-900 rounded-[inherit] z-20 overflow-hidden">
+                        <div class="absolute inset-0 -z-10">
+                            <canvas data-particle-animation data-particle-quantity="3"></canvas>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <img class="w-full h-full aspect-video object-cover" src="./images/customer-bg-02.png" />
+                            <div class="absolute text-white font-bold text-3xl tracking-wide">TOGETHER</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Item #03 -->
+        <div>
+            <a href="customer.html">
+                <div class="relative h-full bg-slate-800 rounded-3xl p-px -m-px before:absolute before:w-64 before:h-64 before:-left-32 before:-top-32 before:bg-indigo-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] hover:before:opacity-30 before:z-30 before:blur-[64px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),var(--color-slate-400),transparent)] group-hover:after:opacity-100 after:z-10 overflow-hidden">
+                    <div class="relative h-full bg-slate-900 rounded-[inherit] z-20 overflow-hidden">
+                        <div class="absolute inset-0 -z-10">
+                            <canvas data-particle-animation data-particle-quantity="3"></canvas>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <img class="w-full h-full aspect-video object-cover" src="./images/customer-bg-03.png" />
+                            <div class="absolute text-white font-bold text-3xl tracking-wide">NO EGO</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Item #04 -->
+        <div>
+            <a href="customer.html">
+                <div class="relative h-full bg-slate-800 rounded-3xl p-px -m-px before:absolute before:w-64 before:h-64 before:-left-32 before:-top-32 before:bg-indigo-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] hover:before:opacity-30 before:z-30 before:blur-[64px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),var(--color-slate-400),transparent)] group-hover:after:opacity-100 after:z-10 overflow-hidden">
+                    <div class="relative h-full bg-slate-900 rounded-[inherit] z-20 overflow-hidden">
+                        <div class="absolute inset-0 -z-10">
+                            <canvas data-particle-animation data-particle-quantity="3"></canvas>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <img class="w-full h-full aspect-video object-cover" src="./images/customer-bg-04.png" />
+                            <div class="absolute text-white font-bold text-3xl tracking-wide">FOCUS</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Item #05 -->
+        <div>
+            <a href="customer.html">
+                <div class="relative h-full bg-slate-800 rounded-3xl p-px -m-px before:absolute before:w-64 before:h-64 before:-left-32 before:-top-32 before:bg-indigo-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] hover:before:opacity-30 before:z-30 before:blur-[64px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),var(--color-slate-400),transparent)] group-hover:after:opacity-100 after:z-10 overflow-hidden">
+                    <div class="relative h-full bg-slate-900 rounded-[inherit] z-20 overflow-hidden">
+                        <div class="absolute inset-0 -z-10">
+                            <canvas data-particle-animation data-particle-quantity="3"></canvas>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <img class="w-full h-full aspect-video object-cover" src="./images/customer-bg-05.png" />
+                            <div class="absolute text-white font-bold text-3xl tracking-wide">ENERGY</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Item #06 -->
+        <div>
+            <a href="customer.html">
+                <div class="relative h-full bg-slate-800 rounded-3xl p-px -m-px before:absolute before:w-64 before:h-64 before:-left-32 before:-top-32 before:bg-indigo-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] hover:before:opacity-30 before:z-30 before:blur-[64px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),var(--color-slate-400),transparent)] group-hover:after:opacity-100 after:z-10 overflow-hidden">
+                    <div class="relative h-full bg-slate-900 rounded-[inherit] z-20 overflow-hidden">
+                        <div class="absolute inset-0 -z-10">
+                            <canvas data-particle-animation data-particle-quantity="3"></canvas>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <img class="w-full h-full aspect-video object-cover" src="./images/customer-bg-06.png" />
+                            <div class="absolute text-white font-bold text-3xl tracking-wide">UNITY</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Item #07 -->
+        <div>
+            <a href="customer.html">
+                <div class="relative h-full bg-slate-800 rounded-3xl p-px -m-px before:absolute before:w-64 before:h-64 before:-left-32 before:-top-32 before:bg-indigo-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] hover:before:opacity-30 before:z-30 before:blur-[64px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),var(--color-slate-400),transparent)] group-hover:after:opacity-100 after:z-10 overflow-hidden">
+                    <div class="relative h-full bg-slate-900 rounded-[inherit] z-20 overflow-hidden">
+                        <div class="absolute inset-0 -z-10">
+                            <canvas data-particle-animation data-particle-quantity="3"></canvas>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <img class="w-full h-full aspect-video object-cover" src="./images/customer-bg-07.png" />
+                            <div class="absolute text-white font-bold text-3xl tracking-wide">FLOW</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Item #08 -->
+        <div>
+            <a href="customer.html">
+                <div class="relative h-full bg-slate-800 rounded-3xl p-px -m-px before:absolute before:w-64 before:h-64 before:-left-32 before:-top-32 before:bg-indigo-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] hover:before:opacity-30 before:z-30 before:blur-[64px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),var(--color-slate-400),transparent)] group-hover:after:opacity-100 after:z-10 overflow-hidden">
+                    <div class="relative h-full bg-slate-900 rounded-[inherit] z-20 overflow-hidden">
+                        <div class="absolute inset-0 -z-10">
+                            <canvas data-particle-animation data-particle-quantity="3"></canvas>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <img class="w-full h-full aspect-video object-cover" src="./images/customer-bg-08.png" />
+                            <div class="absolute text-white font-bold text-3xl tracking-wide">VISION</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Item #09 -->
+        <div>
+            <a href="customer.html">
+                <div class="relative h-full bg-slate-800 rounded-3xl p-px -m-px before:absolute before:w-64 before:h-64 before:-left-32 before:-top-32 before:bg-indigo-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] hover:before:opacity-30 before:z-30 before:blur-[64px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),var(--color-slate-400),transparent)] group-hover:after:opacity-100 after:z-10 overflow-hidden">
+                    <div class="relative h-full bg-slate-900 rounded-[inherit] z-20 overflow-hidden">
+                        <div class="absolute inset-0 -z-10">
+                            <canvas data-particle-animation data-particle-quantity="3"></canvas>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <img class="w-full h-full aspect-video object-cover" src="./images/customer-bg-09.png" />
+                            <div class="absolute text-white font-bold text-3xl tracking-wide">CREATE</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+            </section>
+
+    <section>    
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="pt-12 md:pt-20">
+
+            <!-- Section header -->
+            <div class="max-w-3xl mx-auto text-center pb-12 md:pb-20">
+                <div>
+                    <div class="inline-flex font-medium bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 pb-3">Parents Love Play3</div>
+                </div>
+                <h2 class="h2 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">5-Star Reviews</h2>
+                <p class="text-lg text-slate-400">See why families trust Play3 to build confidence, skills, and a love for football and futsal.</p>
+            </div>
+
+            <!-- Carousel built with Swiper.js -->
+            <div class="relative before:absolute before:inset-0 before:-translate-x-full before:z-20 before:bg-linear-to-l before:from-transparent before:to-slate-900 before:to-20% after:absolute after:inset-0 after:translate-x-full after:z-20 after:bg-linear-to-r after:from-transparent after:to-slate-900 after:to-20%">
+                <div class="stellar-carousel swiper-container group">
+                    <div class="swiper-wrapper w-fit" data-highlighter>
+                        <!-- Carousel items -->
+                        <div class="swiper-slide h-auto relative bg-slate-800 rounded-3xl p-px before:absolute before:w-96 before:h-96 before:-left-48 before:-top-48 before:bg-purple-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] hover:before:opacity-20 before:z-30 before:blur-[100px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),var(--color-slate-400),transparent)] group-hover:after:opacity-100 after:z-10 overflow-hidden group/slide">
+                            <div class="relative h-full bg-slate-900 rounded-[inherit] z-20 overflow-hidden">
+                                <div class="flex flex-col p-6 h-full">
+                                    <img class="mb-3" src="./images/carousel-icon-01.svg" width="56" height="56" alt="Icon 01">
+                                    <div class="grow">
+                                        <div class="font-bold text-lg mb-1">Sarah T., Mum</div>
+                                        <div class="text-slate-400 mb-3">"My son loves Play3! He’s more confident on the pitch and can’t wait for each session." ⭐⭐⭐⭐⭐</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="swiper-slide h-auto relative bg-slate-800 rounded-3xl p-px before:absolute before:w-96 before:h-96 before:-left-48 before:-top-48 before:bg-purple-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] hover:before:opacity-20 before:z-30 before:blur-[100px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),var(--color-slate-400),transparent)] group-hover:after:opacity-100 after:z-10 overflow-hidden group/slide">
+                            <div class="relative h-full bg-slate-900 rounded-[inherit] z-20 overflow-hidden">
+                                <div class="flex flex-col p-6 h-full">
+                                    <img class="mb-3" src="./images/carousel-icon-02.svg" width="56" height="56" alt="Icon 02">
+                                    <div class="grow">
+                                        <div class="font-bold text-lg mb-1">James L., Dad</div>
+                                        <div class="text-slate-400 mb-3">"Play3 gives my daughter freedom to enjoy and improve. The coaches are supportive and inspiring." ⭐⭐⭐⭐⭐</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide h-auto relative bg-slate-800 rounded-3xl p-px before:absolute before:w-96 before:h-96 before:-left-48 before:-top-48 before:bg-purple-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] hover:before:opacity-20 before:z-30 before:blur-[100px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),var(--color-slate-400),transparent)] group-hover:after:opacity-100 after:z-10 overflow-hidden group/slide">
+                            <div class="relative h-full bg-slate-900 rounded-[inherit] z-20 overflow-hidden">
+                                <div class="flex flex-col p-6 h-full">
+                                    <img class="mb-3" src="./images/carousel-icon-03.svg" width="56" height="56" alt="Icon 03">
+                                    <div class="grow">
+                                        <div class="font-bold text-lg mb-1">Linda M., Mum</div>
+                                        <div class="text-slate-400 mb-3">"Amazing! The sessions are fun, safe, and my kids are learning real football skills while making friends." ⭐⭐⭐⭐⭐</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide h-auto relative bg-slate-800 rounded-3xl p-px before:absolute before:w-96 before:h-96 before:-left-48 before:-top-48 before:bg-purple-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] hover:before:opacity-20 before:z-30 before:blur-[100px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),var(--color-slate-400),transparent)] group-hover:after:opacity-100 after:z-10 overflow-hidden group/slide">
+                            <div class="relative h-full bg-slate-900 rounded-[inherit] z-20 overflow-hidden">
+                                <div class="flex flex-col p-6 h-full">
+                                    <img class="mb-3" src="./images/carousel-icon-04.svg" width="56" height="56" alt="Icon 04">
+                                    <div class="grow">
+                                        <div class="font-bold text-lg mb-1">Michael K., Dad</div>
+                                        <div class="text-slate-400 mb-3">"Play3 is hands-down the best coaching environment. The focus on skill, fun, and confidence is perfect." ⭐⭐⭐⭐⭐</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide h-auto relative bg-slate-800 rounded-3xl p-px before:absolute before:w-96 before:h-96 before:-left-48 before:-top-48 before:bg-purple-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] hover:before:opacity-20 before:z-30 before:blur-[100px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),var(--color-slate-400),transparent)] group-hover:after:opacity-100 after:z-10 overflow-hidden group/slide">
+                            <div class="relative h-full bg-slate-900 rounded-[inherit] z-20 overflow-hidden">
+                                <div class="flex flex-col p-6 h-full">
+                                    <img class="mb-3" src="./images/carousel-icon-05.svg" width="56" height="56" alt="Icon 05">
+                                    <div class="grow">
+                                        <div class="font-bold text-lg mb-1">Emily R., Mum</div>
+                                        <div class="text-slate-400 mb-3">"Every session is well-organized and fun. My children are learning, making friends, and loving football!" ⭐⭐⭐⭐⭐</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Arrows -->
+            <div class="flex mt-8 justify-end">
+                <button class="carousel-prev relative z-20 w-12 h-12 flex items-center justify-center group">
+                    <span class="sr-only">Previous</span>
+                    <svg class="w-4 h-4 fill-slate-500 group-hover:fill-purple-500 transition duration-150 ease-in-out" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.7 14.7l1.4-1.4L3.8 9H16V7H3.8l4.3-4.3-1.4-1.4L0 8z" />
+                    </svg>
+                </button>
+                <button class="carousel-next relative z-20 w-12 h-12 flex items-center justify-center group">
+                    <span class="sr-only">Next</span>
+                    <svg class="w-4 h-4 fill-slate-500 group-hover:fill-purple-500 transition duration-150 ease-in-out" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.3 14.7l-1.4-1.4L12.2 9H0V7h12.2L7.9 2.7l1.4-1.4L16 8z" />
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+          <!-- CTA -->
+<section>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="relative px-8 py-12 md:py-20 rounded-[3rem] overflow-hidden">
+
+            <!-- Radial gradient -->
+            <div class="absolute flex items-center justify-center top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/3 aspect-square"
+                aria-hidden="true">
+                <div class="absolute inset-0 translate-z-0 bg-purple-500 rounded-full blur-[120px] opacity-70"></div>
+                <div class="absolute w-1/4 h-1/4 translate-z-0 bg-purple-400 rounded-full blur-[40px]"></div>
+            </div>
+
+            <!-- Blurred shape -->
+            <div class="absolute bottom-0 translate-y-1/2 left-0 blur-2xl opacity-50 pointer-events-none -z-10"
+                aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="434" height="427">
+                    <defs>
+                        <linearGradient id="bs5-a" x1="19.609%" x2="50%" y1="14.544%" y2="100%">
+                            <stop offset="0%" stop-color="#A855F7" />
+                            <stop offset="100%" stop-color="#6366F1" stop-opacity="0" />
+                        </linearGradient>
+                    </defs>
+                    <path fill="url(#bs5-a)" fill-rule="evenodd" d="m0 0 461 369-284 58z"
+                        transform="matrix(1 0 0 -1 0 427)" />
+                </svg>
+            </div>
+
+            <!-- Content -->
+            <div class="max-w-3xl mx-auto text-center">
+                <div>
+                    <div
+                        class="inline-flex font-medium bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 pb-3">
+                        Join the movement
+                    </div>
+                </div>
+                <h2
+                    class="h2 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">
+                    Ready to Play3?
+                </h2>
+                <p class="text-lg text-slate-400 mb-8">
+                    Fast football, loads of touches, competitive energy, no go, Play3 is the perfect place to develop,
+                    have fun and improve your game every week.
+                </p>
+                <div>
+                    <a class="btn text-slate-900 bg-linear-to-r from-white/80 via-white to-white/80 hover:bg-white transition duration-150 ease-in-out group"
+                        href="#pricing">
+                        View Sessions & Pricing <span
+                            class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        </main>
+
+        <!-- Site footer -->
+        
+       <!-- Site footer -->
+<footer>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+        <!-- Blocks -->
+        <div class="grid sm:grid-cols-12 gap-8 py-8 md:py-12">
+
+            <!-- 1st block -->
+            <div class="sm:col-span-12 lg:col-span-4 order-1 lg:order-none">
+                <div class="h-full flex flex-col sm:flex-row lg:flex-col justify-between">
+                    <div class="mb-4 sm:mb-0">
+                        <div class="mb-4">
+                            <!-- Logo -->
+                            <a class="inline-flex" href="index.html" aria-label="Play3">
+                                <img src="./images/logo.svg" width="38" height="38" alt="Play3 Logo">
+                            </a>
+                        </div>
+                        <div class="text-sm text-slate-300">&copy; 2025 Play3 Football <span class="text-slate-500">-</span> All rights reserved.</div>
+                    </div>
+
+                    <!-- Social links (football brand specific) -->
+                    <ul class="flex">
+
+                        <!-- Instagram -->
+                        <li>
+                            <a class="flex justify-center items-center text-purple-500 hover:text-purple-400 transition duration-150 ease-in-out" 
+                               href="https://www.instagram.com/play3football" target="_blank" aria-label="Instagram">
+                                <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                    <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 
+                                            2.243 5 5 5h10c2.757 0 5-2.243 
+                                            5-5V7c0-2.757-2.243-5-5-5H7zm10 
+                                            2c1.654 0 3 1.346 3 3v10c0 
+                                            1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 
+                                            1.346-3 3-3h10zm-5 3a5 5 0 100 10 
+                                            5 5 0 000-10zm0 2a3 3 0 110 
+                                            6 3 3 0 010-6zm4.5-.75a1.25 1.25 0 110 
+                                            2.5 1.25 1.25 0 010-2.5z"/>
+                                </svg>
+                            </a>
+                        </li>
+
+                        <!-- TikTok -->
+                        <li class="ml-2">
+                            <a class="flex justify-center items-center text-purple-500 hover:text-purple-400 transition duration-150 ease-in-out"
+                               href="https://www.tiktok.com/@play3football" target="_blank" aria-label="TikTok">
+                                <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                    <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 
+                                             10-10 10S2 17.514 2 12 6.486 
+                                             2 12 2zm1 4.5v5.086a3.5 3.5 
+                                             0 11-2-3.182V6.5h2z"/>
+                                </svg>
+                            </a>
+                        </li>
+
+                        <!-- YouTube -->
+                        <li class="ml-2">
+                            <a class="flex justify-center items-center text-purple-500 hover:text-purple-400 transition duration-150 ease-in-out"
+                               href="https://www.youtube.com/@play3football" target="_blank" aria-label="YouTube">
+                                <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                    <path d="M21.8 8s-.2-1.5-.8-2.2c-.7-.9-1.5-.9-1.9-1C15.9 
+                                             4.5 12 4.5 12 4.5h-.1s-3.9 
+                                             0-7.1.3c-.4.1-1.2.1-1.9 1C2.4 
+                                             6.5 2.2 8 2.2 8S2 9.7 2 
+                                             11.4v1.3c0 1.7.2 3.4.2 3.4s.2 
+                                             1.5.8 2.2c.7.9 1.7.9 2.2 
+                                             1 1.6.2 6.8.3 6.8.3s3.9 
+                                             0 7.1-.3c.4-.1 1.2-.1 1.9-1 
+                                             .6-.7.8-2.2.8-2.2s.2-1.7.2-3.4v-1.3c0-1.7-.2-3.4-.2-3.4zM10 
+                                             14.7V9.3l5.2 2.7L10 14.7z"/>
+                                </svg>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 2nd block -->
+            <div class="sm:col-span-6 md:col-span-3 lg:col-span-2">
+                <h6 class="text-sm text-slate-50 font-medium mb-2">Play3</h6>
+                <ul class="text-sm space-y-2">
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#training">Training</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#coaches">Our Coaches</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#sessions">Sessions</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#philosophy">Philosophy</a></li>
+                </ul>
+            </div>
+
+            <!-- 3rd block -->
+            <div class="sm:col-span-6 md:col-span-3 lg:col-span-2">
+                <h6 class="text-sm text-slate-50 font-medium mb-2">Company</h6>
+                <ul class="text-sm space-y-2">
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#about">About Us</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#team">Meet the Founders</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#contact">Contact</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#locations">Locations</a></li>
+                </ul>
+            </div>
+
+            <!-- 4th block -->
+            <div class="sm:col-span-6 md:col-span-3 lg:col-span-2">
+                <h6 class="text-sm text-slate-50 font-medium mb-2">Resources</h6>
+                <ul class="text-sm space-y-2">
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#faq">FAQ</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#policies">Policies</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#safeguarding">Safeguarding</a></li>
+                </ul>
+            </div>
+
+            <!-- 5th block -->
+            <div class="sm:col-span-6 md:col-span-3 lg:col-span-2">
+                <h6 class="text-sm text-slate-50 font-medium mb-2">Legal</h6>
+                <ul class="text-sm space-y-2">
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#terms">Terms & Conditions</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#privacy">Privacy Policy</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#liability">Liability Waiver</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#insurance">Insurance</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+</footer>
+
+
+    </div>
+
+    <script src="./js/vendors/alpinejs.min.js" defer></script>
+    <script src="./js/vendors/aos.js"></script>
+    <script src="./js/vendors/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>

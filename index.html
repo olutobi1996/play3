@@ -1,0 +1,1632 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8">
+    <title>Play3 - Home</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="./css/vendors/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/vendors/swiper-bundle.min.css" />
+    <link href="./style.css" rel="stylesheet">
+</head>
+
+<body class="font-inter antialiased bg-slate-900 text-slate-100 tracking-tight">
+
+    <!-- Page wrapper -->
+    <div class="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
+
+        <!-- Site header -->
+        <header class="absolute w-full z-30">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                <div class="flex items-center justify-between h-16 md:h-20">
+        
+                    <!-- Site branding -->
+                    <div class="flex-1">
+                        <!-- Logo -->
+                        <a class="inline-flex" href="index.html" aria-label="Cruip">
+                            <img class="max-w-none" src="./images/logo.svg" width="38" height="38" alt="Stellar">
+                        </a>
+                    </div>
+        
+                    <!-- Desktop navigation -->
+                    <nav class="hidden md:flex md:grow">
+        
+                        <!-- Desktop menu links -->
+                        <ul class="flex grow justify-center flex-wrap items-center">
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="about.html">About</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="booking.html">Booking</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="pricing.html">Pricing</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="reviews.html">Reviews</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="questionnaire.html">Questionnaire</a>
+                            </li>
+                        </ul>
+        
+                    </nav>
+        
+                
+                  <!-- Desktop booking button -->
+<ul class="flex-1 flex justify-end items-center">
+    <li>
+        <a href="https://tidycal.com/helloecobubba/play3-training-session" target="_blank"
+           class="btn-sm text-slate-300 hover:text-white transition duration-150 ease-in-out group
+                  bg-gradient-to-r from-purple-500 to-purple-400 relative
+                  before:absolute before:inset-0 before:bg-slate-800/70 before:rounded-full before:pointer-events-none">
+            <span class="relative inline-flex items-center">
+                Book a Session
+                <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">
+                    -&gt;
+                </span>
+            </span>
+        </a>
+    </li>
+</ul>
+                
+                    <!-- Mobile menu -->
+                    <div class="md:hidden flex items-center ml-4" x-data="{ expanded: false }">
+        
+                        <!-- Hamburger button -->
+                        <button class="group inline-flex w-8 h-8 text-slate-300 hover:text-white text-center items-center justify-center transition" aria-controls="mobile-nav" :aria-expanded="expanded" @click.stop="expanded = !expanded">
+                            <span class="sr-only">Menu</span>
+                            <svg class="w-4 h-4 fill-current pointer-events-none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <rect class="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] -translate-y-[5px] group-aria-expanded:rotate-[315deg] group-aria-expanded:translate-y-0" y="7" width="16" height="2" rx="1"></rect>
+                                <rect class="origin-center group-aria-expanded:rotate-45 transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.8)]" y="7" width="16" height="2" rx="1"></rect>
+                                <rect class="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] translate-y-[5px] group-aria-expanded:rotate-[135deg] group-aria-expanded:translate-y-0" y="7" width="16" height="2" rx="1"></rect>
+                            </svg>
+                        </button>                             
+        
+                        <!-- Mobile navigation -->
+                        <nav id="mobile-nav" class="absolute top-full z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out" x-ref="mobileNav" :style="expanded ? 'max-height: ' + $refs.mobileNav.scrollHeight + 'px; opacity: 1' : 'max-height: 0; opacity: .8'" @click.outside="expanded = false" @keydown.escape.window="expanded = false" x-cloak>
+                            <ul class="border border-transparent [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] rounded-lg px-4 py-1.5">
+                                                   <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="about.html">About</a>
+                            </li>
+                            <li>
+                                <a href="https://tidycal.com/helloecobubba/play3-training-session" class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="booking.html">Booking</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="pricing.html">Pricing</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="reviews.html">Reviews</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="questionnaire.html">Questionnaire</a>
+                            </li>
+                            </ul>
+                        </nav>
+        
+                    </div>
+        
+                </div>
+            </div>
+        </header>
+
+        <!-- Page content -->
+        <main class="grow">
+
+            <!-- Hero -->
+            <section>
+                              <div class="absolute inset-0 -z-20 overflow-hidden opacity-20">
+    <img 
+        src="./images/dariospeech.jpg" 
+        class="w-full h-full object-cover" 
+        alt="FAQ Background"
+    />
+</div>
+                <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+
+                    <!-- Particles animation -->
+                    <div class="absolute inset-0 -z-10" aria-hidden="true">
+                        <canvas data-particle-animation></canvas>
+                    </div>
+
+                    <!-- Illustration -->
+                    <div class="absolute inset-0 -z-10 -mx-28 rounded-b-[3rem] pointer-events-none overflow-hidden" aria-hidden="true">
+                        <div class="absolute left-1/2 -translate-x-1/2 bottom-0 -z-10">
+                            <img src="./images/glow-bottom.svg" class="max-w-none" width="2146" height="774" alt="Hero Illustration">
+                        </div>
+                    </div>
+
+                    <div class="pt-32 pb-16 md:pt-52 md:pb-32">
+
+                        <!-- Hero content -->
+                        <div class="max-w-3xl mx-auto text-center">
+                            <div class="mb-6" data-aos="fade-down">
+                                <div class="inline-flex relative before:absolute before:inset-0 before:bg-purple-500 before:blur-md">
+                                    <a class="btn-sm py-0.5 text-slate-300 hover:text-white transition duration-150 ease-in-out group [background:linear-gradient(var(--color-purple-500),var(--color-purple-500))_padding-box,linear-gradient(var(--color-purple-500),var(--color-purple-200)_75%,transparent_100%)_border-box] relative before:absolute before:inset-0 before:bg-slate-800/50 before:rounded-full before:pointer-events-none shadow-sm" href="about.html">
+                                        <span class="relative inline-flex items-center">
+                                            Tune Into The 3quency — PLAY3 Is Live <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <h1 class="h1 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4" data-aos="fade-down">Unlock The 3quency. Transform Your Game.</h1>
+                            <div class="max-w-xs mx-auto sm:max-w-none sm:inline-flex sm:justify-center space-y-4 sm:space-y-0 sm:space-x-4" data-aos="fade-down" data-aos-delay="400">
+                                <div>
+                                    <a class="btn text-slate-900 bg-linear-to-r from-white/80 via-white to-white/80 hover:bg-white w-full transition duration-150 ease-in-out group" href="booking.html">
+                                        Get Started <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Clients -->
+            <section>
+                <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+
+                    <!-- Particles animation -->
+                    <div class="absolute inset-0 max-w-6xl mx-auto px-4 sm:px-6">
+                        <div class="absolute inset-0 -z-10" aria-hidden="true">
+                            <canvas data-particle-animation data-particle-quantity="5"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="py-12 md:py-16">
+                        <div class="overflow-hidden">
+
+                            <div class="inline-flex w-full flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+                                <ul class="flex animate-infinite-scroll items-center justify-center md:justify-start [&_img]:max-w-none [&_li]:mx-8">
+                                     <li>
+  <svg width="200" height="80" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="gradLove" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#fff" stop-opacity="1"/>
+        <stop offset="100%" stop-color="#ccc" stop-opacity="0.6"/>
+      </linearGradient>
+      <filter id="shadowLove" x="-50%" y="-50%" width="200%" height="200%">
+        <feDropShadow dx="4" dy="4" stdDeviation="3" flood-color="#fff"/>
+      </filter>
+    </defs>
+    <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="48" fill="url(#gradLove)" filter="url(#shadowLove)">Love</text>
+  </svg>
+</li>
+                                    <li>
+                                      <svg width="200" height="80" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradPVO" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#ccc" stop-opacity="0.6"/>
+    </linearGradient>
+    <filter id="shadowPVO" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="4" dy="4" stdDeviation="3" flood-color="#fff"/>
+    </filter>
+  </defs>
+  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="48" fill="url(#gradPVO)" filter="url(#shadowPVO)">PVO</text>
+</svg>
+
+                                    </li>
+                                    <li>
+                                        <svg width="220" height="80" viewBox="0 0 220 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad3quency" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#ccc" stop-opacity="0.6"/>
+    </linearGradient>
+    <filter id="shadow3quency" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="4" dy="4" stdDeviation="3" flood-color="#fff"/>
+    </filter>
+  </defs>
+  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="48" fill="url(#grad3quency)" filter="url(#shadow3quency)">3quency</text>
+</svg>
+
+                                    </li>
+                                    <li>
+                                        <svg width="220" height="80" viewBox="0 0 220 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradPresent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#ccc" stop-opacity="0.6"/>
+    </linearGradient>
+    <filter id="shadowPresent" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="4" dy="4" stdDeviation="3" flood-color="#fff"/>
+    </filter>
+  </defs>
+  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="48" fill="url(#gradPresent)" filter="url(#shadowPresent)">Present</text>
+</svg>
+
+                                    </li>
+                                    <li>
+                                        <svg width="240" height="80" viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradNoEgo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#ccc" stop-opacity="0.6"/>
+    </linearGradient>
+    <filter id="shadowNoEgo" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="4" dy="4" stdDeviation="3" flood-color="#fff"/>
+    </filter>
+  </defs>
+  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="48" fill="url(#gradNoEgo)" filter="url(#shadowNoEgo)">No Ego</text>
+</svg>
+
+                                    </li>
+                                    <li>
+                                       <svg width="220" height="80" viewBox="0 0 220 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradFamily" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#ccc" stop-opacity="0.6"/>
+    </linearGradient>
+    <filter id="shadowFamily" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="4" dy="4" stdDeviation="3" flood-color="#fff"/>
+    </filter>
+  </defs>
+  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="48" fill="url(#gradFamily)" filter="url(#shadowFamily)">Family</text>
+</svg>
+
+                                    </li>
+                                </ul>
+                                <ul class="flex animate-infinite-scroll items-center justify-center md:justify-start [&_img]:max-w-none [&_li]:mx-8" aria-hidden="true">
+                                                                         <li>
+  <svg width="200" height="80" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="gradLove" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#fff" stop-opacity="1"/>
+        <stop offset="100%" stop-color="#ccc" stop-opacity="0.6"/>
+      </linearGradient>
+      <filter id="shadowLove" x="-50%" y="-50%" width="200%" height="200%">
+        <feDropShadow dx="4" dy="4" stdDeviation="3" flood-color="#fff"/>
+      </filter>
+    </defs>
+    <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="48" fill="url(#gradLove)" filter="url(#shadowLove)">Love</text>
+  </svg>
+</li>
+                                    <li>
+                                      <svg width="200" height="80" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradPVO" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#ccc" stop-opacity="0.6"/>
+    </linearGradient>
+    <filter id="shadowPVO" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="4" dy="4" stdDeviation="3" flood-color="#fff"/>
+    </filter>
+  </defs>
+  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="48" fill="url(#gradPVO)" filter="url(#shadowPVO)">PVO</text>
+</svg>
+
+                                    </li>
+                                    <li>
+                                        <svg width="220" height="80" viewBox="0 0 220 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad3quency" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#ccc" stop-opacity="0.6"/>
+    </linearGradient>
+    <filter id="shadow3quency" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="4" dy="4" stdDeviation="3" flood-color="#fff"/>
+    </filter>
+  </defs>
+  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="48" fill="url(#grad3quency)" filter="url(#shadow3quency)">3quency</text>
+</svg>
+
+                                    </li>
+                                    <li>
+                                        <svg width="220" height="80" viewBox="0 0 220 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradPresent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#ccc" stop-opacity="0.6"/>
+    </linearGradient>
+    <filter id="shadowPresent" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="4" dy="4" stdDeviation="3" flood-color="#fff"/>
+    </filter>
+  </defs>
+  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="48" fill="url(#gradPresent)" filter="url(#shadowPresent)">Present</text>
+</svg>
+
+                                    </li>
+                                    <li>
+                                        <svg width="240" height="80" viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradNoEgo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#ccc" stop-opacity="0.6"/>
+    </linearGradient>
+    <filter id="shadowNoEgo" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="4" dy="4" stdDeviation="3" flood-color="#fff"/>
+    </filter>
+  </defs>
+  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="48" fill="url(#gradNoEgo)" filter="url(#shadowNoEgo)">No Ego</text>
+</svg>
+
+                                    </li>
+                                    <li>
+                                       <svg width="220" height="80" viewBox="0 0 220 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradFamily" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#ccc" stop-opacity="0.6"/>
+    </linearGradient>
+    <filter id="shadowFamily" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="4" dy="4" stdDeviation="3" flood-color="#fff"/>
+    </filter>
+  </defs>
+  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="48" fill="url(#gradFamily)" filter="url(#shadowFamily)">Family</text>
+</svg>
+
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+          
+            <!-- Features -->
+            <section>
+                <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+
+                    <!-- Illustration -->
+                    <div class="absolute inset-0 -z-10 -mx-28 rounded-t-[3rem] pointer-events-none overflow-hidden" aria-hidden="true">
+                        <div class="absolute left-1/2 -translate-x-1/2 top-0 -z-10">
+                            <img src="./images/glow-top.svg" class="max-w-none" width="1404" height="658" alt="Features Illustration">
+                        </div>
+                    </div>
+
+                    <div class="pt-16 pb-12 md:pt-52 md:pb-20">
+
+                        <div x-data="{ tab: '1' }">
+
+                            <!-- Section content -->
+                            <div class="max-w-xl mx-auto md:max-w-none flex flex-col md:flex-row md:space-x-8 lg:space-x-16 xl:space-x-20 space-y-8 space-y-reverse md:space-y-0">
+
+                                <!-- Content -->
+                                <div class="md:w-7/12 lg:w-1/2 order-1 md:order-none max-md:text-center" data-aos="fade-down">
+                                    <!-- Content #1 -->
+                                    <div>
+                                        <div class="inline-flex font-medium bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 pb-3">Developing Footballers The Right Way</div>
+                                    </div>
+                                    <h3 class="h3 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-3">The PLAY3 Method: Football. Futsal. Freedom.</h3>
+                                    <p class="text-lg text-slate-400 mb-8">  Our approach blends the speed and precision of futsal with the creativity and confidence of football. 
+                            Every session is built to help young players express themselves, improve technique, and enjoy the game.</p>
+                                    <div class="mt-8 max-w-xs max-md:mx-auto space-y-2">
+                                        <button
+                                            class="flex items-center text-sm font-medium text-slate-50 rounded-sm border bg-slate-800/25 w-full px-3 py-2 transition duration-150 ease-in-out hover:opacity-100"
+                                            :class="tab !== '1' ? 'border-slate-700 opacity-50' : 'border-purple-700 shadow-sm shadow-purple-500/25'"
+                                            @click.prevent="tab = '1'"
+                                        >
+                                            <svg class="shrink-0 fill-slate-300 mr-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                                                <path d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12Zm0 14V2H2v12h12Zm-3-7H5a1 1 0 1 1 0-2h6a1 1 0 0 1 0 2Zm0 4H5a1 1 0 0 1 0-2h6a1 1 0 0 1 0 2Z" />
+                                            </svg>
+                                            <span>Build Confidence & Skill</span>
+                                        </button>
+                                        <button
+                                            class="flex items-center text-sm font-medium text-slate-50 rounded-sm border bg-slate-800/25 w-full px-3 py-2 transition duration-150 ease-in-out hover:opacity-100"
+                                            :class="tab !== '2' ? 'border-slate-700 opacity-50' : 'border-purple-700 shadow-sm shadow-purple-500/25'"
+                                            @click.prevent="tab = '2'"
+                                        >
+                                            <svg class="shrink-0 fill-slate-300 mr-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                                                <path d="M2 6H0V2a2 2 0 0 1 2-2h4v2H2v4ZM16 6h-2V2h-4V0h4a2 2 0 0 1 2 2v4ZM14 16h-4v-2h4v-4h2v4a2 2 0 0 1-2 2ZM6 16H2a2 2 0 0 1-2-2v-4h2v4h4v2Z" />
+                                            </svg>
+                                            <span>Football + Futsal Fusion</span>
+                                        </button>
+                                        <button
+                                            class="flex items-center text-sm font-medium text-slate-50 rounded-sm border bg-slate-800/25 w-full px-3 py-2 transition duration-150 ease-in-out hover:opacity-100"
+                                            :class="tab !== '3' ? 'border-slate-700 opacity-50' : 'border-purple-700 shadow-sm shadow-purple-500/25'"
+                                            @click.prevent="tab = '3'"
+                                        >
+                                            <svg class="shrink-0 fill-slate-300 mr-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                                                <path d="M14.3.3c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-8 8c-.2.2-.4.3-.7.3-.3 0-.5-.1-.7-.3-.4-.4-.4-1 0-1.4l8-8ZM15 7c.6 0 1 .4 1 1 0 4.4-3.6 8-8 8s-8-3.6-8-8 3.6-8 8-8c.6 0 1 .4 1 1s-.4 1-1 1C4.7 2 2 4.7 2 8s2.7 6 6 6 6-2.7 6-6c0-.6.4-1 1-1Z" />
+                                            </svg>
+                                            <span>Individual Player Growth</span>
+                                        </button>                                        
+                                    </div>
+                                </div>
+
+                                <!-- Image -->
+                                <div class="md:w-5/12 lg:w-1/2" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="relative py-24 -mt-12">
+
+                                        <!-- Particles animation -->
+                                        <div class="absolute inset-0 -z-10">
+                                            <canvas data-particle-animation data-particle-quantity="8" data-particle-staticity="30"></canvas>
+                                        </div>
+
+                                        <div class="flex items-center justify-center">
+                                            <div class="relative w-48 h-48 flex justify-center items-center">
+                                                <!-- Halo effect -->
+                                                <svg class="absolute inset-0 -z-10 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 will-change-transform pointer-events-none blur-md" width="480" height="480" viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg">
+                                                    <defs>
+                                                        <linearGradient id="pulse-a" x1="50%" x2="50%" y1="100%" y2="0%">
+                                                            <stop offset="0%" stop-color="#A855F7" />
+                                                            <stop offset="76.382%" stop-color="#FAF5FF" />
+                                                            <stop offset="100%" stop-color="#6366F1" />
+                                                        </linearGradient>
+                                                    </defs>
+                                                    <g fill-rule="evenodd">
+                                                        <path class="pulse" fill="url(#pulse-a)" fill-rule="evenodd" d="M240,0 C372.5484,0 480,107.4516 480,240 C480,372.5484 372.5484,480 240,480 C107.4516,480 0,372.5484 0,240 C0,107.4516 107.4516,0 240,0 Z M240,88.8 C156.4944,88.8 88.8,156.4944 88.8,240 C88.8,323.5056 156.4944,391.2 240,391.2 C323.5056,391.2 391.2,323.5056 391.2,240 C391.2,156.4944 323.5056,88.8 240,88.8 Z"></path>
+                                                        <path class="pulse pulse-1" fill="url(#pulse-a)" fill-rule="evenodd" d="M240,0 C372.5484,0 480,107.4516 480,240 C480,372.5484 372.5484,480 240,480 C107.4516,480 0,372.5484 0,240 C0,107.4516 107.4516,0 240,0 Z M240,88.8 C156.4944,88.8 88.8,156.4944 88.8,240 C88.8,323.5056 156.4944,391.2 240,391.2 C323.5056,391.2 391.2,323.5056 391.2,240 C391.2,156.4944 323.5056,88.8 240,88.8 Z"></path>
+                                                        <path class="pulse pulse-2" fill="url(#pulse-a)" fill-rule="evenodd" d="M240,0 C372.5484,0 480,107.4516 480,240 C480,372.5484 372.5484,480 240,480 C107.4516,480 0,372.5484 0,240 C0,107.4516 107.4516,0 240,0 Z M240,88.8 C156.4944,88.8 88.8,156.4944 88.8,240 C88.8,323.5056 156.4944,391.2 240,391.2 C323.5056,391.2 391.2,323.5056 391.2,240 C391.2,156.4944 323.5056,88.8 240,88.8 Z"></path>
+                                                    </g>
+                                                </svg>
+                                                <!-- Grid -->
+                                                <div class="absolute inset-0 -z-10 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none w-[500px] h-[500px] rounded-full overflow-hidden [mask-image:_radial-gradient(black,_transparent_60%)]">
+                                                    <div class="h-[200%] animate-endless">
+                                                        <div class="absolute inset-0 [background:repeating-linear-gradient(transparent,transparent_48px,var(--color-white)_48px,var(--color-white)_49px)] blur-[2px] opacity-20"></div>
+                                                        <div class="absolute inset-0 [background:repeating-linear-gradient(transparent,transparent_48px,var(--color-purple-500)_48px,var(--color-purple-500)_49px)]"></div>
+                                                        <div class="absolute inset-0 [background:repeating-linear-gradient(90deg,transparent,transparent_48px,var(--color-white)_48px,var(--color-white)_49px)] blur-[2px] opacity-20"></div>
+                                                        <div class="absolute inset-0 [background:repeating-linear-gradient(90deg,transparent,transparent_48px,var(--color-purple-500)_48px,var(--color-purple-500)_49px)]"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- Icons -->
+                                                <div
+                                                    x-show="tab === '1'"
+                                                    x-transition:enter="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700 order-first"
+                                                    x-transition:enter-start="opacity-0 -rotate-[60deg]"
+                                                    x-transition:enter-end="opacity-100 rotate-0"
+                                                    x-transition:leave="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700 absolute"
+                                                    x-transition:leave-start="opacity-100 rotate-0"
+                                                    x-transition:leave-end="opacity-0 rotate-[60deg]"
+                                                >                                                
+                                                    <div class="relative flex items-center justify-center w-16 h-16 border border-transparent rounded-2xl shadow-2xl -rotate-[14deg] [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] before:absolute before:inset-0 before:bg-slate-800/30 before:rounded-2xl">
+                                                        <svg class="relative fill-slate-200" xmlns="http://www.w3.org/2000/svg" width="23" height="25">
+                                                            <path fill-rule="nonzero" d="M10.55 15.91H.442L14.153.826 12.856 9.91h10.107L9.253 24.991l1.297-9.082Zm.702-8.919L4.963 13.91h7.893l-.703 4.918 6.289-6.918H10.55l.702-4.918Z" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    x-show="tab === '2'"
+                                                    x-transition:enter="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700 order-first"
+                                                    x-transition:enter-start="opacity-0 -rotate-[60deg]"
+                                                    x-transition:enter-end="opacity-100 rotate-0"
+                                                    x-transition:leave="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700 absolute"
+                                                    x-transition:leave-start="opacity-100 rotate-0"
+                                                    x-transition:leave-end="opacity-0 rotate-[60deg]"
+                                                >                                                
+                                                    <div class="relative flex items-center justify-center w-16 h-16 border border-transparent rounded-2xl shadow-2xl -rotate-[14deg] [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] before:absolute before:inset-0 before:bg-slate-800/30 before:rounded-2xl">
+                                                        <svg class="relative fill-slate-200" xmlns="http://www.w3.org/2000/svg" width="22" height="22">
+                                                            <path d="M18 14h-2V8h2c2.2 0 4-1.8 4-4s-1.8-4-4-4-4 1.8-4 4v2H8V4c0-2.2-1.8-4-4-4S0 1.8 0 4s1.8 4 4 4h2v6H4c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4v-2h6v2c0 2.2 1.8 4 4 4s4-1.8 4-4-1.8-4-4-4ZM16 4c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2h-2V4ZM2 4c0-1.1.9-2 2-2s2 .9 2 2v2H4c-1.1 0-2-.9-2-2Zm4 14c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2h2v2ZM8 8h6v6H8V8Zm10 12c-1.1 0-2-.9-2-2v-2h2c1.1 0 2 .9 2 2s-.9 2-2 2Z" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    x-show="tab === '3'"
+                                                    x-transition:enter="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700 order-first"
+                                                    x-transition:enter-start="opacity-0 -rotate-[60deg]"
+                                                    x-transition:enter-end="opacity-100 rotate-0"
+                                                    x-transition:leave="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700 absolute"
+                                                    x-transition:leave-start="opacity-100 rotate-0"
+                                                    x-transition:leave-end="opacity-0 rotate-[60deg]"
+                                                >                                                
+                                                    <div class="relative flex items-center justify-center w-16 h-16 border border-transparent rounded-2xl shadow-2xl -rotate-[14deg] [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] before:absolute before:inset-0 before:bg-slate-800/30 before:rounded-2xl">
+                                                        <svg class="relative fill-slate-200" xmlns="http://www.w3.org/2000/svg" width="26" height="14">
+                                                            <path fill-rule="nonzero" d="m10 5.414-8 8L.586 12 10 2.586l6 6 8-8L25.414 2 16 11.414z" />
+                                                        </svg>
+                                                    </div>
+                                                </div>                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+          <!-- Features #2 -->
+            <section class="relative">
+
+                <!-- Particles animation -->
+                <div class="absolute left-1/2 -translate-x-1/2 top-0 -z-10 w-80 h-80 -mt-24 -ml-32">
+                    <div class="absolute inset-0 -z-10" aria-hidden="true">
+                        <canvas data-particle-animation data-particle-quantity="6" data-particle-staticity="30"></canvas>
+                    </div>
+                </div>
+
+                <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                    <div class="pt-16 md:pt-32">
+
+                        <!-- Section header -->
+                        <div class="max-w-3xl mx-auto text-center pb-12 md:pb-20">
+                            <h2 class="h2 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">Built For Ballers. Designed For Growth.</h2>
+                            <p class="text-lg text-slate-400">At Play3, every session blends Football, Futsal, and mindset development.
+The aim? Build confident, expressive, intelligent players, on and off the court.</p>
+                        </div>
+                        <!-- Highlighted boxes -->
+                        <div class="relative pb-12 md:pb-20">
+                            <!-- Blurred shape -->
+                            <div class="absolute bottom-0 -mb-20 left-1/2 -translate-x-1/2 blur-2xl opacity-50 pointer-events-none" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="434" height="427">
+                                    <defs>
+                                        <linearGradient id="bs2-a" x1="19.609%" x2="50%" y1="14.544%" y2="100%">
+                                            <stop offset="0%" stop-color="#6366F1" />
+                                            <stop offset="100%" stop-color="#6366F1" stop-opacity="0" />
+                                        </linearGradient>
+                                    </defs>
+                                    <path fill="url(#bs2-a)" fill-rule="evenodd" d="m346 898 461 369-284 58z" transform="translate(-346 -898)" />
+                                </svg>
+                            </div>
+                            <!-- Grid -->
+                            <div class="grid md:grid-cols-12 gap-6 group" data-highlighter>
+                                <!-- Box #1 -->
+<div class="md:col-span-12" data-aos="fade-down">
+    <div class="relative h-full bg-slate-800 rounded-3xl p-px overflow-hidden">
+        <div class="relative h-full bg-slate-900 rounded-[inherit] z-20 overflow-hidden">
+
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+
+                <!-- IMAGE (Replace with your own football photo) -->
+                <div class="relative w-full h-64 md:h-auto overflow-hidden bg-slate-800">
+                    <img 
+                        src="./images/dariospeech.jpg" 
+                        alt="Football Coaching"
+                        class="object-cover w-full h-full"
+                    />
+                </div>
+
+                <!-- TEXT -->
+                <div class="md:max-w-[480px] shrink-0 p-6 md:p-8 md:pr-0">
+                    <h3 class="text-xl font-bold bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-2">
+                        Elite Coaching, Real Development
+                    </h3>
+                    <p class="text-slate-400 mb-5">
+                        Sessions built by professional players and qualified coaches.
+                        We focus on technique, decision-making, creativity, and confidence.
+                    </p>
+                    
+                    <!-- Button -->
+                    <a class="btn-sm text-slate-300 hover:text-white transition duration-150 ease-in-out"
+                       href="about.html">
+                       Learn more <span class="text-purple-500 ml-1">→</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+                             <!-- Box #2 -->
+<div class="md:col-span-7" data-aos="fade-down">
+    <div class="relative h-full bg-slate-800 rounded-3xl p-px overflow-hidden">
+        <div class="relative h-full bg-slate-900 rounded-[inherit] z-20 overflow-hidden">
+
+            <div class="flex flex-col">
+
+                <!-- IMAGE -->
+                <div class="relative w-full h-64 md:h-auto overflow-hidden">
+                    <img 
+                        src="./images/vinnycoaching.jpg" 
+                        alt="Training Environment"
+                        class="object-cover w-full h-full"
+                    />
+                </div>
+
+                <!-- TEXT -->
+                <div class="p-6 md:p-8">
+                    <h3 class="text-xl font-bold bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-2">
+                        A Training Environment That Inspires
+                    </h3>
+                    <p class="text-slate-400">
+                        Full of positive energy, fun, and challenge. Players learn to express
+                        themselves, communicate, and compete with confidence.
+                    </p>
+                    <a class="btn-sm text-slate-300 hover:text-white transition duration-150 ease-in-out"
+   href="about.html">
+   Learn more <span class="text-purple-500 ml-1">→</span>
+</a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Box #3 -->
+<div class="md:col-span-5 min-h-[650px]" data-aos="fade-down">
+    <div class="relative h-full bg-slate-800 rounded-3xl p-px overflow-hidden">
+        <div class="relative h-full bg-slate-900 rounded-[inherit] z-20 overflow-hidden">
+
+            <div class="flex flex-col justify-between h-full">
+
+                <!-- IMAGE -->
+                <div class="relative w-full h-80 md:h-96 overflow-hidden flex-shrink-0">
+                    <img 
+                        src="./images/gambo1.jpg" 
+                        alt="Futsal and Football"
+                        class="object-cover w-full h-full"
+                    />
+                </div>
+
+                <!-- TEXT -->
+                <div class="p-6 md:p-8">
+                    <h3 class="text-xl font-bold bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-2">
+                        Futsal x Football = The Play3 Advantage
+                    </h3>
+                    <p class="text-slate-400 mb-5">
+                        Futsal builds reactions and close control. Football builds physicality 
+                        and game intelligence. Together: the ultimate development blend.
+                    </p>
+
+                    <a class="btn-sm text-slate-300 hover:text-white transition duration-150 ease-in-out"
+                       href="about.html">
+                       Learn more <span class="text-purple-500 ml-1">→</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+ </section>
+
+     <section>
+                <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+                        <!-- Features list -->
+                        <div class="grid md:grid-cols-3 gap-8 md:gap-12">
+                             <h2 class="h2 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">
+                    Why Trust Us
+                </h2>
+                            <!-- Feature -->
+                            <div>
+                                <div class="flex items-center space-x-2 mb-1">
+                                    <svg class="shrink-0 fill-slate-300" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                                        <path d="M7.999 2.34a4.733 4.733 0 0 0-6.604 6.778l5.904 5.762a1 1 0 0 0 1.4 0l5.915-5.77a4.733 4.733 0 0 0-6.615-6.77Zm5.208 5.348-5.208 5.079-5.2-5.07a2.734 2.734 0 0 1 3.867-3.864c.182.19.335.404.455.638a1.04 1.04 0 0 0 1.756 0 2.724 2.724 0 0 1 5.122 1.294 2.7 2.7 0 0 1-.792 1.923Z" />
+                                    </svg>
+                                    <h4 class="font-medium text-slate-50">Holistic Player Growth</h4>
+                                </div>
+                                <p class="text-sm text-slate-400">We build character, confidence, leadership and mindset, not just skills.</p>
+                            </div>
+                            <!-- Feature -->
+                            <div>
+                                <div class="flex items-center space-x-2 mb-1">
+                                    <svg class="shrink-0 fill-slate-300" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                                        <path d="M11 0c1.3 0 2.6.5 3.5 1.5 1 .9 1.5 2.2 1.5 3.5 0 1.3-.5 2.6-1.4 3.5l-1.2 1.2c-.2.2-.5.3-.7.3-.2 0-.5-.1-.7-.3-.4-.4-.4-1 0-1.4l1.1-1.2c.6-.5.9-1.3.9-2.1s-.3-1.6-.9-2.2C12 1.7 10 1.7 8.9 2.8L7.7 4c-.4.4-1 .4-1.4 0-.4-.4-.4-1 0-1.4l1.2-1.1C8.4.5 9.7 0 11 0ZM8.3 12c.4-.4 1-.5 1.4-.1.4.4.4 1 0 1.4l-1.2 1.2C7.6 15.5 6.3 16 5 16c-1.3 0-2.6-.5-3.5-1.5C.5 13.6 0 12.3 0 11c0-1.3.5-2.6 1.5-3.5l1.1-1.2c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4L2.9 8.9c-.6.5-.9 1.3-.9 2.1s.3 1.6.9 2.2c1.1 1.1 3.1 1.1 4.2 0L8.3 12Zm1.1-6.8c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-4.2 4.2c-.2.2-.5.3-.7.3-.2 0-.5-.1-.7-.3-.4-.4-.4-1 0-1.4l4.2-4.2Z" />
+                                    </svg>
+                                    <h4 class="font-medium text-slate-50">Creative Training Sessions</h4>
+                                </div>
+                                <p class="text-sm text-slate-400">Drills and exercises designed to bring out flair, imagination and expression.</p>
+                            </div>
+                            <!-- Feature -->
+                            <div>
+                                <div class="flex items-center space-x-2 mb-1">
+                                    <svg class="shrink-0 fill-slate-300" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                                        <path d="M14.3.3c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-8 8c-.2.2-.4.3-.7.3-.3 0-.5-.1-.7-.3-.4-.4-.4-1 0-1.4l8-8ZM15 7c.6 0 1 .4 1 1 0 4.4-3.6 8-8 8s-8-3.6-8-8 3.6-8 8-8c.6 0 1 .4 1 1s-.4 1-1 1C4.7 2 2 4.7 2 8s2.7 6 6 6 6-2.7 6-6c0-.6.4-1 1-1Z" />
+                                    </svg>
+                                    <h4 class="font-medium text-slate-50">Professional Coaches</h4>
+                                </div>
+                                <p class="text-sm text-slate-400">Guidance from real pros with years of experience in elite environments.</p>
+                            </div>
+                            <!-- Feature -->
+                            <div>
+                                <div class="flex items-center space-x-2 mb-1">
+                                    <svg class="shrink-0 fill-slate-300" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                                        <path d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12Zm0 14V2H2v12h12Zm-3-7H5a1 1 0 1 1 0-2h6a1 1 0 0 1 0 2Zm0 4H5a1 1 0 0 1 0-2h6a1 1 0 0 1 0 2Z" />
+                                    </svg>
+                                    <h4 class="font-medium text-slate-50">Safe, Supportive, Pathway & Progression</h4>
+                                </div>
+                                <p class="text-sm text-slate-400">From complete beginners to elite players, everyone has a home at Play3, supported and pushed to reach their potential.</p>
+                            </div>
+                            <!-- Feature -->
+                            <div>
+                                <div class="flex items-center space-x-2 mb-1">
+                                    <svg class="shrink-0 fill-slate-300" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                                        <path d="M14.574 5.67a13.292 13.292 0 0 1 1.298 1.842 1 1 0 0 1 0 .98C15.743 8.716 12.706 14 8 14a6.391 6.391 0 0 1-1.557-.2l1.815-1.815C10.97 11.82 13.06 9.13 13.82 8c-.163-.243-.39-.56-.669-.907l1.424-1.424ZM.294 15.706a.999.999 0 0 1-.002-1.413l2.53-2.529C1.171 10.291.197 8.615.127 8.49a.998.998 0 0 1-.002-.975C.251 7.29 3.246 2 8 2c1.331 0 2.515.431 3.548 1.038L14.293.293a.999.999 0 1 1 1.414 1.414l-14 14a.997.997 0 0 1-1.414 0ZM2.18 8a12.603 12.603 0 0 0 2.06 2.347l1.833-1.834A1.925 1.925 0 0 1 6 8a2 2 0 0 1 2-2c.178 0 .348.03.512.074l1.566-1.566C9.438 4.201 8.742 4 8 4 5.146 4 2.958 6.835 2.181 8Z" />
+                                    </svg>
+                                    <h4 class="font-medium text-slate-50">Community & Culture</h4>
+                                </div>
+                                <p class="text-sm text-slate-400">Play3 is built on positivity, unity, belonging. Every player is encouraged, more than a football academy.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+           <!-- Play3 Training Levels -->
+<section class="relative">
+
+    <!-- Blurred shape -->
+    <div class="absolute top-0 -translate-y-1/4 left-1/2 -translate-x-1/2 blur-2xl opacity-50 pointer-events-none -z-10" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="434" height="427">
+            <defs>
+                <linearGradient id="bs3-a" x1="19.609%" x2="50%" y1="14.544%" y2="100%">
+                    <stop offset="0%" stop-color="#6366F1" />
+                    <stop offset="100%" stop-color="#6366F1" stop-opacity="0" />
+                </linearGradient>
+            </defs>
+            <path fill="url(#bs3-a)" fill-rule="evenodd" d="m410 0 461 369-284 58z" transform="matrix(1 0 0 -1 -410 427)" />
+        </svg>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="pt-12 md:pt-20">
+
+            <!-- Section header -->
+            <div class="max-w-3xl mx-auto text-center pb-12 md:pb-20">
+                <div>
+                    <div class="inline-flex font-medium bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 pb-3">
+                        Play3 Player Pathway
+                    </div>
+                </div>
+                <h2 class="h2 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">
+                    Choose Your Training Level
+                </h2>
+                <p class="text-lg text-slate-400">
+                    Select the level that best matches your ability. Once chosen, you’ll complete a short questionnaire so we can build your perfect development pathway.
+                </p>
+            </div>
+
+          <!-- Level Cards -->
+<div class="max-w-3xl mx-auto grid gap-8 md:grid-cols-3">
+
+    <!-- Beginner -->
+    <a href="questionnaire.html?level=beginner" class="group" data-highlighter>
+        <div class="relative bg-slate-800 rounded-3xl p-px before:absolute before:w-96 before:h-96 before:-left-48 before:-top-48 before:bg-purple-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 hover:before:opacity-20 before:z-30 before:blur-[100px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),var(--color-slate-400),transparent)] group-hover:after:opacity-100 after:z-10 overflow-hidden">
+            <div class="relative h-full bg-slate-900 rounded-[inherit] z-20 p-8 text-center">
+                <img src="./images/play3logo.jpg" class="mx-auto mt-6 mb-4" width="80" height="80" alt="Beginner Level Icon">
+                <h3 class="text-xl font-bold text-white mb-2">Beginner</h3>
+                <p class="text-slate-400 text-sm">
+                    For players learning the basics: ball control, movement, and confidence-building.
+                </p>
+            </div>
+        </div>
+    </a>
+
+    <!-- Intermediate -->
+    <a href="questionnaire.html?level=intermediate" class="group" data-highlighter>
+        <div class="relative bg-slate-800 rounded-3xl p-px before:absolute before:w-96 before:h-96 before:-left-48 before:-top-48 before:bg-purple-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 hover:before:opacity-20 before:z-30 before:blur-[100px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),var(--color-slate-400),transparent)] group-hover:after:opacity-100 after:z-10 overflow-hidden">
+            <div class="relative h-full bg-slate-900 rounded-[inherit] z-20 p-8 text-center">
+                <img src="./images/play3logo.jpg" class="mx-auto mt-6 mb-4" width="80" height="80" alt="Intermediate Level Icon">
+                <h3 class="text-xl font-bold text-white mb-2">Intermediate</h3>
+                <p class="text-slate-400 text-sm">
+                    For developing players focusing on technique, speed, decision-making, and consistency.
+                </p>
+            </div>
+        </div>
+    </a>
+
+    <!-- Next Neymar -->
+    <a href="questionnaire.html?level=next-neymar" class="group" data-highlighter>
+        <div class="relative bg-slate-800 rounded-3xl p-px before:absolute before:w-96 before:h-96 before:-left-48 before:-top-48 before:bg-purple-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 hover:before:opacity-20 before:z-30 before:blur-[100px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),var(--color-slate-400),transparent)] group-hover:after:opacity-100 after:z-10 overflow-hidden">
+            <div class="relative h-full bg-slate-900 rounded-[inherit] z-20 p-8 text-center">
+                <img src="./images/play3logo.jpg" class="mx-auto mt-6 mb-4" width="80" height="80" alt="Next Neymar Level Icon">
+                <h3 class="text-xl font-bold text-white mb-2">Next Neymar</h3>
+                <p class="text-slate-400 text-sm">
+                    For advanced players who want to dominate: flair, elite ball mastery, creativity, and high-intensity training.
+                </p>
+            </div>
+        </div>
+    </a>
+
+</div>
+
+
+        </div>
+    </div>
+</section>
+
+
+<section>    
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="pt-12 md:pt-20">
+
+            <!-- Section header -->
+            <div class="max-w-3xl mx-auto text-center pb-12 md:pb-20">
+                <div>
+                    <div class="inline-flex font-medium bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 pb-3">Parents Love Play3</div>
+                </div>
+                <h2 class="h2 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">5-Star Reviews</h2>
+                <p class="text-lg text-slate-400">See why families trust Play3 to build confidence, skills, and a love for football and futsal.</p>
+            </div>
+
+            <!-- Carousel built with Swiper.js -->
+            <div class="relative before:absolute before:inset-0 before:-translate-x-full before:z-20 before:bg-linear-to-l before:from-transparent before:to-slate-900 before:to-20% after:absolute after:inset-0 after:translate-x-full after:z-20 after:bg-linear-to-r after:from-transparent after:to-slate-900 after:to-20%">
+                <div class="stellar-carousel swiper-container group">
+                    <div class="swiper-wrapper w-fit" data-highlighter>
+                        <!-- Carousel items -->
+                        <div class="swiper-slide h-auto relative bg-slate-800 rounded-3xl p-px before:absolute before:w-96 before:h-96 before:-left-48 before:-top-48 before:bg-purple-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] hover:before:opacity-20 before:z-30 before:blur-[100px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),var(--color-slate-400),transparent)] group-hover:after:opacity-100 after:z-10 overflow-hidden group/slide">
+                            <div class="relative h-full bg-slate-900 rounded-[inherit] z-20 overflow-hidden">
+                                <div class="flex flex-col p-6 h-full">
+                                    <img class="mb-3" src="./images/carousel-icon-01.svg" width="56" height="56" alt="Icon 01">
+                                    <div class="grow">
+                                        <div class="font-bold text-lg mb-1">Sarah T., Mum</div>
+                                        <div class="text-slate-400 mb-3">"My son loves Play3! He’s more confident on the pitch and can’t wait for each session." ⭐⭐⭐⭐⭐</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="swiper-slide h-auto relative bg-slate-800 rounded-3xl p-px before:absolute before:w-96 before:h-96 before:-left-48 before:-top-48 before:bg-purple-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] hover:before:opacity-20 before:z-30 before:blur-[100px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),var(--color-slate-400),transparent)] group-hover:after:opacity-100 after:z-10 overflow-hidden group/slide">
+                            <div class="relative h-full bg-slate-900 rounded-[inherit] z-20 overflow-hidden">
+                                <div class="flex flex-col p-6 h-full">
+                                    <img class="mb-3" src="./images/carousel-icon-02.svg" width="56" height="56" alt="Icon 02">
+                                    <div class="grow">
+                                        <div class="font-bold text-lg mb-1">James L., Dad</div>
+                                        <div class="text-slate-400 mb-3">"Play3 gives my daughter freedom to enjoy and improve. The coaches are supportive and inspiring." ⭐⭐⭐⭐⭐</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide h-auto relative bg-slate-800 rounded-3xl p-px before:absolute before:w-96 before:h-96 before:-left-48 before:-top-48 before:bg-purple-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] hover:before:opacity-20 before:z-30 before:blur-[100px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),var(--color-slate-400),transparent)] group-hover:after:opacity-100 after:z-10 overflow-hidden group/slide">
+                            <div class="relative h-full bg-slate-900 rounded-[inherit] z-20 overflow-hidden">
+                                <div class="flex flex-col p-6 h-full">
+                                    <img class="mb-3" src="./images/carousel-icon-03.svg" width="56" height="56" alt="Icon 03">
+                                    <div class="grow">
+                                        <div class="font-bold text-lg mb-1">Linda M., Mum</div>
+                                        <div class="text-slate-400 mb-3">"Amazing! The sessions are fun, safe, and my kids are learning real football skills while making friends." ⭐⭐⭐⭐⭐</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide h-auto relative bg-slate-800 rounded-3xl p-px before:absolute before:w-96 before:h-96 before:-left-48 before:-top-48 before:bg-purple-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] hover:before:opacity-20 before:z-30 before:blur-[100px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),var(--color-slate-400),transparent)] group-hover:after:opacity-100 after:z-10 overflow-hidden group/slide">
+                            <div class="relative h-full bg-slate-900 rounded-[inherit] z-20 overflow-hidden">
+                                <div class="flex flex-col p-6 h-full">
+                                    <img class="mb-3" src="./images/carousel-icon-04.svg" width="56" height="56" alt="Icon 04">
+                                    <div class="grow">
+                                        <div class="font-bold text-lg mb-1">Michael K., Dad</div>
+                                        <div class="text-slate-400 mb-3">"Play3 is hands-down the best coaching environment. The focus on skill, fun, and confidence is perfect." ⭐⭐⭐⭐⭐</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide h-auto relative bg-slate-800 rounded-3xl p-px before:absolute before:w-96 before:h-96 before:-left-48 before:-top-48 before:bg-purple-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] hover:before:opacity-20 before:z-30 before:blur-[100px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),var(--color-slate-400),transparent)] group-hover:after:opacity-100 after:z-10 overflow-hidden group/slide">
+                            <div class="relative h-full bg-slate-900 rounded-[inherit] z-20 overflow-hidden">
+                                <div class="flex flex-col p-6 h-full">
+                                    <img class="mb-3" src="./images/carousel-icon-05.svg" width="56" height="56" alt="Icon 05">
+                                    <div class="grow">
+                                        <div class="font-bold text-lg mb-1">Emily R., Mum</div>
+                                        <div class="text-slate-400 mb-3">"Every session is well-organized and fun. My children are learning, making friends, and loving football!" ⭐⭐⭐⭐⭐</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Arrows -->
+            <div class="flex mt-8 justify-end">
+                <button class="carousel-prev relative z-20 w-12 h-12 flex items-center justify-center group">
+                    <span class="sr-only">Previous</span>
+                    <svg class="w-4 h-4 fill-slate-500 group-hover:fill-purple-500 transition duration-150 ease-in-out" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.7 14.7l1.4-1.4L3.8 9H16V7H3.8l4.3-4.3-1.4-1.4L0 8z" />
+                    </svg>
+                </button>
+                <button class="carousel-next relative z-20 w-12 h-12 flex items-center justify-center group">
+                    <span class="sr-only">Next</span>
+                    <svg class="w-4 h-4 fill-slate-500 group-hover:fill-purple-500 transition duration-150 ease-in-out" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.3 14.7l-1.4-1.4L12.2 9H0V7h12.2L7.9 2.7l1.4-1.4L16 8z" />
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+            <!-- Pricing -->
+            <section class="relative">
+                <!-- Radial gradient -->
+                <div class="absolute inset-0 overflow-hidden pointer-events-none -z-10" aria-hidden="true">
+                    <div class="absolute flex items-center justify-center top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 w-1/3 aspect-square">
+                        <div class="absolute inset-0 translate-z-0 bg-purple-500 rounded-full blur-[120px] opacity-50"></div>
+                    </div>
+                </div>
+                <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                    <div class="py-12 md:py-20">
+                        <!-- Content -->
+                        <div class="max-w-3xl mx-auto text-center pb-12 md:pb-20">
+                            <div>
+                                <div class="inline-flex font-medium bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 pb-3">PLAY3 Sessions & Memberships</div>
+                            </div>
+                            <h2 class="h2 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">Choose how you want to Play3</h2>
+                            <p class="text-lg text-slate-400">Whether you're dropping in for weekly sessions or committing to monthly development, we offer options for every young baller. Quality coaching. Maximum fun. Zero ego.</p>
+                        </div>
+                 <!-- Pricing tabs (PLAY3 content) -->
+<!-- Source PDF: /mnt/data/PLAY3.pdf.pdf -->
+<div class="relative">
+    <!-- Blurred shape (unchanged) -->
+    <div class="max-md:hidden absolute bottom-0 -mb-20 left-2/3 -translate-x-1/2 blur-2xl opacity-70 pointer-events-none" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="434" height="427">
+            <defs>
+                <linearGradient id="bs5-a" x1="19.609%" x2="50%" y1="14.544%" y2="100%">
+                    <stop offset="0%" stop-color="#A855F7" />
+                    <stop offset="100%" stop-color="#6366F1" stop-opacity="0" />
+                </linearGradient>
+            </defs>
+            <path fill="url(#bs5-a)" fill-rule="evenodd" d="m661 736 461 369-284 58z" transform="matrix(1 0 0 -1 -661 1163)" />
+        </svg>
+    </div>
+
+    <!-- Content -->
+    <div class="grid md:grid-cols-4 xl:-mx-6 text-sm [&>div:nth-of-type(-n+4)]:py-6 [&>div:nth-last-of-type(-n+4)]:pb-6 max-md:[&>div:nth-last-of-type(-n+4)]:mb-8 max-md:[&>div:nth-of-type(-n+4):nth-of-type(n+1)]:rounded-t-3xl max-md:[&>div:nth-last-of-type(-n+4)]:rounded-b-3xl md:[&>div:nth-of-type(2)]:rounded-tl-3xl md:[&>div:nth-of-type(4)]:rounded-tr-3xl md:[&>div:nth-last-of-type(3)]:rounded-bl-3xl md:[&>div:nth-last-of-type(1)]:rounded-br-3xl [&>div]:bg-slate-700/20 [&>div:nth-of-type(4n+1)]:bg-transparent max-md:[&>div:nth-of-type(4n+5)]:hidden max-md:[&>div:nth-of-type(4n+2)]:order-1 max-md:[&>div:nth-of-type(4n+3)]:order-2 max-md:[&>div:nth-of-type(4n+4)]:order-3 max-md:md:[&>div:nth-of-type(n)]:mb-0 [&>div:nth-of-type(4n+3)]:relative [&>div:nth-of-type(4n+3)]:before:absolute [&>div:nth-of-type(4n+3)]:before:-inset-px [&>div:nth-of-type(4n+3)]:before:rounded-[inherit] [&>div:nth-of-type(4n+3)]:before:border-x-2 [&>div:nth-of-type(3)]:before:border-t-2 [&>div:nth-last-of-type(2)]:before:border-b-2 [&>div:nth-of-type(4n+3)]:before:border-purple-500 [&>div:nth-of-type(4n+3)]:before:-z-10 [&>div:nth-of-type(4n+3)]:before:pointer-events-none" x-data="{ annual: true }">
+
+        <!-- Pricing toggle (left column kept, text unchanged visually) -->
+        <div class="px-6 flex flex-col justify-end">
+            <div class="pb-5 md:border-b border-slate-800">
+                <!-- Toggle switch (kept) -->
+                <div class="max-md:text-center">
+                    <div class="inline-flex items-center whitespace-nowrap">
+                        <div class="text-sm text-slate-500 font-medium mr-2 md:max-lg:hidden">Monthly</div>
+                        <div class="relative">
+                            <input type="checkbox" id="toggle" class="peer sr-only" x-model="annual" />
+                            <label for="toggle" class="relative flex h-6 w-11 cursor-pointer items-center rounded-full bg-slate-400 px-0.5 outline-slate-400 transition-colors before:h-5 before:w-5 before:rounded-full before:bg-white before:shadow-xs before:transition-transform before:duration-150 peer-checked:bg-purple-500 peer-checked:before:translate-x-full peer-focus-visible:outline peer-focus-visible:outline-offset-2 peer-focus-visible:outline-gray-400 peer-focus-visible:peer-checked:outline-purple-500">
+                                <span class="sr-only">Pay Yearly</span>
+                            </label>
+                        </div>
+                        <div class="text-sm text-slate-500 font-medium ml-2">Yearly <span class="text-teal-500">(-20%)</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Single Session (was Pro) -->
+        <div class="px-6 flex flex-col justify-end">
+            <div class="grow pb-4 mb-4 border-b border-slate-800">
+                <div class="text-base font-medium bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 pb-0.5">Single Session</div>
+                <div class="mb-1">
+                    <span class="text-lg font-medium text-slate-500">£</span>
+                    <!-- Single session price (show same whether annual toggled or not) -->
+                    <span class="text-3xl font-bold text-slate-50" x-text="annual ? '15' : '15'">15</span>
+                    <span class="text-sm text-slate-600 font-medium">/session</span>
+                </div>
+                <div class="text-slate-500">Pay-as-you-go access to any Play3 session.</div>
+            </div>
+            <div class="pb-4 border-b border-slate-800">
+                <a class="btn-sm text-slate-900 bg-linear-to-r from-white/80 via-white to-white/80 hover:bg-white w-full transition duration-150 ease-in-out group" href="booking.html">
+                    Book a Session <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Monthly Membership (was Team) -->
+        <div class="px-6 flex flex-col justify-end">
+            <div class="grow pb-4 mb-4 border-b border-slate-800">
+                <div class="text-base font-medium bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 pb-0.5">Monthly Membership</div>
+                <div class="mb-1">
+                    <span class="text-lg font-medium text-slate-500">£</span>
+                    <!-- Membership price -->
+                    <span class="text-3xl font-bold text-slate-50" x-text="annual ? '45' : '45'">45</span>
+                    <span class="text-sm text-slate-600 font-medium">/mo</span>
+                </div>
+                <div class="text-slate-500">Best value — regular sessions for consistent development (approx. 8 sessions/month).</div>
+            </div>
+            <div class="pb-4 border-b border-slate-800">
+                <a class="btn-sm text-white bg-purple-500 hover:bg-purple-600 w-full transition duration-150 ease-in-out group" href="booking.html">
+                    Join Monthly <span class="tracking-normal text-purple-300 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Elite Pack (was Enterprise) -->
+        <div class="px-6 flex flex-col justify-end">
+            <div class="grow pb-4 mb-4 border-b border-slate-800">
+                <div class="text-base font-medium bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 pb-0.5">Elite Pack</div>
+                <div class="mb-1">
+                    <span class="text-lg font-medium text-slate-500">£</span>
+                    <!-- Elite price -->
+                    <span class="text-3xl font-bold text-slate-50" x-text="annual ? '99' : '99'">99</span>
+                    <span class="text-sm text-slate-600 font-medium">/mo</span>
+                </div>
+                <div class="text-slate-500">Priority booking, guaranteed spot, plus end-of-term progress review and feedback.</div>
+            </div>
+            <div class="pb-4 border-b border-slate-800">
+                <a class="btn-sm text-slate-900 bg-linear-to-r from-white/80 via-white to-white/80 hover:bg-white w-full transition duration-150 ease-in-out group" href="booking.html">
+                    Join Elite <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- What’s Included (Usage) -->
+        <div class="px-6 flex flex-col justify-end">
+            <div class="py-2 text-slate-50 font-medium mt-4">What’s included</div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="py-2 text-slate-50 font-medium mt-4 md:hidden">What’s included</div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="py-2 text-slate-50 font-medium mt-4 md:hidden">What’s included</div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="py-2 text-slate-50 font-medium mt-4 md:hidden">What’s included</div>
+        </div>
+
+        <!-- Capacity (was Social Connections) -->
+        <div class="px-6 flex flex-col justify-end">
+            <div class="py-2 text-slate-400 border-b border-slate-800">Session capacity</div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>16 players max</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>16 players max</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>16 players max</span>
+            </div>
+        </div>
+
+        <!-- Location (was Custom Domains) -->
+        <div class="px-6 flex flex-col justify-end">
+            <div class="py-2 text-slate-400 border-b border-slate-800">Location</div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>Chiswick School, Burlington Lane, W4 3UN</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>Chiswick School, Burlington Lane, W4 3UN</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>Chiswick School, Burlington Lane, W4 3UN</span>
+            </div>
+        </div>
+
+        <!-- Coaching Team (was User Role Management) -->
+        <div class="px-6 flex flex-col justify-end">
+            <div class="py-2 text-slate-400 border-b border-slate-800">Coaching Team</div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>UEFA-qualified + pro players</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>UEFA-qualified + pro players</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>UEFA-qualified + pro players</span>
+            </div>
+        </div>
+
+        <!-- Ages (was External Databases) -->
+        <div class="px-6 flex flex-col justify-end">
+            <div class="py-2 text-slate-400 border-b border-slate-800">Ages</div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>Ages 7–9</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>Ages 10–12</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>Ages 7–12 (mixed)</span>
+            </div>
+        </div>
+
+        <!-- Benefits (was Features) -->
+        <div class="px-6 flex flex-col justify-end">
+            <div class="py-2 text-slate-50 font-medium mt-4">Benefits</div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="py-2 text-slate-50 font-medium mt-4 md:hidden">Benefits</div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="py-2 text-slate-50 font-medium mt-4 md:hidden">Benefits</div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="py-2 text-slate-50 font-medium mt-4 md:hidden">Benefits</div>
+        </div>
+
+        <!-- Futsal Training (was Custom Connection) -->
+        <div class="px-6 flex flex-col justify-end">
+            <div class="py-2 text-slate-400 border-b border-slate-800">Futsal Training</div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>Included</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>Included</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>Included</span>
+            </div>
+        </div>
+
+        <!-- Football Training (was Advanced Deployment Options) -->
+        <div class="px-6 flex flex-col justify-end">
+            <div class="py-2 text-slate-400 border-b border-slate-800">Football Training</div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>Included</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>Included</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>Included</span>
+            </div>
+        </div>
+
+        <!-- Optional Extras (was Extra Add-ons) -->
+        <div class="px-6 flex flex-col justify-end">
+            <div class="py-2 text-slate-400 border-b border-slate-800">Optional extras</div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>Holiday Camps, 1-to-1 coaching</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>Holiday Camps, 1-to-1 coaching</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>Holiday Camps, 1-to-1 coaching</span>
+            </div>
+        </div>
+
+        <!-- Support (was Admin Roles) -->
+        <div class="px-6 flex flex-col justify-end">
+            <div class="py-2 text-slate-400 border-b border-slate-800">Support</div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center border-b border-slate-800 py-2 text-slate-400 max-md:hidden">
+                <span>WhatsApp & email</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center border-b border-slate-800 py-2 text-slate-400 max-md:hidden">
+                <span>WhatsApp & email</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>WhatsApp & email</span>
+            </div>
+        </div>
+
+        <!-- Safety & Welfare (was Deploy and Monitor) -->
+        <div class="px-6 flex flex-col justify-end">
+            <div class="py-2 text-slate-400 border-b border-slate-800">Safety & welfare</div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center border-b border-slate-800 py-2 text-slate-400 max-md:hidden">
+                <span>Safeguarding certified coaches</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center border-b border-slate-800 py-2 text-slate-400 max-md:hidden">
+                <span>First-aid trained staff</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>Secure indoor venue & welfare policies</span>
+            </div>
+        </div>
+
+        <!-- Enterprise Add-ons (kept but renamed visually above to Optional extras) -->
+        <div class="px-6 flex flex-col justify-end">
+            <div class="py-2 text-slate-400 border-b border-slate-800">Enterprise Add-ons</div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center border-b border-slate-800 py-2 text-slate-400 max-md:hidden">
+                <span>Enterprise Add-ons</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center border-b border-slate-800 py-2 text-slate-400 max-md:hidden">
+                <span>Enterprise Add-ons</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>Enterprise Add-ons</span>
+            </div>
+        </div>
+
+        <!-- Premium Support (kept as Support/Extras) -->
+        <div class="px-6 flex flex-col justify-end">
+            <div class="py-2 text-slate-400 border-b border-slate-800">Premium support</div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center border-b border-slate-800 py-2 text-slate-400 max-md:hidden">
+                <span>Coach feedback & priority contact</span>
+            </div>
+        </div>
+        <div class="px-6 flex flex-col justify-end">
+            <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                </svg>
+                <span>Coach feedback & priority contact</span>
+            </div>
+        </div>
+
+    </div>
+</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials -->
+         <!-- Meet the Coaches (Carousel) -->
+<section>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <div class="relative pb-12 md:pb-20">
+
+            <!-- Particles animation -->
+            <div class="absolute left-1/2 -translate-x-1/2 top-0 -z-10 w-80 h-80 -mt-6">
+                <div class="absolute inset-0 -z-10" aria-hidden="true">
+                    <canvas data-particle-animation data-particle-quantity="10" data-particle-staticity="30"></canvas>
+                </div>
+            </div>
+
+            <!-- Carousel -->
+            <div class="text-center" x-data="carousel">
+                
+                <!-- Coach image -->
+                <div class="relative h-32 [mask-image:linear-gradient(0deg,transparent,var(--color-white)_40%,var(--color-white))]">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[480px] h-[480px] -z-10 pointer-events-none before:rounded-full rounded-full before:absolute before:inset-0 before:bg-linear-to-b before:from-slate-400/20 before:to-transparent before:to-20% after:rounded-full after:absolute after:inset-0 after:bg-slate-900 after:m-px before:-z-20 after:-z-20">
+                        
+                        <template x-for="(item, index) in items" :key="index">
+                            <div
+                                x-show="active === index"
+                                class="absolute inset-0 -z-10"
+                                x-transition:enter="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700 order-first"
+                                x-transition:enter-start="opacity-0 -rotate-[60deg]"
+                                x-transition:enter-end="opacity-100 rotate-0"
+                                x-transition:leave="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700"
+                                x-transition:leave-start="opacity-100 rotate-0"
+                                x-transition:leave-end="opacity-0 rotate-[60deg]"
+                            >
+                                <img class="relative top-11 left-1/2 -translate-x-1/2 rounded-full" :src="item.img" width="70" height="70" :alt="item.name">
+                            </div>
+                        </template>
+                    </div>
+                </div>
+
+                <!-- Bio Text -->
+                <div class="mb-10">
+                    <div class="relative flex flex-col transition-all duration-150 delay-300 ease-in-out" x-ref="testimonials">
+                        
+                        <template x-for="(item, index) in items" :key="index">
+                            <div
+                                x-show="active === index"
+                                x-transition:enter="transition ease-in-out duration-500 delay-200 order-first"
+                                x-transition:enter-start="opacity-0 -translate-x-4"
+                                x-transition:enter-end="opacity-100 translate-x-0"
+                                x-transition:leave="transition ease-out duration-300 delay-300 absolute"
+                                x-transition:leave-start="opacity-100 translate-x-0"
+                                x-transition:leave-end="opacity-0 translate-x-4"
+                            >
+                                <div class="text-xl font-bold bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60" x-text="item.quote"></div>
+                            </div>
+                        </template>
+
+                    </div>
+                </div>
+
+                <!-- Buttons -->
+                <div class="flex flex-wrap justify-center -m-1.5">
+                    <template x-for="(item, index) in items" :key="index">
+                        <button
+                            class="btn-sm m-1.5 text-xs py-1.5 text-slate-300 transition duration-150 ease-in-out [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] relative before:absolute before:inset-0 before:bg-slate-800/30 before:rounded-full before:pointer-events-none"
+                            :class="active === index ? 'opacity-100' : 'opacity-30 hover:opacity-60'"
+                            @click="active = index; stopAutorotate();"
+                        >
+                            <span class="relative">
+                                <span class="text-slate-50" x-text="item.name"></span>
+                                <span class="text-slate-600"> - </span>
+                                <span x-text="item.role"></span>
+                            </span>
+                        </button>
+                    </template>
+                </div>
+
+            </div>
+
+            <!-- Alpine Carousel JS -->
+            <script>
+                document.addEventListener('alpine:init', () => {
+                    Alpine.data('carousel', () => ({
+                        active: 0,
+                        autorotate: true,
+                        autorotateTiming: 7000,
+                        items: [
+                            {
+                                img: './images/vinnydribbling.jpg',
+                                name: 'Frank Vincent',
+                                role: 'Co-Founder',
+                                quote: "Our number 33 — energy, passion, positivity. West London raised, QPR bred. Built through setbacks, fuelled by belief. Frank’s journey proves resilience is a superpower."
+                            },
+                            {
+                                img: './images/dariodribbling.jpg',
+                                name: 'Dario O’Reilly Cocker',
+                                role: 'Co-Founder',
+                                quote: "The captain & connector. Acton born, futsal raised — flair, intelligence, creativity. Leading with love, building culture with FV: community, creativity, connection."
+                            },
+                            {
+                                img: './images/philipeadribbling.jpg',
+                                name: 'Phillippe Ferrari',
+                                role: 'Coach',
+                                quote: "The magician. São Paulo roots, London rhythm. Silent swagger, effortless samba. When Philli moves, the ball dances with him."
+                            },
+                            {
+                                img: './images/gambo.jpg',
+                                name: 'Luke Gambin',
+                                role: 'Coach',
+                                quote: "The international technician. EFL trenches to Malta’s national team. Heart of a lion, touch of a maestro. Gambo coaches with purpose — building futures."
+                            }
+                        ],
+                        init() {
+                            if (this.autorotate) {
+                                this.autorotateInterval = setInterval(() => {
+                                    this.active = this.active + 1 === this.items.length ? 0 : this.active + 1
+                                }, this.autorotateTiming)
+                            }
+                            this.$watch('active', () => this.heightFix())
+                        },
+                        stopAutorotate() {
+                            clearInterval(this.autorotateInterval)
+                            this.autorotateInterval = null
+                        },
+                        heightFix() {
+                            this.$nextTick(() => {
+                                this.$refs.testimonials.style.height = this.$refs.testimonials.children[this.active + 1].offsetHeight + 'px'
+                            })
+                        }
+                    }))
+                })
+            </script>
+
+        </div>
+    </div>
+</section>
+
+        </main>
+
+       <!-- Site footer -->
+<footer>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+        <!-- Blocks -->
+        <div class="grid sm:grid-cols-12 gap-8 py-8 md:py-12">
+
+            <!-- 1st block -->
+            <div class="sm:col-span-12 lg:col-span-4 order-1 lg:order-none">
+                <div class="h-full flex flex-col sm:flex-row lg:flex-col justify-between">
+                    <div class="mb-4 sm:mb-0">
+                        <div class="mb-4">
+                            <!-- Logo -->
+                            <a class="inline-flex" href="index.html" aria-label="Play3">
+                                <img src="./images/logo.svg" width="38" height="38" alt="Play3 Logo">
+                            </a>
+                        </div>
+                        <div class="text-sm text-slate-300">&copy; 2025 Play3 Football <span class="text-slate-500">-</span> All rights reserved.</div>
+                    </div>
+
+                    <!-- Social links (football brand specific) -->
+                    <ul class="flex">
+
+                        <!-- Instagram -->
+                        <li>
+                            <a class="flex justify-center items-center text-purple-500 hover:text-purple-400 transition duration-150 ease-in-out" 
+                               href="https://www.instagram.com/play3football" target="_blank" aria-label="Instagram">
+                                <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                    <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 
+                                            2.243 5 5 5h10c2.757 0 5-2.243 
+                                            5-5V7c0-2.757-2.243-5-5-5H7zm10 
+                                            2c1.654 0 3 1.346 3 3v10c0 
+                                            1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 
+                                            1.346-3 3-3h10zm-5 3a5 5 0 100 10 
+                                            5 5 0 000-10zm0 2a3 3 0 110 
+                                            6 3 3 0 010-6zm4.5-.75a1.25 1.25 0 110 
+                                            2.5 1.25 1.25 0 010-2.5z"/>
+                                </svg>
+                            </a>
+                        </li>
+
+                        <!-- TikTok -->
+                        <li class="ml-2">
+                            <a class="flex justify-center items-center text-purple-500 hover:text-purple-400 transition duration-150 ease-in-out"
+                               href="https://www.tiktok.com/@play3football" target="_blank" aria-label="TikTok">
+                                <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                    <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 
+                                             10-10 10S2 17.514 2 12 6.486 
+                                             2 12 2zm1 4.5v5.086a3.5 3.5 
+                                             0 11-2-3.182V6.5h2z"/>
+                                </svg>
+                            </a>
+                        </li>
+
+                        <!-- YouTube -->
+                        <li class="ml-2">
+                            <a class="flex justify-center items-center text-purple-500 hover:text-purple-400 transition duration-150 ease-in-out"
+                               href="https://www.youtube.com/@play3football" target="_blank" aria-label="YouTube">
+                                <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                    <path d="M21.8 8s-.2-1.5-.8-2.2c-.7-.9-1.5-.9-1.9-1C15.9 
+                                             4.5 12 4.5 12 4.5h-.1s-3.9 
+                                             0-7.1.3c-.4.1-1.2.1-1.9 1C2.4 
+                                             6.5 2.2 8 2.2 8S2 9.7 2 
+                                             11.4v1.3c0 1.7.2 3.4.2 3.4s.2 
+                                             1.5.8 2.2c.7.9 1.7.9 2.2 
+                                             1 1.6.2 6.8.3 6.8.3s3.9 
+                                             0 7.1-.3c.4-.1 1.2-.1 1.9-1 
+                                             .6-.7.8-2.2.8-2.2s.2-1.7.2-3.4v-1.3c0-1.7-.2-3.4-.2-3.4zM10 
+                                             14.7V9.3l5.2 2.7L10 14.7z"/>
+                                </svg>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 2nd block -->
+            <div class="sm:col-span-6 md:col-span-3 lg:col-span-2">
+                <h6 class="text-sm text-slate-50 font-medium mb-2">Play3</h6>
+                <ul class="text-sm space-y-2">
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#training">Training</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#coaches">Our Coaches</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#sessions">Sessions</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#philosophy">Philosophy</a></li>
+                </ul>
+            </div>
+
+            <!-- 3rd block -->
+            <div class="sm:col-span-6 md:col-span-3 lg:col-span-2">
+                <h6 class="text-sm text-slate-50 font-medium mb-2">Company</h6>
+                <ul class="text-sm space-y-2">
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#about">About Us</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#team">Meet the Founders</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#contact">Contact</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#locations">Locations</a></li>
+                </ul>
+            </div>
+
+            <!-- 4th block -->
+            <div class="sm:col-span-6 md:col-span-3 lg:col-span-2">
+                <h6 class="text-sm text-slate-50 font-medium mb-2">Resources</h6>
+                <ul class="text-sm space-y-2">
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#faq">FAQ</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#policies">Policies</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#safeguarding">Safeguarding</a></li>
+                </ul>
+            </div>
+
+            <!-- 5th block -->
+            <div class="sm:col-span-6 md:col-span-3 lg:col-span-2">
+                <h6 class="text-sm text-slate-50 font-medium mb-2">Legal</h6>
+                <ul class="text-sm space-y-2">
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#terms">Terms & Conditions</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#privacy">Privacy Policy</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#liability">Liability Waiver</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200" href="#insurance">Insurance</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+</footer>
+
+
+    </div>
+
+    <script src="./js/vendors/alpinejs.min.js" defer></script>
+    <script src="./js/vendors/aos.js"></script>
+    <script src="./js/vendors/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
