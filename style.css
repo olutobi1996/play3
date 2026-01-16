@@ -395,9 +395,38 @@
   }
 }
 :root {
-  --play3-gold: #d4af37;
-  --play3-gold-soft: rgba(212, 175, 55, 0.45);
+  --play3-navy: #0e1b2e;          /* LIGHTER, CLEAN NAVY */
+  --play3-navy-soft: #14263f;    /* panels / cards */
+  --play3-gold: #f5c77a;         /* rich gold */
+  --play3-gold-glow: rgba(245, 199, 122, 0.6);
 }
+
+/* PURPLE KILL SWITCH */
+[class*="purple"],
+[class*="violet"],
+.text-purple-500,
+.text-purple-400,
+.bg-purple-500,
+.bg-purple-400 {
+  color: var(--play3-gold) !important;
+  background-color: var(--play3-navy) !important;
+}
+
+html,
+body,
+main {
+  background-color: var(--play3-navy) !important;
+}
+
+
+.play3-gold-glow {
+  color: var(--play3-gold);
+  text-shadow:
+    0 0 10px var(--play3-gold-glow),
+    0 0 20px var(--play3-gold-glow),
+    0 0 40px var(--play3-gold-glow);
+}
+
 
 @layer base {
   *, ::after, ::before, ::backdrop, ::file-selector-button {
