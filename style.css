@@ -395,10 +395,12 @@
   }
 }
 :root {
-  --play3-navy: #0e1b2e;          /* LIGHTER, CLEAN NAVY */
+ --play3-navy: #0e1b2e;          /* LIGHTER, CLEAN NAVY */
   --play3-navy-soft: #14263f;    /* panels / cards */
-  --play3-gold: #f5c77a;         /* rich gold */
-  --play3-gold-glow: rgba(245, 199, 122, 0.6);
+  --play3-gold: #C7AE8D;
+
+  /* subtle glow only */
+  --play3-gold-glow-soft: rgba(199, 174, 141, 0.35);
 }
 
 /* PURPLE KILL SWITCH */
@@ -418,13 +420,37 @@ main {
   background-color: var(--play3-navy) !important;
 }
 
-
 .play3-gold-glow {
   color: var(--play3-gold);
   text-shadow:
     0 0 10px var(--play3-gold-glow),
     0 0 20px var(--play3-gold-glow),
     0 0 40px var(--play3-gold-glow);
+}
+.btn-play3 {
+  background-color: var(--play3-gold);
+  color: white;
+  font-weight: 600;
+  border-radius: 9999px;
+  padding: 0.75rem 1.5rem;
+
+  box-shadow:
+    0 2px 0 rgba(255,255,255,0.2),
+    0 0 10px rgba(199,174,141,0.35);
+
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-play3:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 3px 0 rgba(255,255,255,0.25),
+    0 0 16px rgba(199,174,141,0.45);
+}
+
+/* Arrow */
+.btn-play3 span span {
+  color: white;
 }
 
 
@@ -458,10 +484,34 @@ main {
     -webkit-text-decoration: underline dotted;
     text-decoration: underline dotted;
   }
-  h1, h2, h3, h4, h5, h6 {
-    font-size: inherit;
-    font-weight: inherit;
-  }
+/* ===============================
+   PLAY3 ELITE HEADING GOLD
+   =============================== */
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--play3-gold);
+  text-shadow:
+    0 1px 0 rgba(255,255,255,0.12),
+    0 0 6px var(--play3-gold-glow-soft);
+}
+/* Gold glow for customer boxes */
+.play3-gold-glow {
+  color: var(--play3-gold);
+  text-shadow:
+    0 0 5px var(--play3-gold-glow-soft),
+    0 0 10px var(--play3-gold-glow-soft);
+  transition: text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.group-hover\:animate-glow:hover {
+  text-shadow:
+    0 0 10px var(--play3-gold-glow-soft),
+    0 0 20px var(--play3-gold-glow-soft),
+    0 0 40px var(--play3-gold-glow-soft);
+  transform: scale(1.05);
+}
+
+
   a {
     color: inherit;
     -webkit-text-decoration: inherit;
