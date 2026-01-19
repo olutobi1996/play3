@@ -114,110 +114,90 @@
         <!-- Page content -->
         <main class="grow">
 
-             <!-- Hero -->
-  <section class="relative">
+<!-- Hero Section -->
+<section class="relative pt-32 md:pt-40"> <!-- Push everything down from navbar -->
 
-    <!-- Radial gradient -->
-    <div class="absolute flex items-center justify-center top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-[800px] aspect-square" aria-hidden="true">
-      <div class="absolute inset-0 translate-z-0 bg-purple-500 rounded-full blur-[120px] opacity-30"></div>
-      <div class="absolute w-64 h-64 translate-z-0 bg-purple-400 rounded-full blur-[80px] opacity-70"></div>
+  <!-- Hero Text -->
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+    <div class="inline-flex font-medium pb-3">The team behind Play3</div>
+
+    <h1 class="h1 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-6">
+      Tune into the 3quency, football + futsal coaching
+    </h1>
+  </div>
+
+  <!-- Golden Circle with Floating Icon -->
+  <div class="relative flex items-center justify-center my-6"> 
+    <!-- Single Golden Ring -->
+    <svg
+      class="absolute"
+      width="200"
+      height="200"
+      viewBox="0 0 200 200"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <defs>
+        <radialGradient id="gold-circle" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#FFD966" stop-opacity="0.65"/>
+          <stop offset="70%" stop-color="#FFD966" stop-opacity="0.4"/>
+          <stop offset="100%" stop-color="#FFD966" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <circle cx="100" cy="100" r="80" fill="url(#gold-circle)" class="animate-[pulseRing_8s_ease-in-out_infinite]" />
+    </svg>
+
+    <!-- Floating Gold Icon -->
+    <div class="relative z-10 animate-[float_4s_ease-in-out_infinite]">
+      <div class="flex items-center justify-center w-20 h-20 rounded-full
+                  bg-[#0f172a]
+                  border border-[#f5c86a]/40
+                  shadow-[0_0_35px_rgba(245,200,106,0.65)]">
+        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24">
+          <path fill="#f5c86a" d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/>
+        </svg>
+      </div>
     </div>
+  </div>
 
-    <!-- Particles animation -->
-    <div class="absolute inset-0 h-96 -z-10" aria-hidden="true">
-      <canvas data-particle-animation data-particle-quantity="15"></canvas>
-    </div>
+</section>
 
-    <!-- Illustration -->
-    <div class="md:block absolute left-1/2 -translate-x-1/2 -mt-16 blur-2xl opacity-90 pointer-events-none -z-10" aria-hidden="true">
-      <img src="./images/page-illustration.svg" class="max-w-none" width="1440" height="427" alt="Page Illustration">
-    </div>
+<!-- Story / What is Play3 -->
+<section class="relative mt-20"> <!-- Push story section down -->
 
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="pt-32 pb-10 md:pt-40">
+  <div class="px-4 sm:px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="pb-12 md:pb-20">
 
-        <!-- Hero content -->
-        <div class="text-center">
-          <div class="inline-flex font-medium bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 pb-3">The team behind Play3</div>
-          <h1 class="h1 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-6">Tune into the 3quency, football + futsal coaching</h1>
+        <!-- Section header -->
+        <div class="max-w-3xl mx-auto text-center pb-12 md:pb-20">
+          <h2 class="h2 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60">What is Play3?</h2>
+          <p class="text-lg text-slate-400 mt-3">
+            Tune into the 3quency. Play3 is a coaching brand that fuses the pace and invention of futsal with the heartbeat and pathways of football. We give young players a safe, encouraging space to explore, make mistakes, and level up their game, technically, tactically and mentally.
+          </p>
+        </div>
 
-          <!-- Rings illustration -->
-          <div class="inline-flex items-center justify-center relative">
-            <!-- Particles animation -->
-            <div class="absolute inset-0 -z-10" aria-hidden="true">
-              <canvas data-particle-animation data-particle-quantity="10"></canvas>
+        <div class="md:flex justify-between space-x-6 md:space-x-8 lg:space-x-14">
+          <figure class="min-w-[240px]">
+            <img class="sticky top-8 mx-auto mb-12 md:mb-0 rounded-lg -rotate-[4deg]" src="./images/3fingers.jpg" width="420" height="280" alt="Play3 coaching" />
+          </figure>
+          <div class="max-w-[548px] mx-auto">
+            <div class="text-slate-400 space-y-6">
+              <p>Play3 is redefining how young players train. By combining futsal intensity with football intelligence, every session becomes a space to grow, express and improve.</p>
+              <p>Our coaching model is built on three pillars: freedom, structure and progression. Players try new ideas, develop real technique and build confidence week by week.</p>
+              <p>Play3 is also a community. We bring families together, celebrate development and create an environment where every player feels supported and inspired.</p>
+              <p>For coaching that builds skill and joy, Play3 delivers. We teach control, creativity and game understanding, helping players unlock new levels on the pitch.</p>
             </div>
-            <div class="inline-flex [mask-image:_radial-gradient(circle_at_bottom,transparent_15%,black_70%)]">
-              <img src="./images/about-illustration.svg" width="446" height="446" alt="About illustration" />
-            </div>
-            <img class="absolute mt-[30%] drop-shadow-lg animate-float" src="./images/about-icon.svg" width="72" height="72" alt="About icon" />
           </div>
+          <figure class="min-w-[240px]">
+            <img class="sticky top-8 mx-auto mb-12 md:mb-0 rounded-lg -rotate-[4deg]" src="./images/dariosmilling.jpg" width="420" height="280" alt="Play3 coaching" />
+          </figure>
         </div>
 
       </div>
     </div>
-
-  </section>
-
-           
-  <!-- Story / What is Play3 -->
-  <section class="relative">
-
-    <!-- Blurred shape -->
-    <div class="absolute top-0 -mt-32 left-1/2 -translate-x-1/2 ml-10 blur-2xl opacity-70 pointer-events-none -z-10" aria-hidden="true">
-      <svg xmlns="http://www.w3.org/2000/svg" width="434" height="427">
-        <defs>
-          <linearGradient id="bs4-a" x1="19.609%" x2="50%" y1="14.544%" y2="100%">
-            <stop offset="0%" stop-color="#A855F7"></stop>
-            <stop offset="100%" stop-color="#6366F1" stop-opacity="0"></stop>
-          </linearGradient>
-        </defs>
-        <path fill="url(#bs4-a)" fill-rule="evenodd" d="m0 0 461 369-284 58z" transform="matrix(1 0 0 -1 0 427)"></path>
-      </svg>
-    </div>
-
-    <div class="px-4 sm:px-6">
-      <div class="max-w-5xl mx-auto">
-        <div class="pb-12 md:pb-20">
-
-          <!-- Section header -->
-          <div class="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <h2 class="h2 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60">What is Play3?</h2>
-            <p class="text-lg text-slate-400 mt-3">Tune into the 3quency. Play3 is a coaching brand that fuses the pace and invention of futsal with the heartbeat and pathways of football. We give young players a safe, encouraging space to explore, make mistakes, and level up their game, technically, tactically and mentally.</p>
-          </div>
-
-          <div class="md:flex justify-between space-x-6 md:space-x-8 lg:space-x-14">
-            <figure class="min-w-[240px]">
-              <img class="sticky top-8 mx-auto mb-12 md:mb-0 rounded-lg -rotate-[4deg]" src="./images/3fingers.jpg" width="420" height="280" alt="Play3 coaching" />
-            </figure>
-            <div class="max-w-[548px] mx-auto">
-              <div class="text-slate-400 space-y-6">
-              <p>
-  Play3 is redefining how young players train. By combining futsal intensity with football intelligence, every session becomes a space to grow, express and improve.
-</p>
-
-<p>
-  Our coaching model is built on three pillars: freedom, structure and progression. Players try new ideas, develop real technique and build confidence week by week.
-</p>
-
-<p>
-  Play3 is also a community. We bring families together, celebrate development and create an environment where every player feels supported and inspired.
-</p>
-
-<p>
-  For coaching that builds skill and joy, Play3 delivers. We teach control, creativity and game understanding, helping players unlock new levels on the pitch.
-</p>
-
-              </div>
-            </div>
-             <figure class="min-w-[240px]">
-              <img class="sticky top-8 mx-auto mb-12 md:mb-0 rounded-lg -rotate-[4deg]" src="./images/dariosmilling.jpg" width="420" height="280" alt="Play3 coaching" />
-            </figure>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  </div>
+</section>
 
           
           <!-- Team -->
@@ -320,162 +300,94 @@
     </div>
   </section>
 
-          <!-- The Play3 Experience -->
 
-                 <!-- Recruitment -->
-            <section class="relative">
+         <section class="relative">
 
-                <!-- Blurred shape -->
-                <div class="absolute top-0 -translate-y-1/3 left-1/2 -translate-x-1/2 ml-24 blur-2xl opacity-50 pointer-events-none -z-10" aria-hidden="true">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="434" height="427">
-                        <defs>
-                            <linearGradient id="bs3-a" x1="19.609%" x2="50%" y1="14.544%" y2="100%">
-                                <stop offset="0%" stop-color="#6366F1" />
-                                <stop offset="100%" stop-color="#6366F1" stop-opacity="0" />
-                            </linearGradient>
-                        </defs>
-                        <path fill="url(#bs3-a)" fill-rule="evenodd" d="m410 0 461 369-284 58z" transform="matrix(1 0 0 -1 -410 427)" />
-                    </svg>
-                </div>
+  <!-- Blurred gold shape -->
+  <div class="absolute top-0 -translate-y-1/3 left-1/2 -translate-x-1/2 ml-24 blur-2xl opacity-50 pointer-events-none -z-10" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" width="434" height="427">
+      <defs>
+        <linearGradient id="gold-blur" x1="20%" x2="50%" y1="15%" y2="100%">
+          <stop offset="0%" stop-color="#f5c86a"/>
+          <stop offset="100%" stop-color="#f5c86a" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <path fill="url(#gold-blur)" d="m410 0 461 369-284 58z" transform="matrix(1 0 0 -1 -410 427)" />
+    </svg>
+  </div>
 
-                <div class="max-w-6xl mx-auto px-4 sm:px-6">
-                    <div class="py-12 md:py-20 border-t [border-image:linear-gradient(to_right,transparent,var(--color-slate-800),transparent)1]">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="py-12 md:py-20 border-t [border-image:linear-gradient(to_right,transparent,var(--color-slate-800),transparent)1]">
 
-                        <!-- Section header -->
-                        <div class="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-                            <h2 class="h2 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">The Play3 Experience</h2>
-                            <p class="text-lg text-slate-400"> Energy, creativity, community. Play3 sessions are built to make every player feel part of something bigger, a culture, a movement and a mindset. </p>
-                        </div>
+      <!-- Header -->
+      <div class="max-w-3xl mx-auto text-center pb-12 md:pb-20">
+        <h2 class="h2 pb-4">The Play3 Experience</h2>
+        <p class="text-lg text-slate-400">
+          Energy, creativity, community. Play3 sessions are built to make every player feel part of something bigger.
+        </p>
+      </div>
 
-                        <!-- Icons with text -->
-                        <div class="grid md:grid-cols-3 gap-6 lg:gap-10 max-w-xs mx-auto md:max-w-none -m-5">
-                            <!-- Block #1 -->
-                            <div class="text-center p-5">
-                                <div class="inline-flex items-center justify-center h-12 w-12 rounded-full border border-transparent [background:linear-gradient(var(--color-slate-800),var(--color-slate-800))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] mb-3">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24">
-                                        <g fill="none" fill-rule="nonzero" opacity=".8">
-                                            <path class="fill-slate-600" d="M14.416 3.527C13.841 4.39 13.5 5.242 13.5 6a1.5 1.5 0 1 0 3 0c0-.758-.34-1.61-.916-2.473A8.962 8.962 0 0 0 15 2.748c-.2.239-.398.5-.584.78ZM17.5 6a2.5 2.5 0 1 1-5 0c0-.992.41-2.015 1.084-3.027a9.979 9.979 0 0 1 1.062-1.327L15 1.293l.354.353a9.979 9.979 0 0 1 1.062 1.326C17.091 3.986 17.5 5.009 17.5 6ZM6 6.5c-1.374 0-2.5-1.055-2.5-2.375 0-.243.043-.492.125-.746.176-.548.523-1.108.99-1.672A9.774 9.774 0 0 1 5.677.62L6 .344l.323.275a9.774 9.774 0 0 1 1.061 1.089c.468.563.815 1.123.991 1.671.082.254.125.503.125.746C8.5 5.445 7.374 6.5 6 6.5Zm-.615-4.154c-.393.474-.678.933-.808 1.339-.051.16-.077.307-.077.44C4.5 4.877 5.164 5.5 6 5.5s1.5-.623 1.5-1.375c0-.133-.026-.28-.077-.44-.13-.406-.415-.865-.808-1.34A8.746 8.746 0 0 0 6 1.682c-.21.205-.42.43-.615.665Z" />
-                                            <path class="fill-slate-200" d="M9.483 14.562A6.495 6.495 0 0 1 15 11.5h4.5v.5a8.5 8.5 0 0 1-8.5 8.5H9.5v3h-1v-7H7A6.5 6.5 0 0 1 .5 10v-.5H4c2.89 0 5.26 2.23 5.483 5.062Zm-.485.938H8.5v1h.174a6.45 6.45 0 0 1 .324-1Zm.502 4H11a7.5 7.5 0 0 0 7.484-7H15A5.5 5.5 0 0 0 9.5 18v1.5Zm-1-4V15A4.5 4.5 0 0 0 4 10.5H1.522A5.5 5.5 0 0 0 7 15.5h1.5Z" />
-                                        </g>
-                                    </svg>
-                                </div>
-                                <div class="font-bold text-slate-100 mb-1">Progression</div>
-                                <p class="text-sm text-slate-400"> Visible development, week by week. better versions of themselves.</p>
-                            </div>
-                            <!-- Block #2 -->
-                            <div class="text-center p-5">
-                                <div class="inline-flex items-center justify-center h-12 w-12 rounded-full border border-transparent [background:linear-gradient(var(--color-slate-800),var(--color-slate-800))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] mb-3">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
-                                        <path class="fill-slate-200" d="M9.423 12.278H.87L11.614.458l-1.037 7.264h8.553L8.386 19.542l1.037-7.264Zm-6.293-1h7.447l-.74 5.18 7.033-7.736H9.423l.74-5.18-7.033 7.736Z" opacity=".8" />
-                                    </svg>
-                                </div>
-                                <div class="font-bold text-slate-100 mb-1">Energy</div>
-                                <p class="text-sm text-slate-400"> Fast, exciting and dynamic, unlock each player’s spark.</p>
-                            </div>
-                            <!-- Block #3 -->
-                            <div class="text-center p-5">
-                                <div class="inline-flex items-center justify-center h-12 w-12 rounded-full border border-transparent [background:linear-gradient(var(--color-slate-800),var(--color-slate-800))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] mb-3">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                                        <g fill="none" fill-rule="nonzero" opacity=".8">
-                                            <path class="fill-slate-600" d="M11.5 1h1v4h-1V1ZM23 11.5v1h-4v-1h4ZM12.5 23h-1v-4h1v4ZM1 12.5v-1h4v1H1Z" />
-                                            <path class="fill-slate-200" d="M12 23.5C5.649 23.5.5 18.351.5 12S5.649.5 12 .5 23.5 5.649 23.5 12 18.351 23.5 12 23.5Zm0-1c5.799 0 10.5-4.701 10.5-10.5S17.799 1.5 12 1.5 1.5 6.201 1.5 12 6.201 22.5 12 22.5Zm0-8a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Zm0-1a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z" />
-                                        </g>
-                                    </svg>
-                                </div>
-                                <div class="font-bold text-slate-100 mb-1">Community</div>
-                                <p class="text-sm text-slate-400"> All of us growing together through shared passion and positivity.</p>
-                            </div>
-                        </div>
+      <!-- Icon blocks -->
+      <div class="grid md:grid-cols-3 gap-6 lg:gap-10 max-w-xs mx-auto md:max-w-none -m-5">
 
-                    </div>
-                </div>
+       <!-- Block -->
+<div class="text-center p-5">
+  <div class="inline-flex items-center justify-center h-12 w-12 rounded-full border border-transparent
+    [background:linear-gradient(#0f172a,#0f172a)_padding-box,
+    conic-gradient(#f5c86a,#e6b85c_25%,#e6b85c_75%,#f5c86a)_border-box]
+    shadow-[0_0_28px_rgba(245,200,106,0.5)] mb-3">
 
-                <!-- Images -->
-                <div class="max-w-[1440px] mx-auto px-4 md:px-0">
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6 md:-mx-5">
-                        <img class="w-full aspect-16/10 object-cover rounded-lg" src="./images/3ptstrophy.jpg" width="352" height="220" alt="Recruitment 01" />
-                        <img class="w-full aspect-16/10 object-cover rounded-lg" src="./images/gambo2.jpg" width="352" height="220" alt="Recruitment 02" />
-                        <img class="w-full aspect-16/10 object-cover rounded-lg" src="./images/vinnywembley.jpg" width="352" height="220" alt="Recruitment 03" />
-                        <img class="w-full aspect-16/10 object-cover rounded-lg" src="./images/dariospeech.jpg" width="352" height="220" alt="Recruitment 04" />
-                    </div>
-                </div>
-            </section>
+    <!-- Improved Progression Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none">
+      <!-- Bars -->
+      <rect x="3" y="13" width="3" height="8" rx="1" fill="#f5c86a"/>
+      <rect x="9" y="10" width="3" height="11" rx="1" fill="#f5c86a"/>
+      <rect x="15" y="6" width="3" height="15" rx="1" fill="#f5c86a"/>
 
-          <!-- Testimonials -->
-<section class="relative">
-    <!-- Radial gradient -->
-    <div class="absolute inset-0 overflow-hidden pointer-events-none -z-10" aria-hidden="true">
-        <div class="absolute flex items-center justify-center top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 w-1/3 aspect-square">
-            <div class="absolute inset-0 translate-z-0 bg-purple-500 rounded-full blur-[120px] opacity-50"></div>
+      <!-- Arrow (aligned to growth path) -->
+      <path d="M10 14 L18 6" stroke="#f5c86a" stroke-width="2.2" stroke-linecap="round"/>
+      <path d="M15.8 6 H18 V8.2" stroke="#f5c86a" stroke-width="2.2" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <div class="font-bold text-slate-100 mb-1">Progression</div>
+  <p class="text-sm text-slate-400">Visible development, week by week.</p>
+</div>
+
+
+
+        <div class="text-center p-5">
+          <div class="inline-flex items-center justify-center h-12 w-12 rounded-full border border-transparent
+            [background:linear-gradient(#0f172a,#0f172a)_padding-box,
+            conic-gradient(#f5c86a,#e6b85c_25%,#e6b85c_75%,#f5c86a)_border-box]
+            shadow-[0_0_25px_rgba(245,200,106,0.45)] mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+              <path fill="#f5c86a" d="M10 0L2 12h6l-2 8 8-12h-6z"/>
+            </svg>
+          </div>
+          <div class="font-bold text-slate-100 mb-1">Energy</div>
+          <p class="text-sm text-slate-400">Fast, exciting and dynamic sessions.</p>
         </div>
-    </div>
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="py-12 md:py-20">
-            <!-- Content -->
-            <div class="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-                <h2 class="h2 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">Hear from our players</h2>
-                <p class="text-lg text-slate-400">Play3 is all about helping young football and futsal players enjoy the game, build confidence, and grow their skills in a supportive environment.</p>
-            </div>
-            <!-- Grid -->
-            <div class="grid lg:grid-cols-3 gap-4 sm:gap-6 max-w-xs mx-auto lg:max-w-none">
-                <!-- Testimonial #01 -->
-                <div class="relative p-5 before:absolute before:inset-0 before:-z-10 before:border before:border-slate-300 before:bg-slate-700 before:opacity-10 before:rounded-xl">
-                    <div class="flex items-center justify-between mb-4">
-                        <div class="flex items-center space-x-4">
-                            <img class="shrink-0" src="./images/testimonial-01.png" width="44" height="44" alt="Testimonial 01" />
-                            <div class="grow">
-                                <div class="font-bold text-slate-100">Liam O'Reilly</div>
-                                <div class="text-sm text-purple-500 font-medium">Youth Player</div>
-                            </div>
-                        </div>
-                        <a class="shrink-0 text-slate-500" href="#0" aria-label="Member's Twitter">
-                            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                                <path d="M11.297 13.807 7.424 18H5.276l5.019-5.436L5 6h4.43l3.06 3.836L16.025 6h2.147l-4.688 5.084L19 18h-4.32l-3.383-4.193Zm3.975 2.975h1.19L8.783 7.155H7.507l7.766 9.627Z" />
-                            </svg>
-                        </a>
-                    </div>
-                    <p class="text-sm text-slate-400">“Play3 has completely changed how I see football. I can try new moves without fear, and my confidence has skyrocketed.”</p>
-                </div>
-                <!-- Testimonial #02 -->
-                <div class="relative p-5 before:absolute before:inset-0 before:-z-10 before:border before:border-slate-300 before:bg-slate-700 before:opacity-10 before:rounded-xl">
-                    <div class="flex items-center justify-between mb-4">
-                        <div class="flex items-center space-x-4">
-                            <img class="shrink-0" src="./images/testimonial-02.png" width="44" height="44" alt="Testimonial 02" />
-                            <div class="grow">
-                                <div class="font-bold text-slate-100">Sofia Martinez</div>
-                                <div class="text-sm text-purple-500 font-medium">Youth Player</div>
-                            </div>
-                        </div>
-                        <a class="shrink-0 text-slate-500" href="#0" aria-label="Member's Twitter">
-                            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                                <path d="M11.297 13.807 7.424 18H5.276l5.019-5.436L5 6h4.43l3.06 3.836L16.025 6h2.147l-4.688 5.084L19 18h-4.32l-3.383-4.193Zm3.975 2.975h1.19L8.783 7.155H7.507l7.766 9.627Z" />
-                            </svg>
-                        </a>
-                    </div>
-                    <p class="text-sm text-slate-400">“I’ve learned more about positioning and teamwork in a few weeks than anywhere else. Play3 makes learning fun and exciting.”</p>
-                </div>
-                <!-- Testimonial #03 -->
-                <div class="relative p-5 before:absolute before:inset-0 before:-z-10 before:border before:border-slate-300 before:bg-slate-700 before:opacity-10 before:rounded-xl">
-                    <div class="flex items-center justify-between mb-4">
-                        <div class="flex items-center space-x-4">
-                            <img class="shrink-0" src="./images/testimonial-03.png" width="44" height="44" alt="Testimonial 03" />
-                            <div class="grow">
-                                <div class="font-bold text-slate-100">Ethan Walker</div>
-                                <div class="text-sm text-purple-500 font-medium">Youth Player</div>
-                            </div>
-                        </div>
-                        <a class="shrink-0 text-slate-500" href="#0" aria-label="Member's Twitter">
-                            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                                <path d="M11.297 13.807 7.424 18H5.276l5.019-5.436L5 6h4.43l3.06 3.836L16.025 6h2.147l-4.688 5.084L19 18h-4.32l-3.383-4.193Zm3.975 2.975h1.19L8.783 7.155H7.507l7.766 9.627Z" />
-                            </svg>
-                        </a>
-                    </div>
-                    <p class="text-sm text-slate-400">“The coaches are amazing. They encourage you to try, fail, and try again, which really helps my skills improve fast.”</p>
-                </div>
-            </div>
+
+        <div class="text-center p-5">
+          <div class="inline-flex items-center justify-center h-12 w-12 rounded-full border border-transparent
+            [background:linear-gradient(#0f172a,#0f172a)_padding-box,
+            conic-gradient(#f5c86a,#e6b85c_25%,#e6b85c_75%,#f5c86a)_border-box]
+            shadow-[0_0_25px_rgba(245,200,106,0.45)] mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+              <circle cx="12" cy="12" r="10" stroke="#f5c86a" stroke-width="2" fill="none"/>
+              <circle cx="12" cy="12" r="3" fill="#f5c86a"/>
+            </svg>
+          </div>
+          <div class="font-bold text-slate-100 mb-1">Community</div>
+          <p class="text-sm text-slate-400">Growing together through shared passion.</p>
         </div>
+
+      </div>
     </div>
+  </div>
 </section>
+
 
 <!-- CTA -->
 <section class="relative">
