@@ -20,11 +20,11 @@
             <div class="max-w-6xl mx-auto px-4 sm:px-6">
                 <div class="flex items-center justify-between h-16 md:h-20">
 
-                    <!-- Site branding -->
+                     <!-- Site branding -->
                     <div class="flex-1">
                         <!-- Logo -->
-                        <a class="inline-flex" href="index.html" aria-label="Cruip">
-                            <img class="max-w-none" src="./images/logo.svg" width="38" height="38" alt="Stellar">
+                        <a class="inline-flex" href="index.html" aria-label="play3logo">
+                           <img class="logo-img max-w-none" src="./images/play3logo.jpg" alt="Stellar">
                         </a>
                     </div>
 
@@ -115,7 +115,8 @@
         <main class="grow">
 
 <!-- Hero Section -->
-<section class="relative pt-32 md:pt-40"> <!-- Push everything down from navbar -->
+<section class="relative pt-32 md:pt-40 pb-40 md:pb-56">
+
 
   <!-- Hero Text -->
   <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
@@ -126,44 +127,60 @@
     </h1>
   </div>
 
-  <!-- Golden Circle with Floating Icon -->
-  <div class="relative flex items-center justify-center my-6"> 
-    <!-- Single Golden Ring -->
-    <svg
-      class="absolute"
-      width="200"
-      height="200"
-      viewBox="0 0 200 200"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-    >
-      <defs>
-        <radialGradient id="gold-circle" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="#FFD966" stop-opacity="0.65"/>
-          <stop offset="70%" stop-color="#FFD966" stop-opacity="0.4"/>
-          <stop offset="100%" stop-color="#FFD966" stop-opacity="0"/>
-        </radialGradient>
-      </defs>
-      <circle cx="100" cy="100" r="80" fill="url(#gold-circle)" class="animate-[pulseRing_8s_ease-in-out_infinite]" />
-    </svg>
+ <!-- Gold Halo + Floating Icon -->
+<div class="relative flex items-center justify-center mt-16 mb-20">
 
-    <!-- Floating Gold Icon -->
-    <div class="relative z-10 animate-[float_4s_ease-in-out_infinite]">
-      <div class="flex items-center justify-center w-20 h-20 rounded-full
-                  bg-[#0f172a]
-                  border border-[#f5c86a]/40
-                  shadow-[0_0_35px_rgba(245,200,106,0.65)]">
-        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24">
-          <path fill="#f5c86a" d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/>
-        </svg>
-      </div>
+  <!-- Halo Effect -->
+  <svg
+    class="absolute inset-0 z-0 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
+           pointer-events-none blur-xl opacity-80"
+    width="420"
+    height="420"
+    viewBox="0 0 480 480"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+  >
+    <defs>
+      <linearGradient id="gold-halo" x1="50%" x2="50%" y1="100%" y2="0%">
+        <stop offset="0%" stop-color="#D4AF37" />
+        <stop offset="60%" stop-color="#FFD966" />
+        <stop offset="100%" stop-color="#FFF3B0" />
+      </linearGradient>
+    </defs>
+
+    <g fill-rule="evenodd">
+      <path class="pulse" fill="url(#gold-halo)"
+        d="M240,0 C372.5,0 480,107.5 480,240 C480,372.5 372.5,480 240,480
+           C107.5,480 0,372.5 0,240 C0,107.5 107.5,0 240,0
+           Z M240,90 C156.5,90 90,156.5 90,240
+           C90,323.5 156.5,390 240,390
+           C323.5,390 390,323.5 390,240
+           C390,156.5 323.5,90 240,90 Z" />
+    </g>
+  </svg>
+
+  <!-- Floating Icon -->
+  <div class="relative z-10 animate-[float_4s_ease-in-out_infinite]">
+    <div class="flex items-center justify-center w-20 h-20 rounded-full
+                bg-[#0f172a]
+                border border-[#f5c86a]/40
+                shadow-[0_0_35px_rgba(245,200,106,0.65)]">
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24">
+        <path fill="#f5c86a"
+          d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/>
+      </svg>
+
     </div>
   </div>
+
+</div>
+
 
 </section>
 
 <!-- Story / What is Play3 -->
-<section class="relative mt-20"> <!-- Push story section down -->
+<section class="relative mt-20 md:pt-40 pb-40 md:pb-56"> <!-- Push story section down -->
 
   <div class="px-4 sm:px-6">
     <div class="max-w-5xl mx-auto">

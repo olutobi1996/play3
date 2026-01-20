@@ -462,6 +462,10 @@ main {
   50% { opacity: 1; }
 }
 
+.logo-img {
+    width: 110px;   /* Adjust to whatever size you want */
+    height: 60px;  /* Keep aspect ratio consistent */
+}
 
 @layer base {
   *, ::after, ::before, ::backdrop, ::file-selector-button {
