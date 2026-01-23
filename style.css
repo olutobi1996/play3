@@ -463,7 +463,7 @@ main {
 }
 
 .logo-img {
-    width: 110px;   /* Adjust to whatever size you want */
+    width: 130px;   /* Adjust to whatever size you want */
     height: 60px;  /* Keep aspect ratio consistent */
 }
 
@@ -502,10 +502,18 @@ main {
    =============================== */
 
 h1, h2, h3, h4, h5, h6 {
-  color: var(--play3-gold);
-  text-shadow:
-    0 1px 0 rgba(255,255,255,0.12),
-    0 0 6px var(--play3-gold-glow-soft);
+    color: #D2B891; /* slightly lighter gold */
+
+text-shadow:
+  /* dark anchor = depth */
+  0 1px 2px rgba(0, 0, 0, 0.35),
+
+  /* tight inner glow = richness */
+  0 0 4px rgba(210, 184, 145, 0.55),
+
+  /* soft outer halo = premium */
+  0 0 10px rgba(210, 184, 145, 0.35);
+
 }
 
 /* Gold text */
