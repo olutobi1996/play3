@@ -16,23 +16,27 @@
     <div class="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
 
         <!-- Site header -->
-        <header class="absolute w-full z-30">
+        <header class="relative w-full z-30">
             <div class="max-w-6xl mx-auto px-4 sm:px-6">
                 <div class="flex items-center justify-between h-16 md:h-20">
         
                     <!-- Site branding -->
-                    <div class="flex-1">
-                        <!-- Logo -->
-                        <a class="inline-flex" href="index.html" aria-label="play3logo">
-                           <img class="logo-img max-w-none" src="./images/play3logo.jpg" alt="Stellar">
-                        </a>
-                    </div>
-        
+       <div class="w-full flex justify-center mt-16 md:mt-24">
+    <!-- Logo -->
+    <a class="inline-flex justify-center" aria-label="play3logo">
+        <img 
+            src="./images/play3logo.jpg" 
+            alt="Play3 Logo"
+            class="w-56 md:w-80 lg:w-96 h-auto object-contain"
+        >
+    </a>
+</div>
+
                     <!-- Desktop navigation -->
-                    <nav class="hidden md:flex md:grow">
+                  <!--   <nav class="hidden md:flex md:grow">
         
-                        <!-- Desktop menu links -->
-                        <ul class="flex grow justify-center flex-wrap items-center">
+                        <! Desktop menu links -->
+                        <!-- <ul class="flex grow justify-center flex-wrap items-center">
                             <li>
                                 <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 mx-4 lg:mx-5 transition duration-150 ease-in-out" href="about.html">About</a>
                             </li>
@@ -47,14 +51,14 @@
                             </li>
                             <li>
                                 <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="questionnaire.html">Questionnaire</a>
-                            </li>
+                            </li> 
                         </ul>
         
-                    </nav>
+                    </nav> -->
         
                 
                   <!-- Desktop booking button -->
-<ul class="flex-1 flex justify-end items-center">
+<!--  <ul class="flex-1 flex justify-end items-center">
     <li>
         <a
   href="https://tidycal.com/helloecobubba/play3-training-session" target="_blank"
@@ -69,7 +73,7 @@
 </a>
 
     </li>
-</ul>
+</ul> -->
                 
                     <!-- Mobile menu -->
                     <div class="md:hidden flex items-center ml-4" x-data="{ expanded: false }">
@@ -85,7 +89,7 @@
                         </button>                             
         
                         <!-- Mobile navigation -->
-                        <nav id="mobile-nav" class="absolute top-full z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out" x-ref="mobileNav" :style="expanded ? 'max-height: ' + $refs.mobileNav.scrollHeight + 'px; opacity: 1' : 'max-height: 0; opacity: .8'" @click.outside="expanded = false" @keydown.escape.window="expanded = false" x-cloak>
+                      <!--   <nav id="mobile-nav" class="absolute top-full z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out" x-ref="mobileNav" :style="expanded ? 'max-height: ' + $refs.mobileNav.scrollHeight + 'px; opacity: 1' : 'max-height: 0; opacity: .8'" @click.outside="expanded = false" @keydown.escape.window="expanded = false" x-cloak>
                             <ul class="border border-transparent [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] rounded-lg px-4 py-1.5">
                                                    <li>
                                 <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="about.html">About</a>
@@ -93,17 +97,18 @@
                             <li>
                                 <a href="https://tidycal.com/helloecobubba/play3-training-session" class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="booking.html">Booking</a>
                             </li>
-                            <li>
+
+                             <li>
                                 <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="pricing.html">Pricing</a>
-                            </li>
+                            </li> 
                             <li>
                                 <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="reviews.html">Reviews</a>
                             </li>
                             <li>
                                 <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="questionnaire.html">Questionnaire</a>
-                            </li>
+                            </li> 
                             </ul>
-                        </nav>
+                        </nav> -->
         
                     </div>
         
@@ -153,7 +158,8 @@
         0 0 16px rgba(212,175,55,0.4);
     "
   >
-    Tune Into The 3quency — PLAY3 Is Live
+    PLAY3 
+    Coming Soon
     <span
       class="ml-1 transition-transform duration-200 ease-in-out group-hover:translate-x-1"
       style="
@@ -168,12 +174,15 @@
   </a>
 </div>
                             </div>
-                            <h1 class="h1 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4" data-aos="fade-down">Unlock The 3quency. Transform Your Game.</h1>
+                            <h1 class="h1 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4" data-aos="fade-down"><p class="mb-6 text-lg font-medium" style="color: var(--play3-gold);">
+                        Sign up to Play Fr33<br>
+                        1-2-1 & Small Group Sessions Available
+                    </h1>
                             <div class="max-w-xs mx-auto sm:max-w-none sm:inline-flex sm:justify-center space-y-4 sm:space-y-0 sm:space-x-4" data-aos="fade-down" data-aos-delay="400">
                                 <div>
                                    <a href="booking.html" class="btn-play3 inline-flex items-center justify-center group">
   <span class="inline-flex items-center">
-    Get Started
+    Sign Up
     <span class="ml-1 transition-transform group-hover:translate-x-0.5">→</span>
   </span>
 </a>
@@ -378,7 +387,7 @@
     </div>
   </div>
 </section>
-
+<template>
                <!-- Features -->
             <section>
                 <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
@@ -1653,6 +1662,11 @@ The aim? Build confident, expressive, intelligent players, on and off the court.
     <script src="./js/vendors/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
 
+</body>
+
+</html>
+</template>
+</main>
 </body>
 
 </html>
