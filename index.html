@@ -215,11 +215,17 @@
   <span class="arrow">→</span>
 </div>
 
-<form class="form-box" name="play3-signup" method="POST" data-netlify="true"  action="/thank-you.html">
+<form class="form-box" name="play3-signup" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
   
   <!-- Hidden input required for Netlify -->
   <input type="hidden" name="form-name" value="play3-signup" />
 
+    <!-- Honeypot spam protection -->
+  <div hidden>
+    <input name="bot-field" />
+  </div>
+
+  
   <input 
     type="email" 
     name="email" 
