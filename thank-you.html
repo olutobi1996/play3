@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Hood Homes</title>
+    <link rel="stylesheet" href="/css/style.css">
+  <style>
+    :root {
+        --play3-gold: #d4af37;
+    }
+
+    /* Center layout */
+    .success-wrapper {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: url(/images/3fingers.jpg) no-repeat center center / cover;
+        position: relative;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* Dark overlay (matches landing page vibe) */
+    .success-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    /* Main success card */
+    .success-box {
+        position: relative;
+        z-index: 2;
+        background: rgba(0, 0, 0, 0.75);
+        backdrop-filter: blur(8px);
+        border: 1px solid var(--play3-gold);
+        border-radius: 16px;
+        box-shadow:
+            0 0 20px rgba(212,175,55,0.5),
+            0 0 40px rgba(212,175,55,0.25);
+        padding: 3rem 4rem;
+        max-width: 600px;
+        text-align: center;
+        animation: fadeInUp 0.8s ease forwards;
+    }
+
+    /* Heading */
+    .success-box h1 {
+        font-size: 2.5rem;
+        color: var(--play3-gold);
+        margin-bottom: 1rem;
+        text-shadow:
+            0 0 6px rgba(212,175,55,0.6),
+            0 0 16px rgba(212,175,55,0.4);
+        letter-spacing: 1px;
+    }
+
+    .success-box h1::after {
+        content: "";
+        display: block;
+        width: 80px;
+        height: 2px;
+        background: var(--play3-gold);
+        margin: 0.8rem auto 0;
+        border-radius: 2px;
+        box-shadow: 0 0 10px rgba(212,175,55,0.6);
+    }
+
+    /* Paragraph */
+    .success-box p {
+        font-style: italic;
+        color: #ffffff;
+        line-height: 1.7;
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+    }
+
+    /* CTA Button */
+    .cta-button {
+        display: inline-block;
+        background: transparent;
+        color: var(--play3-gold);
+        padding: 0.8rem 1.8rem;
+        border-radius: 30px;
+        border: 1px solid var(--play3-gold);
+        font-weight: 600;
+        text-decoration: none;
+        text-shadow:
+            0 0 6px rgba(212,175,55,0.6),
+            0 0 16px rgba(212,175,55,0.4);
+        transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+        background: var(--play3-gold);
+        color: #000;
+        box-shadow:
+            0 0 15px rgba(212,175,55,0.8),
+            0 0 35px rgba(212,175,55,0.6);
+        transform: translateY(-2px);
+    }
+
+    @keyframes fadeInUp {
+        from {opacity: 0; transform: translateY(30px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+</style>
+    <script>
+      // Auto-redirect after 5 seconds
+      setTimeout(() => {
+          window.location.href = "/index.html";
+      }, 5000);
+    </script>
+</head>
+<body>
+    <div class="success-wrapper">
+        <div class="success-overlay"></div>
+        <div class="success-box">
+            <h1>Thank You!</h1>
+            <p>Your message has been successfully sent to Hood Homes.<br>
+            We appreciate your enquiry and will get back to you shortly.</p>
+             <a href="/index.html" class="cta-button" data-aos="zoom-in" data-aos-delay="500">
+        Home
+      </a>
+        </div>
+    </div>
+</body>
+</html>
